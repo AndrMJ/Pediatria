@@ -75,13 +75,6 @@ function render() {
         var checkSmxcau = triagem.getData(i, 'smxcau');
         var checkHosp = triagem.getData(i, 'hospitzd');
         var dischargeEntered = triagem.getData(i, 'saida');
-        var roundsdateEntered = triagem.getData(i, 'roundsdate');
-        var rdate = new Date(roundsdateEntered.substring(0,4),roundsdateEntered.substring(5,7),roundsdateEntered.substring(9,10));
-        var q = new Date();
-        var m = q.getMonth()+1;
-        var d = q.getDay();
-        var y = q.getFullYear();
-        var today = new Date(y,m,d);
         
         // make list entry
         // Only show patients not yet checked for admission 
@@ -106,7 +99,7 @@ function render() {
             //  Name information
             var name = document.createElement('li');
             name.setAttribute('class', 'detail');
-            name.innerHTML = 'Name: ' + roundsdateEntered;
+            name.innerHTML = 'Name: ' + nameEntered;
             item.appendChild(name);
 
             //  DoB information
@@ -115,7 +108,7 @@ function render() {
             if(dobEntered !== null) {
             	dobEntered = dobEntered.substring(8,10) + dobEntered.substring(4,7) + '-' + dobEntered.substring(0,4);
             }
-            dob.innerHTML = 'DoB: ' + rdate;
+            dob.innerHTML = 'DoB: ' + dobEntered;
             item.appendChild(dob);
             
             //  Sex information
@@ -126,7 +119,7 @@ function render() {
             } else if(sexEntered === '2') {
             	sexEntered = 'Female'
             }
-            sex.innerHTML = 'Sex: ' + today;
+            sex.innerHTML = 'Sex: ' + sexEntered;
             item.appendChild(sex);
             
             //  smxcau information
