@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!--Menu-->
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="css/homescreen.css" type="text/css" rel="stylesheet" />
+        <script type="text/javascript" src="commonDefinitions.js"></script>
+        <script type="text/javascript" src="libs/jquery-3.2.1.js"></script>
+        <script type="text/javascript" src="libs/jquery-migrate-3.0.0.js"></script>
+        <script type="text/javascript" src="../../system/js/odkCommon.js"></script>
+        <script type="text/javascript" src="../../system/js/odkData.js"></script>
+        <script type="text/javascript" src="../../system/tables/js/odkTables.js"></script>
+        <script type="text/javascript">
+
+        // Displays homescreen
+        function display() {
+
+            /*    Screen new client option that launches new client list view */
+            var newClient = document.createElement("button");
+            newClient.setAttribute("id", "button1");
+            newClient.innerHTML = "Triagem";
+            newClient.onclick = function() {
+                odkTables.addRowWithSurvey(null,
+                    'triagem',
+                    'triagem',
+                    null,
+                    null);
+            }
+            document.getElementById("wrapper").appendChild(newClient);    
+
+            // Follow up with existing client option that launches
+            // 'femaleClients' table list view
+            var followUp = document.createElement("button");
+            followUp.setAttribute("id", "button2");
+            followUp.innerHTML = "Diagnoses";
+            followUp.onclick = function() {
+                odkTables.openTableToListView(null,
+                    'triagem',
+                    null,
+                    null,
+                    'config/tables/triagem/html/triagem_list.html');
+            }
+            document.getElementById("wrapper").appendChild(followUp);    
+
+         // Send data option that luanches send finalized forms screen in
+            var rounds = document.createElement("button");
+            rounds.setAttribute("id", "button3");
+            rounds.innerHTML = "Paulo - check";
+            rounds.onclick = function() {
+                odkTables.openTableToListView(null,
+                    'triagem',
+                    null,
+                    null,
+                    'config/tables/triagem/html/triagem_hospcheck.html');
+            }
+            document.getElementById("wrapper").appendChild(rounds); 
+            
+         // Send data option that luanches send finalized forms screen in
+            var rounds = document.createElement("button");
+            rounds.setAttribute("id", "button4");
+            rounds.innerHTML = "Paulo - rounds";
+            rounds.onclick = function() {
+                odkTables.openTableToListView(null,
+                    'triagem',
+                    null,
+                    null,
+                    'config/tables/triagem/html/triagem_initrounds.html');
+            }
+            document.getElementById("wrapper").appendChild(rounds); 
+            
+         // Send data option that luanches send finalized forms screen in
+            var rounds = document.createElement("button");
+            rounds.setAttribute("id", "button5");
+            rounds.innerHTML = "Lola";
+            rounds.onclick = function() {
+                odkTables.openTableToListView(null,
+                    'triagem',
+                    null,
+                    null,
+                    'config/tables/triagem/html/triagem_laterounds.html');
+            }
+            document.getElementById("wrapper").appendChild(rounds); 
+        }
+        
+        </script>
+    </head>
+
+    <body onload="display();">
+        <h1>Pediatria</h1>
+        <div id="wrapper"></div>
+    </body>
+</html>
