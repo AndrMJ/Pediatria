@@ -268,26 +268,26 @@
     ],
     "model": [
       {
-        "name": "nome",
-        "type": "text",
+        "name": "cam1",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 2
-      },
-      {
-        "name": "roundsdate",
-        "type": "text",
-        "isSessionVariable": false,
-        "_row_num": 3
       },
       {
         "name": "id",
         "type": "text",
         "isSessionVariable": false,
+        "_row_num": 3
+      },
+      {
+        "name": "nome",
+        "type": "text",
+        "isSessionVariable": false,
         "_row_num": 4
       },
       {
-        "name": "cam1",
-        "type": "integer",
+        "name": "roundsdate",
+        "type": "text",
         "isSessionVariable": false,
         "_row_num": 5
       },
@@ -568,11 +568,33 @@
       }
     },
     "model": {
+      "cam1": {
+        "type": "integer",
+        "_defn": [
+          {
+            "_row_num": 2,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": false,
+        "elementKey": "cam1"
+      },
+      "id": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 3,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": false,
+        "elementKey": "id"
+      },
       "nome": {
         "type": "string",
         "_defn": [
           {
-            "_row_num": 2,
+            "_row_num": 4,
             "section_name": "model"
           }
         ],
@@ -583,34 +605,12 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 3,
-            "section_name": "model"
-          }
-        ],
-        "isSessionVariable": false,
-        "elementKey": "roundsdate"
-      },
-      "id": {
-        "type": "string",
-        "_defn": [
-          {
-            "_row_num": 4,
-            "section_name": "model"
-          }
-        ],
-        "isSessionVariable": false,
-        "elementKey": "id"
-      },
-      "cam1": {
-        "type": "integer",
-        "_defn": [
-          {
             "_row_num": 5,
             "section_name": "model"
           }
         ],
         "isSessionVariable": false,
-        "elementKey": "cam1"
+        "elementKey": "roundsdate"
       },
       "sec1": {
         "type": "string",
@@ -884,11 +884,39 @@
       }
     },
     "dataTableModel": {
+      "cam1": {
+        "type": "integer",
+        "_defn": [
+          {
+            "_row_num": 2,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": false,
+        "elementKey": "cam1",
+        "elementName": "cam1",
+        "elementSet": "data",
+        "elementPath": "cam1"
+      },
+      "id": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 3,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": false,
+        "elementKey": "id",
+        "elementName": "id",
+        "elementSet": "data",
+        "elementPath": "id"
+      },
       "nome": {
         "type": "string",
         "_defn": [
           {
-            "_row_num": 2,
+            "_row_num": 4,
             "section_name": "model"
           }
         ],
@@ -902,7 +930,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 3,
+            "_row_num": 5,
             "section_name": "model"
           }
         ],
@@ -911,34 +939,6 @@
         "elementName": "roundsdate",
         "elementSet": "data",
         "elementPath": "roundsdate"
-      },
-      "id": {
-        "type": "string",
-        "_defn": [
-          {
-            "_row_num": 4,
-            "section_name": "model"
-          }
-        ],
-        "isSessionVariable": false,
-        "elementKey": "id",
-        "elementName": "id",
-        "elementSet": "data",
-        "elementPath": "id"
-      },
-      "cam1": {
-        "type": "integer",
-        "_defn": [
-          {
-            "_row_num": 5,
-            "section_name": "model"
-          }
-        ],
-        "isSessionVariable": false,
-        "elementKey": "cam1",
-        "elementName": "cam1",
-        "elementSet": "data",
-        "elementPath": "cam1"
       },
       "sec1": {
         "type": "string",

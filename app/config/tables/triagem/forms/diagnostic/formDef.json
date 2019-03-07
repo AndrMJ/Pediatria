@@ -1,5 +1,16 @@
 {
   "xlsx": {
+    "initial": [
+      {
+        "clause": "do section survey",
+        "_row_num": 2
+      },
+      {
+        "clause": "goto _finalize",
+        "comments": "skips the finalize screen where the user chooses to save as incomplete or finalized and instead saves as finalized",
+        "_row_num": 3
+      }
+    ],
     "settings": [
       {
         "setting_name": "form_id",
@@ -2895,7 +2906,7 @@
       },
       {
         "name": "regdate",
-        "type": "date",
+        "type": "text",
         "isSessionVariable": false,
         "_row_num": 36
       },
@@ -3440,19 +3451,19 @@
         "_row_num": 126
       },
       {
-        "name": "cam1",
-        "type": "integer",
+        "name": "defdiag1",
+        "type": "text",
         "isSessionVariable": false,
         "_row_num": 127
       },
       {
-        "name": "defdiag1",
+        "name": "defdiag2",
         "type": "text",
         "isSessionVariable": false,
         "_row_num": 128
       },
       {
-        "name": "defdiag2",
+        "name": "roundsdate",
         "type": "text",
         "isSessionVariable": false,
         "_row_num": 129
@@ -3470,112 +3481,58 @@
         "_row_num": 131
       },
       {
-        "name": "sec1",
-        "type": "select_one_dropdown",
-        "isSessionVariable": false,
-        "_row_num": 132
-      },
-      {
         "name": "smxcau",
         "type": "select_one",
         "isSessionVariable": false,
-        "_row_num": 133
+        "_row_num": 132
       },
       {
         "name": "vcartR",
         "type": "select_one",
         "isSessionVariable": false,
+        "_row_num": 133
+      },
+      {
+        "name": "vdcart",
+        "type": "text",
+        "isSessionVariable": false,
         "_row_num": 134
-      },
-      {
-        "name": "cam1i",
-        "type": "integer",
-        "isSessionVariable": true,
-        "_row_num": 135
-      },
-      {
-        "name": "cam1na",
-        "type": "select_multiple",
-        "isSessionVariable": true,
-        "_row_num": 136
       },
       {
         "name": "defdiag1i",
         "type": "select_one_dropdown",
         "isSessionVariable": true,
-        "_row_num": 137
+        "_row_num": 135
       },
       {
         "name": "defdiag1n",
         "type": "select_multiple",
         "isSessionVariable": true,
-        "_row_num": 138
+        "_row_num": 136
       },
       {
         "name": "defdiag2i",
         "type": "select_one_dropdown",
         "isSessionVariable": true,
-        "_row_num": 139
+        "_row_num": 137
       },
       {
         "name": "defdiag2n",
         "type": "select_multiple",
         "isSessionVariable": true,
-        "_row_num": 140
+        "_row_num": 138
       },
       {
         "name": "saidana",
         "type": "select_multiple",
         "isSessionVariable": true,
-        "_row_num": 141
+        "_row_num": 139
       },
       {
         "name": "saidat",
         "type": "custom_date",
         "isSessionVariable": true,
-        "_row_num": 142
-      },
-      {
-        "name": "roundsdate",
-        "type": "date",
-        "isSessionVariable": false,
-        "_row_num": 143
-      },
-      {
-        "name": "test",
-        "type": "text",
-        "isSessionVariable": false,
-        "_row_num": 144
-      },
-      {
-        "name": "cam1in",
-        "type": "text",
-        "isSessionVariable": true,
-        "_row_num": 145
-      },
-      {
-        "name": "cam1q",
-        "type": "select_multiple",
-        "isSessionVariable": true,
-        "_row_num": 146
-      },
-      {
-        "name": "roundq",
-        "type": "select_one",
-        "isSessionVariable": true,
-        "_row_num": 147
-      },
-      {
-        "name": "sec1in",
-        "type": "text",
-        "isSessionVariable": true,
-        "_row_num": 148
-      },
-      {
-        "name": "sec1q",
-        "type": "select_multiple",
-        "isSessionVariable": true,
-        "_row_num": 149
+        "_row_num": 140
       }
     ]
   },
@@ -6671,7 +6628,6 @@
       },
       "regdate": {
         "type": "string",
-        "elementType": "date",
         "_defn": [
           {
             "_row_num": 36,
@@ -7887,22 +7843,11 @@
         "isSessionVariable": true,
         "elementKey": "prodiag2n"
       },
-      "cam1": {
-        "type": "integer",
-        "_defn": [
-          {
-            "_row_num": 127,
-            "section_name": "model"
-          }
-        ],
-        "isSessionVariable": false,
-        "elementKey": "cam1"
-      },
       "defdiag1": {
         "type": "string",
         "_defn": [
           {
-            "_row_num": 128,
+            "_row_num": 127,
             "section_name": "model"
           }
         ],
@@ -7913,12 +7858,23 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 129,
+            "_row_num": 128,
             "section_name": "model"
           }
         ],
         "isSessionVariable": false,
         "elementKey": "defdiag2"
+      },
+      "roundsdate": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 129,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": false,
+        "elementKey": "roundsdate"
       },
       "saida": {
         "prompt_type_name": "custom_date",
@@ -7947,22 +7903,11 @@
         "isSessionVariable": false,
         "elementKey": "saidacom"
       },
-      "sec1": {
-        "type": "string",
-        "_defn": [
-          {
-            "_row_num": 132,
-            "section_name": "model"
-          }
-        ],
-        "isSessionVariable": false,
-        "elementKey": "sec1"
-      },
       "smxcau": {
         "type": "string",
         "_defn": [
           {
-            "_row_num": 133,
+            "_row_num": 132,
             "section_name": "model"
           }
         ],
@@ -7973,44 +7918,29 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 134,
+            "_row_num": 133,
             "section_name": "model"
           }
         ],
         "isSessionVariable": false,
         "elementKey": "vcartR"
       },
-      "cam1i": {
-        "type": "integer",
+      "vdcart": {
+        "type": "string",
         "_defn": [
           {
-            "_row_num": 135,
+            "_row_num": 134,
             "section_name": "model"
           }
         ],
-        "isSessionVariable": true,
-        "elementKey": "cam1i"
-      },
-      "cam1na": {
-        "type": "array",
-        "items": {
-          "type": "string",
-          "elementKey": "cam1na_items"
-        },
-        "_defn": [
-          {
-            "_row_num": 136,
-            "section_name": "model"
-          }
-        ],
-        "isSessionVariable": true,
-        "elementKey": "cam1na"
+        "isSessionVariable": false,
+        "elementKey": "vdcart"
       },
       "defdiag1i": {
         "type": "string",
         "_defn": [
           {
-            "_row_num": 137,
+            "_row_num": 135,
             "section_name": "model"
           }
         ],
@@ -8025,7 +7955,7 @@
         },
         "_defn": [
           {
-            "_row_num": 138,
+            "_row_num": 136,
             "section_name": "model"
           }
         ],
@@ -8036,7 +7966,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 139,
+            "_row_num": 137,
             "section_name": "model"
           }
         ],
@@ -8051,7 +7981,7 @@
         },
         "_defn": [
           {
-            "_row_num": 140,
+            "_row_num": 138,
             "section_name": "model"
           }
         ],
@@ -8066,7 +7996,7 @@
         },
         "_defn": [
           {
-            "_row_num": 141,
+            "_row_num": 139,
             "section_name": "model"
           }
         ],
@@ -8082,98 +8012,12 @@
         "__rowNum__": 1,
         "_defn": [
           {
-            "_row_num": 142,
+            "_row_num": 140,
             "section_name": "model"
           }
         ],
         "isSessionVariable": true,
         "elementKey": "saidat"
-      },
-      "roundsdate": {
-        "type": "string",
-        "elementType": "date",
-        "_defn": [
-          {
-            "_row_num": 143,
-            "section_name": "model"
-          }
-        ],
-        "isSessionVariable": false,
-        "elementKey": "roundsdate"
-      },
-      "test": {
-        "type": "string",
-        "_defn": [
-          {
-            "_row_num": 144,
-            "section_name": "model"
-          }
-        ],
-        "isSessionVariable": false,
-        "elementKey": "test"
-      },
-      "cam1in": {
-        "type": "string",
-        "_defn": [
-          {
-            "_row_num": 145,
-            "section_name": "model"
-          }
-        ],
-        "isSessionVariable": true,
-        "elementKey": "cam1in"
-      },
-      "cam1q": {
-        "type": "array",
-        "items": {
-          "type": "string",
-          "elementKey": "cam1q_items"
-        },
-        "_defn": [
-          {
-            "_row_num": 146,
-            "section_name": "model"
-          }
-        ],
-        "isSessionVariable": true,
-        "elementKey": "cam1q"
-      },
-      "roundq": {
-        "type": "string",
-        "_defn": [
-          {
-            "_row_num": 147,
-            "section_name": "model"
-          }
-        ],
-        "isSessionVariable": true,
-        "elementKey": "roundq"
-      },
-      "sec1in": {
-        "type": "string",
-        "_defn": [
-          {
-            "_row_num": 148,
-            "section_name": "model"
-          }
-        ],
-        "isSessionVariable": true,
-        "elementKey": "sec1in"
-      },
-      "sec1q": {
-        "type": "array",
-        "items": {
-          "type": "string",
-          "elementKey": "sec1q_items"
-        },
-        "_defn": [
-          {
-            "_row_num": 149,
-            "section_name": "model"
-          }
-        ],
-        "isSessionVariable": true,
-        "elementKey": "sec1q"
       }
     },
     "section_names": [
@@ -8181,6 +8025,117 @@
       "survey"
     ],
     "sections": {
+      "initial": {
+        "section_name": "initial",
+        "nested_sections": {
+          "survey": true
+        },
+        "reachable_sections": {
+          "survey": true
+        },
+        "prompts": [
+          {
+            "clause": "do section survey",
+            "_row_num": 2,
+            "__rowNum__": 1,
+            "_token_type": "prompt",
+            "_do_section_name": "survey",
+            "_type": "_section",
+            "promptIdx": 0,
+            "display": {
+              "title": {
+                "text": {
+                  "default": "Diagnostic",
+                  "portuguese": "Diagnostic"
+                }
+              }
+            },
+            "_branch_label_enclosing_screen": "survey/0"
+          },
+          {
+            "_token_type": "prompt",
+            "type": "contents",
+            "_type": "contents",
+            "_row_num": 4,
+            "_branch_label_enclosing_screen": "initial/_screen4",
+            "promptIdx": 1
+          }
+        ],
+        "validation_tag_map": {
+          "finalize": []
+        },
+        "operations": [
+          {
+            "clause": "do section survey",
+            "_row_num": 2,
+            "__rowNum__": 1,
+            "_token_type": "do_section",
+            "_do_section_name": "survey",
+            "operationIdx": 0
+          },
+          {
+            "clause": "goto _finalize",
+            "comments": "skips the finalize screen where the user chooses to save as incomplete or finalized and instead saves as finalized",
+            "_row_num": 3,
+            "__rowNum__": 2,
+            "_token_type": "goto_label",
+            "_branch_label": "_finalize",
+            "operationIdx": 1
+          },
+          {
+            "_token_type": "exit_section",
+            "clause": "exit section",
+            "_row_num": 4,
+            "operationIdx": 2
+          },
+          {
+            "_row_num": 4,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(1);\n\nreturn activePromptIndicies;\n}\n",
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 3
+          },
+          {
+            "_token_type": "resume",
+            "clause": "resume",
+            "_row_num": 4,
+            "operationIdx": 4
+          },
+          {
+            "_token_type": "validate",
+            "clause": "validate finalize",
+            "_sweep_name": "finalize",
+            "_row_num": 4,
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 5
+          },
+          {
+            "_token_type": "save_and_terminate",
+            "clause": "save and terminate",
+            "calculation": true,
+            "_row_num": 4,
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 6
+          },
+          {
+            "_token_type": "resume",
+            "clause": "resume",
+            "_row_num": 4,
+            "operationIdx": 7
+          }
+        ],
+        "branch_label_map": {
+          "_contents": 3,
+          "_screen4": 3,
+          "_finalize": 5
+        }
+      },
       "survey": {
         "section_name": "survey",
         "nested_sections": {},
@@ -8324,186 +8279,6 @@
           "_screen5": 1,
           "_contents": 3,
           "_screen21": 3
-        }
-      },
-      "initial": {
-        "section_name": "initial",
-        "nested_sections": {
-          "survey": true
-        },
-        "reachable_sections": {
-          "survey": true
-        },
-        "prompts": [
-          {
-            "_row_num": 3,
-            "type": "opening",
-            "display": {
-              "text": "Edit form"
-            },
-            "_token_type": "prompt",
-            "_type": "opening",
-            "_branch_label_enclosing_screen": "initial/_screen3",
-            "promptIdx": 0
-          },
-          {
-            "_row_num": 4,
-            "clause": "do section survey",
-            "_token_type": "prompt",
-            "_do_section_name": "survey",
-            "_type": "_section",
-            "promptIdx": 1,
-            "display": {
-              "title": {
-                "text": {
-                  "default": "Diagnostic",
-                  "portuguese": "Diagnostic"
-                }
-              }
-            },
-            "_branch_label_enclosing_screen": "survey/0"
-          },
-          {
-            "_row_num": 5,
-            "type": "finalize",
-            "display": {
-              "text": "Save form"
-            },
-            "_token_type": "prompt",
-            "_type": "finalize",
-            "_branch_label_enclosing_screen": "initial/_screen5",
-            "promptIdx": 2
-          },
-          {
-            "_row_num": 7,
-            "type": "instances",
-            "display": {
-              "text": "Saved instances"
-            },
-            "_token_type": "prompt",
-            "_type": "instances",
-            "_branch_label_enclosing_screen": "initial/_screen7",
-            "promptIdx": 3
-          },
-          {
-            "_token_type": "prompt",
-            "type": "contents",
-            "_type": "contents",
-            "_row_num": 9,
-            "_branch_label_enclosing_screen": "initial/_screen9",
-            "promptIdx": 4
-          }
-        ],
-        "validation_tag_map": {
-          "finalize": []
-        },
-        "operations": [
-          {
-            "_row_num": 2,
-            "clause": "if // start",
-            "condition": "(opendatakit.getCurrentInstanceId() != null)",
-            "_token_type": "goto_label",
-            "_tag_name": "start",
-            "_branch_label": "_then2",
-            "operationIdx": 0
-          },
-          {
-            "clause": "else // start",
-            "_token_type": "goto_label",
-            "_branch_label": "_else6",
-            "_row_num": 6,
-            "operationIdx": 1
-          },
-          {
-            "_row_num": 3,
-            "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 2
-          },
-          {
-            "_row_num": 4,
-            "clause": "do section survey",
-            "_token_type": "do_section",
-            "_do_section_name": "survey",
-            "operationIdx": 3
-          },
-          {
-            "_row_num": 5,
-            "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(2);\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 4
-          },
-          {
-            "clause": "end if // start",
-            "_token_type": "goto_label",
-            "_branch_label": "_endif8",
-            "_row_num": 8,
-            "operationIdx": 5
-          },
-          {
-            "_row_num": 7,
-            "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(3);\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 6
-          },
-          {
-            "_token_type": "exit_section",
-            "clause": "exit section",
-            "_row_num": 9,
-            "operationIdx": 7
-          },
-          {
-            "_row_num": 9,
-            "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(4);\n\nreturn activePromptIndicies;\n}\n",
-            "screen": {
-              "hideInBackHistory": true
-            },
-            "operationIdx": 8
-          },
-          {
-            "_token_type": "resume",
-            "clause": "resume",
-            "_row_num": 9,
-            "operationIdx": 9
-          },
-          {
-            "_token_type": "validate",
-            "clause": "validate finalize",
-            "_sweep_name": "finalize",
-            "_row_num": 9,
-            "screen": {
-              "hideInBackHistory": true
-            },
-            "operationIdx": 10
-          },
-          {
-            "_token_type": "save_and_terminate",
-            "clause": "save and terminate",
-            "calculation": true,
-            "_row_num": 9,
-            "screen": {
-              "hideInBackHistory": true
-            },
-            "operationIdx": 11
-          },
-          {
-            "_token_type": "resume",
-            "clause": "resume",
-            "_row_num": 9,
-            "operationIdx": 12
-          }
-        ],
-        "branch_label_map": {
-          "_then2": 2,
-          "_screen3": 2,
-          "_screen5": 4,
-          "_else6": 6,
-          "_screen7": 6,
-          "_endif8": 7,
-          "_contents": 8,
-          "_screen9": 8,
-          "_finalize": 10
         }
       }
     },
@@ -8988,7 +8763,6 @@
       },
       "regdate": {
         "type": "string",
-        "elementType": "date",
         "_defn": [
           {
             "_row_num": 36,
@@ -10669,25 +10443,11 @@
           "prodiag2n_items"
         ]
       },
-      "cam1": {
-        "type": "integer",
-        "_defn": [
-          {
-            "_row_num": 127,
-            "section_name": "model"
-          }
-        ],
-        "isSessionVariable": false,
-        "elementKey": "cam1",
-        "elementName": "cam1",
-        "elementSet": "data",
-        "elementPath": "cam1"
-      },
       "defdiag1": {
         "type": "string",
         "_defn": [
           {
-            "_row_num": 128,
+            "_row_num": 127,
             "section_name": "model"
           }
         ],
@@ -10701,7 +10461,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 129,
+            "_row_num": 128,
             "section_name": "model"
           }
         ],
@@ -10710,6 +10470,20 @@
         "elementName": "defdiag2",
         "elementSet": "data",
         "elementPath": "defdiag2"
+      },
+      "roundsdate": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 129,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": false,
+        "elementKey": "roundsdate",
+        "elementName": "roundsdate",
+        "elementSet": "data",
+        "elementPath": "roundsdate"
       },
       "saida": {
         "prompt_type_name": "custom_date",
@@ -10744,25 +10518,11 @@
         "elementSet": "data",
         "elementPath": "saidacom"
       },
-      "sec1": {
-        "type": "string",
-        "_defn": [
-          {
-            "_row_num": 132,
-            "section_name": "model"
-          }
-        ],
-        "isSessionVariable": false,
-        "elementKey": "sec1",
-        "elementName": "sec1",
-        "elementSet": "data",
-        "elementPath": "sec1"
-      },
       "smxcau": {
         "type": "string",
         "_defn": [
           {
-            "_row_num": 133,
+            "_row_num": 132,
             "section_name": "model"
           }
         ],
@@ -10776,7 +10536,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 134,
+            "_row_num": 133,
             "section_name": "model"
           }
         ],
@@ -10786,51 +10546,25 @@
         "elementSet": "data",
         "elementPath": "vcartR"
       },
-      "cam1i": {
-        "type": "integer",
+      "vdcart": {
+        "type": "string",
         "_defn": [
           {
-            "_row_num": 135,
+            "_row_num": 134,
             "section_name": "model"
           }
         ],
-        "isSessionVariable": true,
-        "elementKey": "cam1i",
-        "elementName": "cam1i",
+        "isSessionVariable": false,
+        "elementKey": "vdcart",
+        "elementName": "vdcart",
         "elementSet": "data",
-        "elementPath": "cam1i"
-      },
-      "cam1na": {
-        "type": "array",
-        "items": {
-          "type": "string",
-          "elementKey": "cam1na_items",
-          "elementName": "items",
-          "elementSet": "data",
-          "elementPath": "cam1na.items",
-          "isSessionVariable": true,
-          "notUnitOfRetention": true
-        },
-        "_defn": [
-          {
-            "_row_num": 136,
-            "section_name": "model"
-          }
-        ],
-        "isSessionVariable": true,
-        "elementKey": "cam1na",
-        "elementName": "cam1na",
-        "elementSet": "data",
-        "elementPath": "cam1na",
-        "listChildElementKeys": [
-          "cam1na_items"
-        ]
+        "elementPath": "vdcart"
       },
       "defdiag1i": {
         "type": "string",
         "_defn": [
           {
-            "_row_num": 137,
+            "_row_num": 135,
             "section_name": "model"
           }
         ],
@@ -10853,7 +10587,7 @@
         },
         "_defn": [
           {
-            "_row_num": 138,
+            "_row_num": 136,
             "section_name": "model"
           }
         ],
@@ -10870,7 +10604,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 139,
+            "_row_num": 137,
             "section_name": "model"
           }
         ],
@@ -10893,7 +10627,7 @@
         },
         "_defn": [
           {
-            "_row_num": 140,
+            "_row_num": 138,
             "section_name": "model"
           }
         ],
@@ -10919,7 +10653,7 @@
         },
         "_defn": [
           {
-            "_row_num": 141,
+            "_row_num": 139,
             "section_name": "model"
           }
         ],
@@ -10941,7 +10675,7 @@
         "__rowNum__": 1,
         "_defn": [
           {
-            "_row_num": 142,
+            "_row_num": 140,
             "section_name": "model"
           }
         ],
@@ -10950,129 +10684,6 @@
         "elementName": "saidat",
         "elementSet": "data",
         "elementPath": "saidat"
-      },
-      "roundsdate": {
-        "type": "string",
-        "elementType": "date",
-        "_defn": [
-          {
-            "_row_num": 143,
-            "section_name": "model"
-          }
-        ],
-        "isSessionVariable": false,
-        "elementKey": "roundsdate",
-        "elementName": "roundsdate",
-        "elementSet": "data",
-        "elementPath": "roundsdate"
-      },
-      "test": {
-        "type": "string",
-        "_defn": [
-          {
-            "_row_num": 144,
-            "section_name": "model"
-          }
-        ],
-        "isSessionVariable": false,
-        "elementKey": "test",
-        "elementName": "test",
-        "elementSet": "data",
-        "elementPath": "test"
-      },
-      "cam1in": {
-        "type": "string",
-        "_defn": [
-          {
-            "_row_num": 145,
-            "section_name": "model"
-          }
-        ],
-        "isSessionVariable": true,
-        "elementKey": "cam1in",
-        "elementName": "cam1in",
-        "elementSet": "data",
-        "elementPath": "cam1in"
-      },
-      "cam1q": {
-        "type": "array",
-        "items": {
-          "type": "string",
-          "elementKey": "cam1q_items",
-          "elementName": "items",
-          "elementSet": "data",
-          "elementPath": "cam1q.items",
-          "isSessionVariable": true,
-          "notUnitOfRetention": true
-        },
-        "_defn": [
-          {
-            "_row_num": 146,
-            "section_name": "model"
-          }
-        ],
-        "isSessionVariable": true,
-        "elementKey": "cam1q",
-        "elementName": "cam1q",
-        "elementSet": "data",
-        "elementPath": "cam1q",
-        "listChildElementKeys": [
-          "cam1q_items"
-        ]
-      },
-      "roundq": {
-        "type": "string",
-        "_defn": [
-          {
-            "_row_num": 147,
-            "section_name": "model"
-          }
-        ],
-        "isSessionVariable": true,
-        "elementKey": "roundq",
-        "elementName": "roundq",
-        "elementSet": "data",
-        "elementPath": "roundq"
-      },
-      "sec1in": {
-        "type": "string",
-        "_defn": [
-          {
-            "_row_num": 148,
-            "section_name": "model"
-          }
-        ],
-        "isSessionVariable": true,
-        "elementKey": "sec1in",
-        "elementName": "sec1in",
-        "elementSet": "data",
-        "elementPath": "sec1in"
-      },
-      "sec1q": {
-        "type": "array",
-        "items": {
-          "type": "string",
-          "elementKey": "sec1q_items",
-          "elementName": "items",
-          "elementSet": "data",
-          "elementPath": "sec1q.items",
-          "isSessionVariable": true,
-          "notUnitOfRetention": true
-        },
-        "_defn": [
-          {
-            "_row_num": 149,
-            "section_name": "model"
-          }
-        ],
-        "isSessionVariable": true,
-        "elementKey": "sec1q",
-        "elementName": "sec1q",
-        "elementSet": "data",
-        "elementPath": "sec1q",
-        "listChildElementKeys": [
-          "sec1q_items"
-        ]
       },
       "camoq_items": {
         "type": "string",
@@ -11290,15 +10901,6 @@
         "isSessionVariable": true,
         "notUnitOfRetention": true
       },
-      "cam1na_items": {
-        "type": "string",
-        "elementKey": "cam1na_items",
-        "elementName": "items",
-        "elementSet": "data",
-        "elementPath": "cam1na.items",
-        "isSessionVariable": true,
-        "notUnitOfRetention": true
-      },
       "defdiag1n_items": {
         "type": "string",
         "elementKey": "defdiag1n_items",
@@ -11323,24 +10925,6 @@
         "elementName": "items",
         "elementSet": "data",
         "elementPath": "saidana.items",
-        "isSessionVariable": true,
-        "notUnitOfRetention": true
-      },
-      "cam1q_items": {
-        "type": "string",
-        "elementKey": "cam1q_items",
-        "elementName": "items",
-        "elementSet": "data",
-        "elementPath": "cam1q.items",
-        "isSessionVariable": true,
-        "notUnitOfRetention": true
-      },
-      "sec1q_items": {
-        "type": "string",
-        "elementKey": "sec1q_items",
-        "elementName": "items",
-        "elementSet": "data",
-        "elementPath": "sec1q.items",
         "isSessionVariable": true,
         "notUnitOfRetention": true
       },
