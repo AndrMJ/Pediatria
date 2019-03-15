@@ -58,12 +58,12 @@ function render() {
         odkTables.addRowWithSurvey(
         		null,
                 'triagem',
-                'triagem',
+                'lateroundsQuick',
                 null,
                 null);
     };
     addClient.setAttribute('class', 'launchForm');
-    addClient.innerHTML = 'Add Client';
+    addClient.innerHTML = 'Add child';
     document.getElementById('searchBox').appendChild(addClient);
 
     for (var i = 0; i < triagem.getCount(); i++) {
@@ -88,8 +88,9 @@ function render() {
 
         // make list entry
         // Only show not patients not yet checked today
-       if ((checkSmxcau === "55" && today > rdate) || (checkSmxcau === "55" && roundsdateEntered === null)){
-            /*    Creating the item space    */
+       //if ((checkSmxcau === "55" && today > rdate) || (checkSmxcau === "55" && roundsdateEntered === null)){
+        if (checkSmxcau === "55"){    
+        /*    Creating the item space    */
             var item = document.createElement('li');
             item.setAttribute('class', 'item_space');
             item.setAttribute(

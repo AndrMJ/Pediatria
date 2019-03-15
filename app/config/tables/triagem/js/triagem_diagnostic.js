@@ -30,7 +30,7 @@ function cbSRSuccess(searchData) {
 				'triagem',
 				'_id = ?',
 				[rowId],
-				'config/tables/triagem/html/triagem_list.html');
+				'config/tables/triagem/html/triagem_diagnostic.html');
     } else {
         document.getElementById("search").value = "";
         document.getElementsByName("query")[0].placeholder="Client not found";
@@ -38,7 +38,7 @@ function cbSRSuccess(searchData) {
 }
 
 function cbSRFailure(error) {
-    console.log('triagem_list: cbSRFailure failed with error: ' + error);
+    console.log('triagem_diagnostic: cbSRFailure failed with error: ' + error);
 }
 
 // filters list view by regdate entered by user
@@ -52,18 +52,18 @@ function getResults() {
 // displays list view of patients
 function render() {
 
-    // create button that adds patients to the system - launches triagem form
+    // create button that adds patients to the system - launches diagnosticQuick form
     var addClient = document.createElement('p');
     addClient.onclick = function() {
         odkTables.addRowWithSurvey(
         		null,
                 'triagem',
-                'triagem',
+                'diagnosticQuick',
                 null,
                 null);
     };
     addClient.setAttribute('class', 'launchForm');
-    addClient.innerHTML = 'Add Client';
+    addClient.innerHTML = 'Add child';
     document.getElementById('searchBox').appendChild(addClient);
 
     for (var i = 0; i < triagem.getCount(); i++) {

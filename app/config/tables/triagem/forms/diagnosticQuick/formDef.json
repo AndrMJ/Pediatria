@@ -6,15 +6,14 @@
         "_row_num": 2
       },
       {
-        "clause": "goto _finalize",
-        "comments": "skips the finalize screen where the user chooses to save as incomplete or finalized and instead saves as finalized",
+        "type": "finalize",
         "_row_num": 3
       }
     ],
     "settings": [
       {
         "setting_name": "form_id",
-        "value": "diagnostic",
+        "value": "diagnosticQuick",
         "_row_num": 2
       },
       {
@@ -32,8 +31,8 @@
         "display": {
           "title": {
             "text": {
-              "default": "Diagnostic",
-              "portuguese": "Diagnostic"
+              "default": "Add child from medical book",
+              "portuguese": "Add child from medical book"
             }
           }
         },
@@ -76,13 +75,16 @@
         "_row_num": 2
       },
       {
-        "type": "select_one",
-        "values_list": "YesNo",
-        "name": "hospitzd",
+        "type": "text",
+        "name": "regdate",
         "display": {
           "prompt": {
-            "text": "Is the child hospitalized"
+            "text": "Day of registration"
           }
+        },
+        "required": true,
+        "inputAttributes": {
+          "type": "date"
         },
         "_row_num": 3
       },
@@ -95,6 +97,158 @@
         "_row_num": 5
       },
       {
+        "type": "text",
+        "name": "nome",
+        "display": {
+          "prompt": {
+            "text": {
+              "default": "Name of child",
+              "portuguese": "Nome do filho(a)"
+            }
+          }
+        },
+        "inputAttributes": {
+          "autocomplete": "off"
+        },
+        "_row_num": 6
+      },
+      {
+        "type": "select_one",
+        "values_list": "mf",
+        "name": "sex",
+        "display": {
+          "prompt": {
+            "text": {
+              "default": "Gender",
+              "portuguese": "Genero"
+            }
+          }
+        },
+        "_row_num": 7
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 8
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 9
+      },
+      {
+        "type": "decimal",
+        "name": "peso",
+        "display": {
+          "prompt": {
+            "text": {
+              "default": "Weight of child",
+              "portuguese": "Peso da criança"
+            }
+          }
+        },
+        "inputAttributes": {
+          "autocomplete": "off"
+        },
+        "_row_num": 10
+      },
+      {
+        "type": "integer",
+        "name": "anos",
+        "display": {
+          "prompt": {
+            "text": {
+              "default": "Age of child (years)",
+              "portuguese": "Idade da criança (anos)"
+            }
+          }
+        },
+        "inputAttributes": {
+          "autocomplete": "off"
+        },
+        "_row_num": 11
+      },
+      {
+        "type": "integer",
+        "name": "meses",
+        "display": {
+          "prompt": {
+            "text": {
+              "default": "Age of child (months)",
+              "portuguese": "Idade da criança (meses)"
+            }
+          },
+          "constraint_message": {
+            "text": {
+              "default": "Must be 12 or less:",
+              "portuguese": "Deve ser 12 ou menos"
+            }
+          }
+        },
+        "constraint": "data('meses') <= 12",
+        "inputAttributes": {
+          "autocomplete": "off"
+        },
+        "_row_num": 12
+      },
+      {
+        "type": "integer",
+        "name": "dias",
+        "display": {
+          "prompt": {
+            "text": {
+              "default": "Age of child (days)",
+              "portuguese": "Idade da criança (dias)"
+            }
+          }
+        },
+        "inputAttributes": {
+          "autocomplete": "off"
+        },
+        "_row_num": 13
+      },
+      {
+        "type": "decimal",
+        "name": "tempr",
+        "display": {
+          "prompt": {
+            "text": {
+              "default": "Temperature",
+              "portuguese": "Temperatura"
+            }
+          }
+        },
+        "inputAttributes": {
+          "autocomplete": "off"
+        },
+        "_row_num": 14
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 15
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 16
+      },
+      {
+        "type": "select_one",
+        "values_list": "YesNo",
+        "name": "hospitzd",
+        "display": {
+          "prompt": {
+            "text": "Is the child hospitalized"
+          }
+        },
+        "_row_num": 17
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 18
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 19
+      },
+      {
         "type": "select_one_dropdown",
         "values_list": "diag",
         "name": "prodiag1",
@@ -103,28 +257,28 @@
             "text": "Diagnosis 1"
           }
         },
-        "_row_num": 6
+        "_row_num": 20
       },
       {
         "type": "select_multiple",
         "values_list": "diagNo",
         "name": "prodiag1n",
-        "_row_num": 7
+        "_row_num": 21
       },
       {
         "clause": "if",
         "condition": "data('prodiag1n') !=null",
-        "_row_num": 8
+        "_row_num": 22
       },
       {
         "type": "assign",
         "name": "prodiag1",
         "calculation": 9999,
-        "_row_num": 9
+        "_row_num": 23
       },
       {
         "clause": "end if",
-        "_row_num": 10
+        "_row_num": 24
       },
       {
         "type": "select_one_dropdown",
@@ -135,32 +289,32 @@
             "text": "Diagnosis 2"
           }
         },
-        "_row_num": 11
+        "_row_num": 25
       },
       {
         "type": "select_multiple",
         "values_list": "diagNo",
         "name": "prodiag2n",
-        "_row_num": 12
+        "_row_num": 26
       },
       {
         "clause": "if",
         "condition": "data('prodiag2n') !=null",
-        "_row_num": 13
+        "_row_num": 27
       },
       {
         "type": "assign",
         "name": "prodiag2",
         "calculation": 9999,
-        "_row_num": 14
+        "_row_num": 28
       },
       {
         "clause": "end if",
-        "_row_num": 15
+        "_row_num": 29
       },
       {
         "clause": "end screen",
-        "_row_num": 16
+        "_row_num": 30
       },
       {
         "required": true,
@@ -3763,7 +3917,7 @@
     "settings": {
       "form_id": {
         "setting_name": "form_id",
-        "value": "diagnostic",
+        "value": "diagnosticQuick",
         "_row_num": 2
       },
       "form_version": {
@@ -3781,8 +3935,8 @@
         "display": {
           "title": {
             "text": {
-              "default": "Diagnostic",
-              "portuguese": "Diagnostic"
+              "default": "Add child from medical book",
+              "portuguese": "Add child from medical book"
             }
           }
         },
@@ -3858,8 +4012,8 @@
         "display": {
           "title": {
             "text": {
-              "default": "Diagnostic",
-              "portuguese": "Diagnostic"
+              "default": "Add child from medical book",
+              "portuguese": "Add child from medical book"
             }
           }
         },
@@ -6626,6 +6780,10 @@
         "type": "integer",
         "_defn": [
           {
+            "_row_num": 11,
+            "section_name": "survey"
+          },
+          {
             "_row_num": 2,
             "section_name": "model"
           }
@@ -6824,6 +6982,10 @@
         "type": "integer",
         "_defn": [
           {
+            "_row_num": 13,
+            "section_name": "survey"
+          },
+          {
             "_row_num": 20,
             "section_name": "model"
           }
@@ -6913,6 +7075,10 @@
         "type": "integer",
         "_defn": [
           {
+            "_row_num": 12,
+            "section_name": "survey"
+          },
+          {
             "_row_num": 28,
             "section_name": "model"
           }
@@ -6923,6 +7089,10 @@
       "nome": {
         "type": "string",
         "_defn": [
+          {
+            "_row_num": 6,
+            "section_name": "survey"
+          },
           {
             "_row_num": 29,
             "section_name": "model"
@@ -6956,6 +7126,10 @@
       "peso": {
         "type": "number",
         "_defn": [
+          {
+            "_row_num": 10,
+            "section_name": "survey"
+          },
           {
             "_row_num": 32,
             "section_name": "model"
@@ -7002,6 +7176,10 @@
         "type": "string",
         "_defn": [
           {
+            "_row_num": 3,
+            "section_name": "survey"
+          },
+          {
             "_row_num": 36,
             "section_name": "model"
           }
@@ -7035,7 +7213,12 @@
       },
       "sex": {
         "type": "string",
+        "valuesList": "mf",
         "_defn": [
+          {
+            "_row_num": 7,
+            "section_name": "survey"
+          },
           {
             "_row_num": 39,
             "section_name": "model"
@@ -7113,6 +7296,10 @@
       "tempr": {
         "type": "number",
         "_defn": [
+          {
+            "_row_num": 14,
+            "section_name": "survey"
+          },
           {
             "_row_num": 46,
             "section_name": "model"
@@ -8099,7 +8286,7 @@
         "valuesList": "YesNo",
         "_defn": [
           {
-            "_row_num": 3,
+            "_row_num": 17,
             "section_name": "survey"
           },
           {
@@ -8115,7 +8302,7 @@
         "valuesList": "diag",
         "_defn": [
           {
-            "_row_num": 6,
+            "_row_num": 20,
             "section_name": "survey"
           },
           {
@@ -8131,7 +8318,7 @@
         "valuesList": "diag",
         "_defn": [
           {
-            "_row_num": 11,
+            "_row_num": 25,
             "section_name": "survey"
           },
           {
@@ -8151,7 +8338,7 @@
         "valuesList": "diagNo",
         "_defn": [
           {
-            "_row_num": 7,
+            "_row_num": 21,
             "section_name": "survey"
           },
           {
@@ -8171,7 +8358,7 @@
         "valuesList": "diagNo",
         "_defn": [
           {
-            "_row_num": 12,
+            "_row_num": 26,
             "section_name": "survey"
           },
           {
@@ -8553,12 +8740,21 @@
             "display": {
               "title": {
                 "text": {
-                  "default": "Diagnostic",
-                  "portuguese": "Diagnostic"
+                  "default": "Add child from medical book",
+                  "portuguese": "Add child from medical book"
                 }
               }
             },
             "_branch_label_enclosing_screen": "survey/0"
+          },
+          {
+            "type": "finalize",
+            "_row_num": 3,
+            "__rowNum__": 2,
+            "_token_type": "prompt",
+            "_type": "finalize",
+            "_branch_label_enclosing_screen": "initial/_screen3",
+            "promptIdx": 1
           },
           {
             "_token_type": "prompt",
@@ -8566,7 +8762,7 @@
             "_type": "contents",
             "_row_num": 4,
             "_branch_label_enclosing_screen": "initial/_screen4",
-            "promptIdx": 1
+            "promptIdx": 2
           }
         ],
         "validation_tag_map": {
@@ -8582,12 +8778,9 @@
             "operationIdx": 0
           },
           {
-            "clause": "goto _finalize",
-            "comments": "skips the finalize screen where the user chooses to save as incomplete or finalized and instead saves as finalized",
             "_row_num": 3,
-            "__rowNum__": 2,
-            "_token_type": "goto_label",
-            "_branch_label": "_finalize",
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(1);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 1
           },
           {
@@ -8599,7 +8792,7 @@
           {
             "_row_num": 4,
             "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(1);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(2);\n\nreturn activePromptIndicies;\n}\n",
             "screen": {
               "hideInBackHistory": true
             },
@@ -8639,6 +8832,7 @@
           }
         ],
         "branch_label_map": {
+          "_screen3": 1,
           "_contents": 3,
           "_screen4": 3,
           "_finalize": 5
@@ -8650,6 +8844,177 @@
         "reachable_sections": {},
         "prompts": [
           {
+            "type": "text",
+            "name": "regdate",
+            "display": {
+              "prompt": {
+                "text": "Day of registration"
+              }
+            },
+            "required": true,
+            "inputAttributes": {
+              "type": "date"
+            },
+            "_row_num": 3,
+            "__rowNum__": 2,
+            "_token_type": "prompt",
+            "_type": "text",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 0
+          },
+          {
+            "type": "text",
+            "name": "nome",
+            "display": {
+              "prompt": {
+                "text": {
+                  "default": "Name of child",
+                  "portuguese": "Nome do filho(a)"
+                }
+              }
+            },
+            "inputAttributes": {
+              "autocomplete": "off"
+            },
+            "_row_num": 6,
+            "__rowNum__": 5,
+            "_token_type": "prompt",
+            "_type": "text",
+            "_branch_label_enclosing_screen": "survey/_screen5",
+            "promptIdx": 1
+          },
+          {
+            "type": "select_one",
+            "values_list": "mf",
+            "name": "sex",
+            "display": {
+              "prompt": {
+                "text": {
+                  "default": "Gender",
+                  "portuguese": "Genero"
+                }
+              }
+            },
+            "_row_num": 7,
+            "__rowNum__": 6,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen5",
+            "promptIdx": 2
+          },
+          {
+            "type": "decimal",
+            "name": "peso",
+            "display": {
+              "prompt": {
+                "text": {
+                  "default": "Weight of child",
+                  "portuguese": "Peso da criança"
+                }
+              }
+            },
+            "inputAttributes": {
+              "autocomplete": "off"
+            },
+            "_row_num": 10,
+            "__rowNum__": 9,
+            "_token_type": "prompt",
+            "_type": "decimal",
+            "_branch_label_enclosing_screen": "survey/_screen9",
+            "promptIdx": 3
+          },
+          {
+            "type": "integer",
+            "name": "anos",
+            "display": {
+              "prompt": {
+                "text": {
+                  "default": "Age of child (years)",
+                  "portuguese": "Idade da criança (anos)"
+                }
+              }
+            },
+            "inputAttributes": {
+              "autocomplete": "off"
+            },
+            "_row_num": 11,
+            "__rowNum__": 10,
+            "_token_type": "prompt",
+            "_type": "integer",
+            "_branch_label_enclosing_screen": "survey/_screen9",
+            "promptIdx": 4
+          },
+          {
+            "type": "integer",
+            "name": "meses",
+            "display": {
+              "prompt": {
+                "text": {
+                  "default": "Age of child (months)",
+                  "portuguese": "Idade da criança (meses)"
+                }
+              },
+              "constraint_message": {
+                "text": {
+                  "default": "Must be 12 or less:",
+                  "portuguese": "Deve ser 12 ou menos"
+                }
+              }
+            },
+            "constraint": "data('meses') <= 12",
+            "inputAttributes": {
+              "autocomplete": "off"
+            },
+            "_row_num": 12,
+            "__rowNum__": 11,
+            "_token_type": "prompt",
+            "_type": "integer",
+            "_branch_label_enclosing_screen": "survey/_screen9",
+            "promptIdx": 5
+          },
+          {
+            "type": "integer",
+            "name": "dias",
+            "display": {
+              "prompt": {
+                "text": {
+                  "default": "Age of child (days)",
+                  "portuguese": "Idade da criança (dias)"
+                }
+              }
+            },
+            "inputAttributes": {
+              "autocomplete": "off"
+            },
+            "_row_num": 13,
+            "__rowNum__": 12,
+            "_token_type": "prompt",
+            "_type": "integer",
+            "_branch_label_enclosing_screen": "survey/_screen9",
+            "promptIdx": 6
+          },
+          {
+            "type": "decimal",
+            "name": "tempr",
+            "display": {
+              "prompt": {
+                "text": {
+                  "default": "Temperature",
+                  "portuguese": "Temperatura"
+                }
+              }
+            },
+            "inputAttributes": {
+              "autocomplete": "off"
+            },
+            "_row_num": 14,
+            "__rowNum__": 13,
+            "_token_type": "prompt",
+            "_type": "decimal",
+            "_branch_label_enclosing_screen": "survey/_screen9",
+            "promptIdx": 7
+          },
+          {
             "type": "select_one",
             "values_list": "YesNo",
             "name": "hospitzd",
@@ -8658,12 +9023,12 @@
                 "text": "Is the child hospitalized"
               }
             },
-            "_row_num": 3,
-            "__rowNum__": 2,
+            "_row_num": 17,
+            "__rowNum__": 16,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 0
+            "_branch_label_enclosing_screen": "survey/_screen16",
+            "promptIdx": 8
           },
           {
             "type": "select_one_dropdown",
@@ -8674,23 +9039,23 @@
                 "text": "Diagnosis 1"
               }
             },
-            "_row_num": 6,
-            "__rowNum__": 5,
+            "_row_num": 20,
+            "__rowNum__": 19,
             "_token_type": "prompt",
             "_type": "select_one_dropdown",
-            "_branch_label_enclosing_screen": "survey/_screen5",
-            "promptIdx": 1
+            "_branch_label_enclosing_screen": "survey/_screen19",
+            "promptIdx": 9
           },
           {
             "type": "select_multiple",
             "values_list": "diagNo",
             "name": "prodiag1n",
-            "_row_num": 7,
-            "__rowNum__": 6,
+            "_row_num": 21,
+            "__rowNum__": 20,
             "_token_type": "prompt",
             "_type": "select_multiple",
-            "_branch_label_enclosing_screen": "survey/_screen5",
-            "promptIdx": 2
+            "_branch_label_enclosing_screen": "survey/_screen19",
+            "promptIdx": 10
           },
           {
             "type": "select_one_dropdown",
@@ -8701,35 +9066,38 @@
                 "text": "Diagnosis 2"
               }
             },
-            "_row_num": 11,
-            "__rowNum__": 10,
+            "_row_num": 25,
+            "__rowNum__": 24,
             "_token_type": "prompt",
             "_type": "select_one_dropdown",
-            "_branch_label_enclosing_screen": "survey/_screen5",
-            "promptIdx": 3
+            "_branch_label_enclosing_screen": "survey/_screen19",
+            "promptIdx": 11
           },
           {
             "type": "select_multiple",
             "values_list": "diagNo",
             "name": "prodiag2n",
-            "_row_num": 12,
-            "__rowNum__": 11,
+            "_row_num": 26,
+            "__rowNum__": 25,
             "_token_type": "prompt",
             "_type": "select_multiple",
-            "_branch_label_enclosing_screen": "survey/_screen5",
-            "promptIdx": 4
+            "_branch_label_enclosing_screen": "survey/_screen19",
+            "promptIdx": 12
           },
           {
             "_token_type": "prompt",
             "type": "contents",
             "_type": "contents",
-            "_row_num": 17,
-            "_branch_label_enclosing_screen": "survey/_screen17",
-            "promptIdx": 5
+            "_row_num": 31,
+            "_branch_label_enclosing_screen": "survey/_screen31",
+            "promptIdx": 13
           }
         ],
         "validation_tag_map": {
-          "finalize": []
+          "finalize": [
+            0,
+            5
+          ]
         },
         "operations": [
           {
@@ -8753,40 +9121,85 @@
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 16,
-              "__rowNum__": 15,
+              "_row_num": 8,
+              "__rowNum__": 7,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(1);\nactivePromptIndicies.push(2);\nif (data('prodiag1n') !=null) {\nassign('prodiag1', 9999);\n}\nactivePromptIndicies.push(3);\nactivePromptIndicies.push(4);\nif (data('prodiag2n') !=null) {\nassign('prodiag2', 9999);\n}\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(1);\nactivePromptIndicies.push(2);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 1
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 9,
+            "__rowNum__": 8,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 15,
+              "__rowNum__": 14,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(3);\nactivePromptIndicies.push(4);\nactivePromptIndicies.push(5);\nactivePromptIndicies.push(6);\nactivePromptIndicies.push(7);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 2
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 16,
+            "__rowNum__": 15,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 18,
+              "__rowNum__": 17,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(8);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 3
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 19,
+            "__rowNum__": 18,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 30,
+              "__rowNum__": 29,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(9);\nactivePromptIndicies.push(10);\nif (data('prodiag1n') !=null) {\nassign('prodiag1', 9999);\n}\nactivePromptIndicies.push(11);\nactivePromptIndicies.push(12);\nif (data('prodiag2n') !=null) {\nassign('prodiag2', 9999);\n}\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 4
           },
           {
             "_token_type": "exit_section",
             "clause": "exit section",
-            "_row_num": 17,
-            "operationIdx": 2
+            "_row_num": 31,
+            "operationIdx": 5
           },
           {
-            "_row_num": 17,
+            "_row_num": 31,
             "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(5);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(13);\n\nreturn activePromptIndicies;\n}\n",
             "screen": {
               "hideInBackHistory": true
             },
-            "operationIdx": 3
+            "operationIdx": 6
           },
           {
             "_token_type": "resume",
             "clause": "resume",
-            "_row_num": 17,
-            "operationIdx": 4
+            "_row_num": 31,
+            "operationIdx": 7
           }
         ],
         "branch_label_map": {
           "_screen2": 0,
           "_screen5": 1,
-          "_contents": 3,
-          "_screen17": 3
+          "_screen9": 2,
+          "_screen16": 3,
+          "_screen19": 4,
+          "_contents": 6,
+          "_screen31": 6
         }
       }
     },
@@ -8794,6 +9207,10 @@
       "anos": {
         "type": "integer",
         "_defn": [
+          {
+            "_row_num": 11,
+            "section_name": "survey"
+          },
           {
             "_row_num": 2,
             "section_name": "model"
@@ -9047,6 +9464,10 @@
         "type": "integer",
         "_defn": [
           {
+            "_row_num": 13,
+            "section_name": "survey"
+          },
+          {
             "_row_num": 20,
             "section_name": "model"
           }
@@ -9160,6 +9581,10 @@
         "type": "integer",
         "_defn": [
           {
+            "_row_num": 12,
+            "section_name": "survey"
+          },
+          {
             "_row_num": 28,
             "section_name": "model"
           }
@@ -9173,6 +9598,10 @@
       "nome": {
         "type": "string",
         "_defn": [
+          {
+            "_row_num": 6,
+            "section_name": "survey"
+          },
           {
             "_row_num": 29,
             "section_name": "model"
@@ -9215,6 +9644,10 @@
       "peso": {
         "type": "number",
         "_defn": [
+          {
+            "_row_num": 10,
+            "section_name": "survey"
+          },
           {
             "_row_num": 32,
             "section_name": "model"
@@ -9273,6 +9706,10 @@
         "type": "string",
         "_defn": [
           {
+            "_row_num": 3,
+            "section_name": "survey"
+          },
+          {
             "_row_num": 36,
             "section_name": "model"
           }
@@ -9315,7 +9752,12 @@
       },
       "sex": {
         "type": "string",
+        "valuesList": "mf",
         "_defn": [
+          {
+            "_row_num": 7,
+            "section_name": "survey"
+          },
           {
             "_row_num": 39,
             "section_name": "model"
@@ -9414,6 +9856,10 @@
       "tempr": {
         "type": "number",
         "_defn": [
+          {
+            "_row_num": 14,
+            "section_name": "survey"
+          },
           {
             "_row_num": 46,
             "section_name": "model"
@@ -10795,7 +11241,7 @@
         "valuesList": "YesNo",
         "_defn": [
           {
-            "_row_num": 3,
+            "_row_num": 17,
             "section_name": "survey"
           },
           {
@@ -10814,7 +11260,7 @@
         "valuesList": "diag",
         "_defn": [
           {
-            "_row_num": 6,
+            "_row_num": 20,
             "section_name": "survey"
           },
           {
@@ -10833,7 +11279,7 @@
         "valuesList": "diag",
         "_defn": [
           {
-            "_row_num": 11,
+            "_row_num": 25,
             "section_name": "survey"
           },
           {
@@ -10861,7 +11307,7 @@
         "valuesList": "diagNo",
         "_defn": [
           {
-            "_row_num": 7,
+            "_row_num": 21,
             "section_name": "survey"
           },
           {
@@ -10892,7 +11338,7 @@
         "valuesList": "diagNo",
         "_defn": [
           {
-            "_row_num": 12,
+            "_row_num": 26,
             "section_name": "survey"
           },
           {

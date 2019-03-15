@@ -78,14 +78,14 @@ function render() {
         
         // make list entry
         // Only show patients not yet checked for admission 
-       if (checkHosp === '1' && dischargeEntered === null){
+    	if (checkHosp === '1' && checkSmxcau === null){
             /*    Creating the item space    */
             var item = document.createElement('li');
             item.setAttribute('class', 'item_space');
             item.setAttribute(
                     'onClick',
                     'handleClick("' + triagem.getRowId(i) + '")');
-            item.innerHTML = regdateEntered.substring(8,10) + regdateEntered.substring(4,7) + '-' + regdateEntered.substring(0,4);
+            item.innerHTML = nameEntered;
             document.getElementById('list').appendChild(item);
 
             var chevron = document.createElement('img');
