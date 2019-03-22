@@ -68,11 +68,11 @@ function render() {
 
     for (var i = 0; i < triagem.getCount(); i++) {
 
-        var regdateEntered = triagem.getData(i, 'regdate');
         var nameEntered = triagem.getData(i, 'nome');
         var dobEntered = triagem.getData(i, 'dob');
         var	sexEntered = triagem.getData(i, 'sex');
         var pesoEntered = triagem.getData(i, 'peso');
+        var tempEntered = triagem.getData(i, 'tempr')
         var bairroEntered = triagem.getData(i, 'bairro');
         var checkHosp = triagem.getData(i, 'hospitzd');
 
@@ -85,7 +85,7 @@ function render() {
             item.setAttribute(
                     'onClick',
                     'handleClick("' + triagem.getRowId(i) + '")');
-            item.innerHTML = regdateEntered.substring(8,10) + regdateEntered.substring(4,7) + '-' + regdateEntered.substring(0,4);
+            item.innerHTML = nameEntered;
             document.getElementById('list').appendChild(item);
 
             var chevron = document.createElement('img');
@@ -96,19 +96,13 @@ function render() {
             item.appendChild(chevron);
 
             // create sub-list in item space
-            //  Name information
-            var name = document.createElement('li');
-            name.setAttribute('class', 'detail');
-            name.innerHTML = 'Name: ' + nameEntered;
-            item.appendChild(name);
-
             //  DoB information
             var dob = document.createElement('li');
             dob.setAttribute('class', 'detail');
             if(dobEntered !== null) {
             	dobEntered = dobEntered.substring(8,10) + dobEntered.substring(4,7) + '-' + dobEntered.substring(0,4);
             }
-            dob.innerHTML = 'DoB: ' + dobEntered;
+            dob.innerHTML = 'Dob: ' + dobEntered;
             item.appendChild(dob);
             
             //  Sex information
@@ -122,10 +116,10 @@ function render() {
             sex.innerHTML = 'Sex: ' + sexEntered;
             item.appendChild(sex);
             
-            //  Weight information
+            //  Weight and temperature information
             var peso = document.createElement('li');
             peso.setAttribute('class', 'detail');
-            peso.innerHTML = 'Weight: ' + pesoEntered;
+            peso.innerHTML = 'Weight: ' + pesoEntered + ',' + '     Temperature: ' + tempEntered;
             item.appendChild(peso);
             
             //  Bairro information

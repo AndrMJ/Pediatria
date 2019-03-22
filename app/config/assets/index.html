@@ -45,19 +45,6 @@
          // Send data option that luanches send finalized forms screen in
             var rounds = document.createElement("button");
             rounds.setAttribute("id", "button3");
-            rounds.innerHTML = "Paulo - check";
-            rounds.onclick = function() {
-                odkTables.openTableToListView(null,
-                    'triagem',
-                    null,
-                    null,
-                    'config/tables/triagem/html/triagem_hospcheck.html');
-            }
-            document.getElementById("wrapper").appendChild(rounds); 
-            
-         // Send data option that luanches send finalized forms screen in
-            var rounds = document.createElement("button");
-            rounds.setAttribute("id", "button4");
             rounds.innerHTML = "Paulo - rounds";
             rounds.onclick = function() {
                 odkTables.openTableToListView(null,
@@ -70,7 +57,7 @@
             
          // Send data option that luanches send finalized forms screen in
             var rounds = document.createElement("button");
-            rounds.setAttribute("id", "button5");
+            rounds.setAttribute("id", "button4");
             rounds.innerHTML = "Lola";
             rounds.onclick = function() {
                 odkTables.openTableToListView(null,
@@ -79,7 +66,21 @@
                     null,
                     'config/tables/triagem/html/triagem_laterounds.html');
             }
+            
+            document.getElementById("wrapper").appendChild(rounds);
+         // Send data option that luanches send finalized forms screen in
+            var rounds = document.createElement("button");
+            rounds.setAttribute("id", "button5");
+            rounds.innerHTML = "Paulo - discharge";
+            rounds.onclick = function() {
+                odkTables.openTableToListView(null,
+                    'triagem',
+                    null,
+                    null,
+                    'config/tables/triagem/html/triagem_discharge.html');
+            }
             document.getElementById("wrapper").appendChild(rounds); 
+            
         }
         
         </script>

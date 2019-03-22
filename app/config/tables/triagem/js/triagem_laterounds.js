@@ -73,7 +73,7 @@ function render() {
         var dobEntered = triagem.getData(i, 'dob');
         var	sexEntered = triagem.getData(i, 'sex');
         var checkSmxcau = triagem.getData(i, 'smxcau');
-        var roundsdateEntered = triagem.getData(i, 'roundsdate');
+        var roundsdateEntered = triagem.getData(i, 'roundsdateinit');
         var q = new Date();
         var m = q.getMonth();
         var d = q.getDate();

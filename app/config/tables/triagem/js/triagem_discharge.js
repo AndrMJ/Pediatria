@@ -15,7 +15,7 @@ function handleClick(index) {
         		null,
                 'triagem',
                 index,
-                'hospcheck',
+                'discharge',
                 null);
     }
 }
@@ -30,7 +30,7 @@ function cbSRSuccess(searchData) {
 				'triagem',
 				'_id = ?',
 				[rowId],
-				'config/tables/triagem/html/triagem_hospcheck.html');
+				'config/tables/triagem/html/triagem_discharge.html');
     } else {
         document.getElementById("search").value = "";
         document.getElementsByName("query")[0].placeholder="Client not found";
@@ -58,7 +58,7 @@ function render() {
         odkTables.addRowWithSurvey(
         		null,
                 'triagem',
-                'hospcheckQuick',
+                'dischargeQuick',
                 null,
                 null);
     };
@@ -78,7 +78,7 @@ function render() {
 
         // make list entry
         // Only show patients not yet checked for admission 
-       if (checkHosp === null){
+       if (checkHosp === "1"){
             /*    Creating the item space    */
             var item = document.createElement('li');
             item.setAttribute('class', 'item_space');
@@ -158,7 +158,7 @@ function cbSuccess(result) {
 }
 
 function cbFailure(error) {
-    console.log('triagem_hospcheck: failed with error: ' + error);
+    console.log('triagem_discharge: failed with error: ' + error);
 }
 
 function display() {
