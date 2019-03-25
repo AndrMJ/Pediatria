@@ -3421,7 +3421,7 @@ promptTypes.acknowledge = promptTypes.select.extend({
 
         that.renderContext.choices = [{
             name: "acknowledge",
-            display: that.acknLabel.display,
+            display:{"title":{"text": that.acknLabel.text}},
             checked: acknowledged
         }];
 
@@ -3445,7 +3445,7 @@ promptTypes.acknowledge = promptTypes.select.extend({
         }
         that.renderContext.choices = [{
             name: "acknowledge",
-            display: that.acknLabel.display,
+            display:{"title":{"text": that.acknLabel.text}},
             checked: acknowledged
         }];
         ctxt.success();
@@ -3454,3 +3454,4 @@ promptTypes.acknowledge = promptTypes.select.extend({
 
 return promptTypes;
 });
+
