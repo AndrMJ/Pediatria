@@ -16,50 +16,49 @@
         function display() {
 
             /*    Screen new client option that launches new client list view */
-            var newClient = document.createElement("button");
-            newClient.setAttribute("id", "button1");
-            newClient.innerHTML = "Triagem";
-            newClient.onclick = function() {
+            var newChild = document.createElement("button");
+            newChild.setAttribute("id", "button1");
+            newChild.innerHTML = "Triagem";
+            newChild.onclick = function() {
                 odkTables.addRowWithSurvey(null,
                     'triagem',
                     'triagem',
                     null,
                     null);
             }
-            document.getElementById("wrapper").appendChild(newClient);    
+            document.getElementById("wrapper").appendChild(newChild);    
 
             // Follow up with existing client option that launches
-            // 'femaleClients' table list view
-            var followUp = document.createElement("button");
-            followUp.setAttribute("id", "button2");
-            followUp.innerHTML = "Diagnoses";
-            followUp.onclick = function() {
+            var diagnostic = document.createElement("button");
+            diagnostic.setAttribute("id", "button2");
+            diagnostic.innerHTML = "Diagnoses";
+            diagnostic.onclick = function() {
                 odkTables.openTableToListView(null,
                     'triagem',
                     null,
                     null,
-                    'config/tables/triagem/html/triagem_diagnostic.html');
+                    'config/tables/triagem/html/triagem_diagnostic_new.html');
             }
-            document.getElementById("wrapper").appendChild(followUp);    
+            document.getElementById("wrapper").appendChild(diagnostic);    
 
          // Send data option that luanches send finalized forms screen in
-            var rounds = document.createElement("button");
-            rounds.setAttribute("id", "button3");
-            rounds.innerHTML = "Paulo - rounds";
-            rounds.onclick = function() {
+            var initrounds = document.createElement("button");
+            initrounds.setAttribute("id", "button3");
+            initrounds.innerHTML = "Paulo - rounds";
+            initrounds.onclick = function() {
                 odkTables.openTableToListView(null,
                     'triagem',
                     null,
                     null,
                     'config/tables/triagem/html/triagem_initrounds.html');
             }
-            document.getElementById("wrapper").appendChild(rounds); 
+            document.getElementById("wrapper").appendChild(initrounds); 
             
          // Send data option that luanches send finalized forms screen in
-            var rounds = document.createElement("button");
-            rounds.setAttribute("id", "button4");
-            rounds.innerHTML = "Lola";
-            rounds.onclick = function() {
+            var laterounds = document.createElement("button");
+            laterounds.setAttribute("id", "button4");
+            laterounds.innerHTML = "Lola";
+            laterounds.onclick = function() {
                 odkTables.openTableToListView(null,
                     'triagem',
                     null,
@@ -67,19 +66,33 @@
                     'config/tables/triagem/html/triagem_laterounds.html');
             }
             
-            document.getElementById("wrapper").appendChild(rounds);
+            document.getElementById("wrapper").appendChild(laterounds);
+        
          // Send data option that luanches send finalized forms screen in
-            var rounds = document.createElement("button");
-            rounds.setAttribute("id", "button5");
-            rounds.innerHTML = "Paulo - discharge";
-            rounds.onclick = function() {
+            var discharge = document.createElement("button");
+            discharge.setAttribute("id", "button5");
+            discharge.innerHTML = "Paulo - discharge";
+            discharge.onclick = function() {
                 odkTables.openTableToListView(null,
                     'triagem',
                     null,
                     null,
                     'config/tables/triagem/html/triagem_discharge.html');
             }
-            document.getElementById("wrapper").appendChild(rounds); 
+            document.getElementById("wrapper").appendChild(discharge);
+            
+         // Send data option that luanches send finalized forms screen in
+            var tlist = document.createElement("button");
+            tlist.setAttribute("id", "button6");
+            tlist.innerHTML = "Triagem list";
+            tlist.onclick = function() {
+                odkTables.openTableToListView(null,
+                    'triagem',
+                    null,
+                    null,
+                    'config/tables/triagem/html/triagem_list.html');
+            }
+            document.getElementById("wrapper").appendChild(tlist); 
             
         }
         

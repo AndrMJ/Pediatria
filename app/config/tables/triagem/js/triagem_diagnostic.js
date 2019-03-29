@@ -45,7 +45,7 @@ function cbSRFailure(error) {
 function getResults() {
     var searchText = document.getElementById('search').value;
     
-    odkData.query('triagem', 'regdate = ?', [searchText], null, null, 
+    odkData.query('triagem', 'nome = ?', [searchText], null, null, 
     		null, null, null, null, true, cbSRSuccess, cbSRFailure);
 }
 
@@ -70,10 +70,15 @@ function render() {
 
         var nameEntered = triagem.getData(i, 'nome');
         var dobEntered = triagem.getData(i, 'dob');
+        var anosEntered = triagem.getData(i, 'anos');
+        var mesEntered = triagem.getData(i, 'meses');
+        var semEntered = triagem.getData(i, 'semanes');
+        var diasEntered = triagem.getData(i, 'dias');
         var	sexEntered = triagem.getData(i, 'sex');
         var pesoEntered = triagem.getData(i, 'peso');
-        var tempEntered = triagem.getData(i, 'tempr')
+        var tempEntered = triagem.getData(i, 'tempr');
         var bairroEntered = triagem.getData(i, 'bairro');
+        var regdateEntered = triagem.getData(i, 'regdate');
         var checkHosp = triagem.getData(i, 'hospitzd');
 
         // make list entry
@@ -85,6 +90,9 @@ function render() {
             item.setAttribute(
                     'onClick',
                     'handleClick("' + triagem.getRowId(i) + '")');
+            if(nameEntered === null) {
+            	nameEntered = 'Não sabe';
+            }
             item.innerHTML = nameEntered;
             document.getElementById('list').appendChild(item);
 
@@ -96,31 +104,53 @@ function render() {
             item.appendChild(chevron);
 
             // create sub-list in item space
-            //  DoB information
-            var dob = document.createElement('li');
-            dob.setAttribute('class', 'detail');
+            //  DoB/age information
+            var age = document.createElement('li');
+            var ageEntered = null;
+        	age.setAttribute('class', 'detail');
             if(dobEntered !== null) {
-            	dobEntered = dobEntered.substring(8,10) + dobEntered.substring(4,7) + '-' + dobEntered.substring(0,4);
-            }
-            dob.innerHTML = 'Dob: ' + dobEntered;
-            item.appendChild(dob);
-            
+                ageEntered = dobEntered.substring(8,10) + dobEntered.substring(4,7) + '-' + dobEntered.substring(0,4);
+                age.innerHTML = 'Dob: ' + ageEntered;
+            } else if(dobEntered === null) {
+            	if(anosEntered !== null) {
+            		ageEntered = anosEntered + ' ano(s)';
+            	} else if(mesEntered !== null) {
+            		ageEntered = mesEntered + ' mês(es)';
+            	} else if(semEntered !== null) {
+            		ageEntered = semEntered + ' semana(s)';
+            	} else if(diasEntered !== null) {
+            		ageEntered = diasEntered + ' dia(s)';
+            	} else {
+                	ageEntered = 'Não sabe';
+                }
+            	age.innerHTML = 'Age: ' + ageEntered;
+            } 
+            item.appendChild(age);
+          
             //  Sex information
             var sex = document.createElement('li');
             sex.setAttribute('class', 'detail');
             if(sexEntered === '1') {
             	sexEntered = 'Male';
             } else if(sexEntered === '2') {
-            	sexEntered = 'Female'
+            	sexEntered = 'Female';
+            } else {
+            	sexEntered = 'Não sabe';
             }
             sex.innerHTML = 'Sex: ' + sexEntered;
             item.appendChild(sex);
             
             //  Weight and temperature information
-            var peso = document.createElement('li');
-            peso.setAttribute('class', 'detail');
-            peso.innerHTML = 'Weight: ' + pesoEntered + ',' + '     Temperature: ' + tempEntered;
-            item.appendChild(peso);
+            var pesotemp = document.createElement('li');
+            pesotemp.setAttribute('class', 'detail');
+            if(pesoEntered === null) {
+            	pesoEntered = 'Não sabe';
+            }
+            if(tempEntered === null) {
+            	tempEntered = 'Não sabe';
+            }
+            pesotemp.innerHTML = 'Weight: ' + pesoEntered + ',' + ' Temperature: ' + tempEntered;
+            item.appendChild(pesotemp);
             
             //  Bairro information
             var bairro = document.createElement('li');
@@ -138,10 +168,21 @@ function render() {
             } else if(bairroEntered === '9') {
             	bairroEntered = 'Cuntum II';
             } else if(bairroEntered === '999') {
-            	bairroEntered = null
+            	bairroEntered = 'Não sabe';
+            } else {
+            	bairroEntered = 'Não sabe';
             }
             bairro.innerHTML = 'Bairro: ' + bairroEntered;
             item.appendChild(bairro);
+            
+            // Regdate information
+            var reg = document.createElement('li');
+            reg.setAttribute('class', 'detail');
+            if(regdateEntered !== null) {
+            	regdateEntered = 'Não sabe';
+            }
+            reg.innerHTML = 'Regdate: ' + regdateEntered;
+            item.appendChild(reg)
         }
     }
 }
@@ -152,7 +193,7 @@ function cbSuccess(result) {
 }
 
 function cbFailure(error) {
-    console.log('triagem_list: failed with error: ' + error);
+    console.log('triagem_diagnostic: failed with error: ' + error);
 }
 
 function display() {

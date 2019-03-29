@@ -127,14 +127,6 @@
         "_row_num": 7
       },
       {
-        "clause": "end screen",
-        "_row_num": 8
-      },
-      {
-        "clause": "begin screen",
-        "_row_num": 9
-      },
-      {
         "type": "decimal",
         "name": "peso",
         "display": {
@@ -148,31 +140,15 @@
         "inputAttributes": {
           "autocomplete": "off"
         },
-        "_row_num": 10
-      },
-      {
-        "type": "decimal",
-        "name": "tempr",
-        "display": {
-          "prompt": {
-            "text": {
-              "default": "Temperature",
-              "portuguese": "Temperatura"
-            }
-          }
-        },
-        "inputAttributes": {
-          "autocomplete": "off"
-        },
-        "_row_num": 11
+        "_row_num": 8
       },
       {
         "clause": "end screen",
-        "_row_num": 12
+        "_row_num": 9
       },
       {
         "clause": "begin screen",
-        "_row_num": 13
+        "_row_num": 10
       },
       {
         "type": "integer",
@@ -188,7 +164,7 @@
         "inputAttributes": {
           "autocomplete": "off"
         },
-        "_row_num": 14
+        "_row_num": 11
       },
       {
         "type": "integer",
@@ -211,7 +187,7 @@
         "inputAttributes": {
           "autocomplete": "off"
         },
-        "_row_num": 15
+        "_row_num": 12
       },
       {
         "type": "integer",
@@ -227,7 +203,7 @@
         "inputAttributes": {
           "autocomplete": "off"
         },
-        "_row_num": 16
+        "_row_num": 13
       },
       {
         "type": "integer",
@@ -243,34 +219,50 @@
         "inputAttributes": {
           "autocomplete": "off"
         },
-        "_row_num": 17
+        "_row_num": 14
       },
       {
         "clause": "end screen",
-        "_row_num": 18
+        "_row_num": 15
       },
       {
         "clause": "begin screen",
-        "_row_num": 19
+        "_row_num": 16
       },
       {
         "type": "select_one_dropdown",
         "values_list": "reg",
-        "name": "reg",
+        "name": "bairro",
         "display": {
           "prompt": {
             "text": "Region"
           }
         },
-        "_row_num": 20
+        "_row_num": 17
       },
       {
         "clause": "end screen",
-        "_row_num": 24
+        "_row_num": 21
       },
       {
         "clause": "begin screen",
-        "_row_num": 25
+        "_row_num": 22
+      },
+      {
+        "type": "decimal",
+        "name": "tempr",
+        "display": {
+          "prompt": {
+            "text": {
+              "default": "Temperature",
+              "portuguese": "Temperatura"
+            }
+          }
+        },
+        "inputAttributes": {
+          "autocomplete": "off"
+        },
+        "_row_num": 23
       },
       {
         "type": "select_one",
@@ -281,15 +273,15 @@
             "text": "Is the child hospitalized"
           }
         },
-        "_row_num": 26
+        "_row_num": 24
       },
       {
         "clause": "end screen",
-        "_row_num": 27
+        "_row_num": 25
       },
       {
         "clause": "begin screen",
-        "_row_num": 28
+        "_row_num": 26
       },
       {
         "type": "select_one_dropdown",
@@ -303,28 +295,28 @@
             }
           }
         },
-        "_row_num": 29
+        "_row_num": 27
       },
       {
         "type": "select_multiple",
         "values_list": "diagNo",
         "name": "prodiag1n",
-        "_row_num": 30
+        "_row_num": 28
       },
       {
         "clause": "if",
         "condition": "data('prodiag1n') !=null",
-        "_row_num": 31
+        "_row_num": 29
       },
       {
         "type": "assign",
         "name": "prodiag1",
         "calculation": 9999,
-        "_row_num": 32
+        "_row_num": 30
       },
       {
         "clause": "end if",
-        "_row_num": 33
+        "_row_num": 31
       },
       {
         "type": "select_one_dropdown",
@@ -338,28 +330,28 @@
             }
           }
         },
-        "_row_num": 34
+        "_row_num": 32
       },
       {
         "type": "select_multiple",
         "values_list": "diagNo",
         "name": "prodiag2n",
-        "_row_num": 35
+        "_row_num": 33
       },
       {
         "clause": "if",
         "condition": "data('prodiag2n') !=null",
-        "_row_num": 36
+        "_row_num": 34
       },
       {
         "type": "assign",
         "name": "prodiag2",
         "calculation": 9999,
-        "_row_num": 37
+        "_row_num": 35
       },
       {
         "clause": "end if",
-        "_row_num": 38
+        "_row_num": 36
       },
       {
         "type": "select_one_dropdown",
@@ -373,36 +365,36 @@
             }
           }
         },
-        "_row_num": 39
+        "_row_num": 37
       },
       {
         "type": "select_multiple",
         "values_list": "diagNo",
         "name": "prodiag3n",
-        "_row_num": 40
+        "_row_num": 38
       },
       {
         "clause": "if",
         "condition": "data('prodiag3n') !=null",
-        "_row_num": 41
+        "_row_num": 39
       },
       {
         "type": "assign",
         "name": "prodiag3",
         "calculation": 9999,
-        "_row_num": 42
+        "_row_num": 40
       },
       {
         "clause": "end if",
-        "_row_num": 43
+        "_row_num": 41
       },
       {
         "clause": "end screen",
-        "_row_num": 44
+        "_row_num": 42
       },
       {
         "required": true,
-        "_row_num": 418
+        "_row_num": 416
       }
     ],
     "choices": [
@@ -3185,7 +3177,7 @@
       },
       {
         "name": "bairro",
-        "type": "select_one_inline",
+        "type": "select_one_dropdown",
         "isSessionVariable": false,
         "_row_num": 3
       },
@@ -4000,196 +3992,208 @@
         "_row_num": 138
       },
       {
-        "name": "roundsdatelate",
-        "type": "text",
-        "isSessionVariable": false,
+        "name": "exactdob2",
+        "type": "select_one",
+        "isSessionVariable": true,
         "_row_num": 139
       },
       {
-        "name": "roundq",
+        "name": "maeq",
         "type": "select_one",
-        "isSessionVariable": false,
+        "isSessionVariable": true,
         "_row_num": 140
       },
       {
-        "name": "csobs",
+        "name": "roundsdatelate",
         "type": "text",
         "isSessionVariable": false,
         "_row_num": 141
       },
       {
-        "name": "defdiag1",
-        "type": "text",
+        "name": "roundq",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 142
       },
       {
-        "name": "defdiag2",
+        "name": "csobs",
         "type": "text",
         "isSessionVariable": false,
         "_row_num": 143
       },
       {
-        "name": "defdiag3",
+        "name": "defdiag1",
         "type": "text",
         "isSessionVariable": false,
         "_row_num": 144
       },
       {
-        "name": "falh",
-        "type": "integer",
+        "name": "defdiag2",
+        "type": "text",
         "isSessionVariable": false,
         "_row_num": 145
       },
       {
-        "name": "falm",
-        "type": "integer",
+        "name": "defdiag3",
+        "type": "text",
         "isSessionVariable": false,
         "_row_num": 146
       },
       {
-        "name": "gepor",
+        "name": "falh",
         "type": "integer",
         "isSessionVariable": false,
         "_row_num": 147
       },
       {
-        "name": "geresl",
+        "name": "falm",
         "type": "integer",
         "isSessionVariable": false,
         "_row_num": 148
       },
       {
-        "name": "hemogli1",
-        "type": "decimal",
+        "name": "gepor",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 149
       },
       {
-        "name": "horainth",
+        "name": "geresl",
         "type": "integer",
         "isSessionVariable": false,
         "_row_num": 150
       },
       {
-        "name": "horaintm",
-        "type": "integer",
+        "name": "hemogli1",
+        "type": "decimal",
         "isSessionVariable": false,
         "_row_num": 151
       },
       {
-        "name": "leucocito",
+        "name": "horainth",
         "type": "integer",
         "isSessionVariable": false,
         "_row_num": 152
       },
       {
+        "name": "horaintm",
+        "type": "integer",
+        "isSessionVariable": false,
+        "_row_num": 153
+      },
+      {
+        "name": "leucocito",
+        "type": "integer",
+        "isSessionVariable": false,
+        "_row_num": 154
+      },
+      {
         "name": "saida",
         "type": "custom_date",
         "isSessionVariable": false,
-        "_row_num": 153
+        "_row_num": 155
       },
       {
         "name": "saidacom",
         "type": "text",
         "isSessionVariable": false,
-        "_row_num": 154
+        "_row_num": 156
       },
       {
         "name": "sanguegrp",
         "type": "select_one_dropdown",
         "isSessionVariable": false,
-        "_row_num": 155
+        "_row_num": 157
       },
       {
         "name": "tdr",
         "type": "select_one_dropdown",
         "isSessionVariable": false,
-        "_row_num": 156
+        "_row_num": 158
       },
       {
         "name": "transtot",
         "type": "integer",
         "isSessionVariable": false,
-        "_row_num": 157
+        "_row_num": 159
       },
       {
         "name": "defdiag1n",
         "type": "select_multiple",
         "isSessionVariable": true,
-        "_row_num": 158
+        "_row_num": 160
       },
       {
         "name": "defdiag2n",
         "type": "select_multiple",
         "isSessionVariable": true,
-        "_row_num": 159
+        "_row_num": 161
       },
       {
         "name": "defdiag3n",
         "type": "select_multiple",
         "isSessionVariable": true,
-        "_row_num": 160
+        "_row_num": 162
       },
       {
         "name": "falq",
         "type": "select_multiple",
         "isSessionVariable": true,
-        "_row_num": 161
+        "_row_num": 163
       },
       {
         "name": "geresli",
         "type": "integer",
         "isSessionVariable": true,
-        "_row_num": 162
+        "_row_num": 164
       },
       {
         "name": "hemogli1q",
         "type": "select_multiple",
         "isSessionVariable": true,
-        "_row_num": 163
+        "_row_num": 165
       },
       {
         "name": "horaintq",
         "type": "select_multiple",
         "isSessionVariable": true,
-        "_row_num": 164
+        "_row_num": 166
       },
       {
         "name": "leucocitoq",
         "type": "select_multiple",
         "isSessionVariable": true,
-        "_row_num": 165
+        "_row_num": 167
       },
       {
         "name": "malq",
         "type": "select_multiple",
         "isSessionVariable": true,
-        "_row_num": 166
+        "_row_num": 168
       },
       {
         "name": "saidana",
         "type": "select_multiple",
         "isSessionVariable": true,
-        "_row_num": 167
+        "_row_num": 169
       },
       {
         "name": "sanguegrpi",
         "type": "select_one_dropdown",
         "isSessionVariable": true,
-        "_row_num": 168
+        "_row_num": 170
       },
       {
         "name": "sanguegrpq",
         "type": "select_multiple",
         "isSessionVariable": true,
-        "_row_num": 169
+        "_row_num": 171
       },
       {
         "name": "transtotq",
         "type": "select_multiple",
         "isSessionVariable": true,
-        "_row_num": 170
+        "_row_num": 172
       }
     ]
   },
@@ -7172,7 +7176,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 14,
+            "_row_num": 11,
             "section_name": "survey"
           },
           {
@@ -7185,7 +7189,12 @@
       },
       "bairro": {
         "type": "string",
+        "valuesList": "reg",
         "_defn": [
+          {
+            "_row_num": 17,
+            "section_name": "survey"
+          },
           {
             "_row_num": 3,
             "section_name": "model"
@@ -7418,7 +7427,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 17,
+            "_row_num": 14,
             "section_name": "survey"
           },
           {
@@ -7511,7 +7520,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 15,
+            "_row_num": 12,
             "section_name": "survey"
           },
           {
@@ -7563,7 +7572,7 @@
         "type": "number",
         "_defn": [
           {
-            "_row_num": 10,
+            "_row_num": 8,
             "section_name": "survey"
           },
           {
@@ -7599,12 +7608,7 @@
       },
       "reg": {
         "type": "string",
-        "valuesList": "reg",
         "_defn": [
-          {
-            "_row_num": 20,
-            "section_name": "survey"
-          },
           {
             "_row_num": 39,
             "section_name": "model"
@@ -7656,7 +7660,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 16,
+            "_row_num": 13,
             "section_name": "survey"
           },
           {
@@ -7753,7 +7757,7 @@
         "type": "number",
         "_defn": [
           {
-            "_row_num": 11,
+            "_row_num": 23,
             "section_name": "survey"
           },
           {
@@ -8757,7 +8761,7 @@
         "valuesList": "YesNo",
         "_defn": [
           {
-            "_row_num": 26,
+            "_row_num": 24,
             "section_name": "survey"
           },
           {
@@ -8773,7 +8777,7 @@
         "valuesList": "diag",
         "_defn": [
           {
-            "_row_num": 29,
+            "_row_num": 27,
             "section_name": "survey"
           },
           {
@@ -8789,7 +8793,7 @@
         "valuesList": "diag",
         "_defn": [
           {
-            "_row_num": 34,
+            "_row_num": 32,
             "section_name": "survey"
           },
           {
@@ -8805,7 +8809,7 @@
         "valuesList": "diag",
         "_defn": [
           {
-            "_row_num": 39,
+            "_row_num": 37,
             "section_name": "survey"
           },
           {
@@ -8825,7 +8829,7 @@
         "valuesList": "diagNo",
         "_defn": [
           {
-            "_row_num": 30,
+            "_row_num": 28,
             "section_name": "survey"
           },
           {
@@ -8845,7 +8849,7 @@
         "valuesList": "diagNo",
         "_defn": [
           {
-            "_row_num": 35,
+            "_row_num": 33,
             "section_name": "survey"
           },
           {
@@ -8865,7 +8869,7 @@
         "valuesList": "diagNo",
         "_defn": [
           {
-            "_row_num": 40,
+            "_row_num": 38,
             "section_name": "survey"
           },
           {
@@ -8957,11 +8961,33 @@
         "isSessionVariable": true,
         "elementKey": "cam1na"
       },
-      "roundsdatelate": {
+      "exactdob2": {
         "type": "string",
         "_defn": [
           {
             "_row_num": 139,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": true,
+        "elementKey": "exactdob2"
+      },
+      "maeq": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 140,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": true,
+        "elementKey": "maeq"
+      },
+      "roundsdatelate": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 141,
             "section_name": "model"
           }
         ],
@@ -8972,7 +8998,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 140,
+            "_row_num": 142,
             "section_name": "model"
           }
         ],
@@ -8983,7 +9009,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 141,
+            "_row_num": 143,
             "section_name": "model"
           }
         ],
@@ -8994,7 +9020,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 142,
+            "_row_num": 144,
             "section_name": "model"
           }
         ],
@@ -9005,7 +9031,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 143,
+            "_row_num": 145,
             "section_name": "model"
           }
         ],
@@ -9016,7 +9042,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 144,
+            "_row_num": 146,
             "section_name": "model"
           }
         ],
@@ -9027,7 +9053,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 145,
+            "_row_num": 147,
             "section_name": "model"
           }
         ],
@@ -9038,7 +9064,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 146,
+            "_row_num": 148,
             "section_name": "model"
           }
         ],
@@ -9049,7 +9075,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 147,
+            "_row_num": 149,
             "section_name": "model"
           }
         ],
@@ -9060,7 +9086,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 148,
+            "_row_num": 150,
             "section_name": "model"
           }
         ],
@@ -9071,7 +9097,7 @@
         "type": "number",
         "_defn": [
           {
-            "_row_num": 149,
+            "_row_num": 151,
             "section_name": "model"
           }
         ],
@@ -9082,7 +9108,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 150,
+            "_row_num": 152,
             "section_name": "model"
           }
         ],
@@ -9093,7 +9119,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 151,
+            "_row_num": 153,
             "section_name": "model"
           }
         ],
@@ -9104,7 +9130,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 152,
+            "_row_num": 154,
             "section_name": "model"
           }
         ],
@@ -9120,7 +9146,7 @@
         "__rowNum__": 1,
         "_defn": [
           {
-            "_row_num": 153,
+            "_row_num": 155,
             "section_name": "model"
           }
         ],
@@ -9131,7 +9157,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 154,
+            "_row_num": 156,
             "section_name": "model"
           }
         ],
@@ -9142,7 +9168,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 155,
+            "_row_num": 157,
             "section_name": "model"
           }
         ],
@@ -9153,7 +9179,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 156,
+            "_row_num": 158,
             "section_name": "model"
           }
         ],
@@ -9164,7 +9190,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 157,
+            "_row_num": 159,
             "section_name": "model"
           }
         ],
@@ -9179,7 +9205,7 @@
         },
         "_defn": [
           {
-            "_row_num": 158,
+            "_row_num": 160,
             "section_name": "model"
           }
         ],
@@ -9194,7 +9220,7 @@
         },
         "_defn": [
           {
-            "_row_num": 159,
+            "_row_num": 161,
             "section_name": "model"
           }
         ],
@@ -9209,7 +9235,7 @@
         },
         "_defn": [
           {
-            "_row_num": 160,
+            "_row_num": 162,
             "section_name": "model"
           }
         ],
@@ -9224,7 +9250,7 @@
         },
         "_defn": [
           {
-            "_row_num": 161,
+            "_row_num": 163,
             "section_name": "model"
           }
         ],
@@ -9235,7 +9261,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 162,
+            "_row_num": 164,
             "section_name": "model"
           }
         ],
@@ -9250,7 +9276,7 @@
         },
         "_defn": [
           {
-            "_row_num": 163,
+            "_row_num": 165,
             "section_name": "model"
           }
         ],
@@ -9265,7 +9291,7 @@
         },
         "_defn": [
           {
-            "_row_num": 164,
+            "_row_num": 166,
             "section_name": "model"
           }
         ],
@@ -9280,7 +9306,7 @@
         },
         "_defn": [
           {
-            "_row_num": 165,
+            "_row_num": 167,
             "section_name": "model"
           }
         ],
@@ -9295,7 +9321,7 @@
         },
         "_defn": [
           {
-            "_row_num": 166,
+            "_row_num": 168,
             "section_name": "model"
           }
         ],
@@ -9310,7 +9336,7 @@
         },
         "_defn": [
           {
-            "_row_num": 167,
+            "_row_num": 169,
             "section_name": "model"
           }
         ],
@@ -9321,7 +9347,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 168,
+            "_row_num": 170,
             "section_name": "model"
           }
         ],
@@ -9336,7 +9362,7 @@
         },
         "_defn": [
           {
-            "_row_num": 169,
+            "_row_num": 171,
             "section_name": "model"
           }
         ],
@@ -9351,7 +9377,7 @@
         },
         "_defn": [
           {
-            "_row_num": 170,
+            "_row_num": 172,
             "section_name": "model"
           }
         ],
@@ -9560,33 +9586,12 @@
             "inputAttributes": {
               "autocomplete": "off"
             },
-            "_row_num": 10,
-            "__rowNum__": 9,
+            "_row_num": 8,
+            "__rowNum__": 7,
             "_token_type": "prompt",
             "_type": "decimal",
-            "_branch_label_enclosing_screen": "survey/_screen9",
+            "_branch_label_enclosing_screen": "survey/_screen5",
             "promptIdx": 3
-          },
-          {
-            "type": "decimal",
-            "name": "tempr",
-            "display": {
-              "prompt": {
-                "text": {
-                  "default": "Temperature",
-                  "portuguese": "Temperatura"
-                }
-              }
-            },
-            "inputAttributes": {
-              "autocomplete": "off"
-            },
-            "_row_num": 11,
-            "__rowNum__": 10,
-            "_token_type": "prompt",
-            "_type": "decimal",
-            "_branch_label_enclosing_screen": "survey/_screen9",
-            "promptIdx": 4
           },
           {
             "type": "integer",
@@ -9602,12 +9607,12 @@
             "inputAttributes": {
               "autocomplete": "off"
             },
-            "_row_num": 14,
-            "__rowNum__": 13,
+            "_row_num": 11,
+            "__rowNum__": 10,
             "_token_type": "prompt",
             "_type": "integer",
-            "_branch_label_enclosing_screen": "survey/_screen13",
-            "promptIdx": 5
+            "_branch_label_enclosing_screen": "survey/_screen10",
+            "promptIdx": 4
           },
           {
             "type": "integer",
@@ -9630,12 +9635,12 @@
             "inputAttributes": {
               "autocomplete": "off"
             },
-            "_row_num": 15,
-            "__rowNum__": 14,
+            "_row_num": 12,
+            "__rowNum__": 11,
             "_token_type": "prompt",
             "_type": "integer",
-            "_branch_label_enclosing_screen": "survey/_screen13",
-            "promptIdx": 6
+            "_branch_label_enclosing_screen": "survey/_screen10",
+            "promptIdx": 5
           },
           {
             "type": "integer",
@@ -9651,12 +9656,12 @@
             "inputAttributes": {
               "autocomplete": "off"
             },
-            "_row_num": 16,
-            "__rowNum__": 15,
+            "_row_num": 13,
+            "__rowNum__": 12,
             "_token_type": "prompt",
             "_type": "integer",
-            "_branch_label_enclosing_screen": "survey/_screen13",
-            "promptIdx": 7
+            "_branch_label_enclosing_screen": "survey/_screen10",
+            "promptIdx": 6
           },
           {
             "type": "integer",
@@ -9672,27 +9677,48 @@
             "inputAttributes": {
               "autocomplete": "off"
             },
-            "_row_num": 17,
-            "__rowNum__": 16,
+            "_row_num": 14,
+            "__rowNum__": 13,
             "_token_type": "prompt",
             "_type": "integer",
-            "_branch_label_enclosing_screen": "survey/_screen13",
-            "promptIdx": 8
+            "_branch_label_enclosing_screen": "survey/_screen10",
+            "promptIdx": 7
           },
           {
             "type": "select_one_dropdown",
             "values_list": "reg",
-            "name": "reg",
+            "name": "bairro",
             "display": {
               "prompt": {
                 "text": "Region"
               }
             },
-            "_row_num": 20,
-            "__rowNum__": 19,
+            "_row_num": 17,
+            "__rowNum__": 16,
             "_token_type": "prompt",
             "_type": "select_one_dropdown",
-            "_branch_label_enclosing_screen": "survey/_screen19",
+            "_branch_label_enclosing_screen": "survey/_screen16",
+            "promptIdx": 8
+          },
+          {
+            "type": "decimal",
+            "name": "tempr",
+            "display": {
+              "prompt": {
+                "text": {
+                  "default": "Temperature",
+                  "portuguese": "Temperatura"
+                }
+              }
+            },
+            "inputAttributes": {
+              "autocomplete": "off"
+            },
+            "_row_num": 23,
+            "__rowNum__": 22,
+            "_token_type": "prompt",
+            "_type": "decimal",
+            "_branch_label_enclosing_screen": "survey/_screen22",
             "promptIdx": 9
           },
           {
@@ -9704,11 +9730,11 @@
                 "text": "Is the child hospitalized"
               }
             },
-            "_row_num": 26,
-            "__rowNum__": 25,
+            "_row_num": 24,
+            "__rowNum__": 23,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "survey/_screen25",
+            "_branch_label_enclosing_screen": "survey/_screen22",
             "promptIdx": 10
           },
           {
@@ -9723,22 +9749,22 @@
                 }
               }
             },
-            "_row_num": 29,
-            "__rowNum__": 28,
+            "_row_num": 27,
+            "__rowNum__": 26,
             "_token_type": "prompt",
             "_type": "select_one_dropdown",
-            "_branch_label_enclosing_screen": "survey/_screen28",
+            "_branch_label_enclosing_screen": "survey/_screen26",
             "promptIdx": 11
           },
           {
             "type": "select_multiple",
             "values_list": "diagNo",
             "name": "prodiag1n",
-            "_row_num": 30,
-            "__rowNum__": 29,
+            "_row_num": 28,
+            "__rowNum__": 27,
             "_token_type": "prompt",
             "_type": "select_multiple",
-            "_branch_label_enclosing_screen": "survey/_screen28",
+            "_branch_label_enclosing_screen": "survey/_screen26",
             "promptIdx": 12
           },
           {
@@ -9753,22 +9779,22 @@
                 }
               }
             },
-            "_row_num": 34,
-            "__rowNum__": 33,
+            "_row_num": 32,
+            "__rowNum__": 31,
             "_token_type": "prompt",
             "_type": "select_one_dropdown",
-            "_branch_label_enclosing_screen": "survey/_screen28",
+            "_branch_label_enclosing_screen": "survey/_screen26",
             "promptIdx": 13
           },
           {
             "type": "select_multiple",
             "values_list": "diagNo",
             "name": "prodiag2n",
-            "_row_num": 35,
-            "__rowNum__": 34,
+            "_row_num": 33,
+            "__rowNum__": 32,
             "_token_type": "prompt",
             "_type": "select_multiple",
-            "_branch_label_enclosing_screen": "survey/_screen28",
+            "_branch_label_enclosing_screen": "survey/_screen26",
             "promptIdx": 14
           },
           {
@@ -9783,37 +9809,37 @@
                 }
               }
             },
-            "_row_num": 39,
-            "__rowNum__": 38,
+            "_row_num": 37,
+            "__rowNum__": 36,
             "_token_type": "prompt",
             "_type": "select_one_dropdown",
-            "_branch_label_enclosing_screen": "survey/_screen28",
+            "_branch_label_enclosing_screen": "survey/_screen26",
             "promptIdx": 15
           },
           {
             "type": "select_multiple",
             "values_list": "diagNo",
             "name": "prodiag3n",
-            "_row_num": 40,
-            "__rowNum__": 39,
+            "_row_num": 38,
+            "__rowNum__": 37,
             "_token_type": "prompt",
             "_type": "select_multiple",
-            "_branch_label_enclosing_screen": "survey/_screen28",
+            "_branch_label_enclosing_screen": "survey/_screen26",
             "promptIdx": 16
           },
           {
             "_token_type": "prompt",
             "type": "contents",
             "_type": "contents",
-            "_row_num": 45,
-            "_branch_label_enclosing_screen": "survey/_screen45",
+            "_row_num": 43,
+            "_branch_label_enclosing_screen": "survey/_screen43",
             "promptIdx": 17
           }
         ],
         "validation_tag_map": {
           "finalize": [
             0,
-            6
+            5
           ]
         },
         "operations": [
@@ -9838,115 +9864,100 @@
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 8,
-              "__rowNum__": 7,
+              "_row_num": 9,
+              "__rowNum__": 8,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(1);\nactivePromptIndicies.push(2);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(1);\nactivePromptIndicies.push(2);\nactivePromptIndicies.push(3);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 1
           },
           {
             "clause": "begin screen",
-            "_row_num": 9,
-            "__rowNum__": 8,
+            "_row_num": 10,
+            "__rowNum__": 9,
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 12,
-              "__rowNum__": 11,
+              "_row_num": 15,
+              "__rowNum__": 14,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(3);\nactivePromptIndicies.push(4);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(4);\nactivePromptIndicies.push(5);\nactivePromptIndicies.push(6);\nactivePromptIndicies.push(7);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 2
           },
           {
             "clause": "begin screen",
-            "_row_num": 13,
-            "__rowNum__": 12,
+            "_row_num": 16,
+            "__rowNum__": 15,
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 18,
-              "__rowNum__": 17,
+              "_row_num": 21,
+              "__rowNum__": 20,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(5);\nactivePromptIndicies.push(6);\nactivePromptIndicies.push(7);\nactivePromptIndicies.push(8);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(8);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 3
           },
           {
             "clause": "begin screen",
-            "_row_num": 19,
-            "__rowNum__": 18,
+            "_row_num": 22,
+            "__rowNum__": 21,
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 24,
-              "__rowNum__": 23,
+              "_row_num": 25,
+              "__rowNum__": 24,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(9);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(9);\nactivePromptIndicies.push(10);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 4
           },
           {
             "clause": "begin screen",
-            "_row_num": 25,
-            "__rowNum__": 24,
+            "_row_num": 26,
+            "__rowNum__": 25,
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 27,
-              "__rowNum__": 26,
-              "_token_type": "end_screen"
-            },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(10);\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 5
-          },
-          {
-            "clause": "begin screen",
-            "_row_num": 28,
-            "__rowNum__": 27,
-            "_token_type": "begin_screen",
-            "_end_screen_clause": {
-              "clause": "end screen",
-              "_row_num": 44,
-              "__rowNum__": 43,
+              "_row_num": 42,
+              "__rowNum__": 41,
               "_token_type": "end_screen"
             },
             "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(11);\nactivePromptIndicies.push(12);\nif (data('prodiag1n') !=null) {\nassign('prodiag1', 9999);\n}\nactivePromptIndicies.push(13);\nactivePromptIndicies.push(14);\nif (data('prodiag2n') !=null) {\nassign('prodiag2', 9999);\n}\nactivePromptIndicies.push(15);\nactivePromptIndicies.push(16);\nif (data('prodiag3n') !=null) {\nassign('prodiag3', 9999);\n}\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 6
+            "operationIdx": 5
           },
           {
             "_token_type": "exit_section",
             "clause": "exit section",
-            "_row_num": 45,
-            "operationIdx": 7
+            "_row_num": 43,
+            "operationIdx": 6
           },
           {
-            "_row_num": 45,
+            "_row_num": 43,
             "_token_type": "begin_screen",
             "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(17);\n\nreturn activePromptIndicies;\n}\n",
             "screen": {
               "hideInBackHistory": true
             },
-            "operationIdx": 8
+            "operationIdx": 7
           },
           {
             "_token_type": "resume",
             "clause": "resume",
-            "_row_num": 45,
-            "operationIdx": 9
+            "_row_num": 43,
+            "operationIdx": 8
           }
         ],
         "branch_label_map": {
           "_screen2": 0,
           "_screen5": 1,
-          "_screen9": 2,
-          "_screen13": 3,
-          "_screen19": 4,
-          "_screen25": 5,
-          "_screen28": 6,
-          "_contents": 8,
-          "_screen45": 8
+          "_screen10": 2,
+          "_screen16": 3,
+          "_screen22": 4,
+          "_screen26": 5,
+          "_contents": 7,
+          "_screen43": 7
         }
       }
     },
@@ -9955,7 +9966,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 14,
+            "_row_num": 11,
             "section_name": "survey"
           },
           {
@@ -9971,7 +9982,12 @@
       },
       "bairro": {
         "type": "string",
+        "valuesList": "reg",
         "_defn": [
+          {
+            "_row_num": 17,
+            "section_name": "survey"
+          },
           {
             "_row_num": 3,
             "section_name": "model"
@@ -10267,7 +10283,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 17,
+            "_row_num": 14,
             "section_name": "survey"
           },
           {
@@ -10384,7 +10400,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 15,
+            "_row_num": 12,
             "section_name": "survey"
           },
           {
@@ -10448,7 +10464,7 @@
         "type": "number",
         "_defn": [
           {
-            "_row_num": 10,
+            "_row_num": 8,
             "section_name": "survey"
           },
           {
@@ -10493,12 +10509,7 @@
       },
       "reg": {
         "type": "string",
-        "valuesList": "reg",
         "_defn": [
-          {
-            "_row_num": 20,
-            "section_name": "survey"
-          },
           {
             "_row_num": 39,
             "section_name": "model"
@@ -10562,7 +10573,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 16,
+            "_row_num": 13,
             "section_name": "survey"
           },
           {
@@ -10683,7 +10694,7 @@
         "type": "number",
         "_defn": [
           {
-            "_row_num": 11,
+            "_row_num": 23,
             "section_name": "survey"
           },
           {
@@ -12093,7 +12104,7 @@
         "valuesList": "YesNo",
         "_defn": [
           {
-            "_row_num": 26,
+            "_row_num": 24,
             "section_name": "survey"
           },
           {
@@ -12112,7 +12123,7 @@
         "valuesList": "diag",
         "_defn": [
           {
-            "_row_num": 29,
+            "_row_num": 27,
             "section_name": "survey"
           },
           {
@@ -12131,7 +12142,7 @@
         "valuesList": "diag",
         "_defn": [
           {
-            "_row_num": 34,
+            "_row_num": 32,
             "section_name": "survey"
           },
           {
@@ -12150,7 +12161,7 @@
         "valuesList": "diag",
         "_defn": [
           {
-            "_row_num": 39,
+            "_row_num": 37,
             "section_name": "survey"
           },
           {
@@ -12178,7 +12189,7 @@
         "valuesList": "diagNo",
         "_defn": [
           {
-            "_row_num": 30,
+            "_row_num": 28,
             "section_name": "survey"
           },
           {
@@ -12209,7 +12220,7 @@
         "valuesList": "diagNo",
         "_defn": [
           {
-            "_row_num": 35,
+            "_row_num": 33,
             "section_name": "survey"
           },
           {
@@ -12240,7 +12251,7 @@
         "valuesList": "diagNo",
         "_defn": [
           {
-            "_row_num": 40,
+            "_row_num": 38,
             "section_name": "survey"
           },
           {
@@ -12367,11 +12378,39 @@
           "cam1na_items"
         ]
       },
-      "roundsdatelate": {
+      "exactdob2": {
         "type": "string",
         "_defn": [
           {
             "_row_num": 139,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": true,
+        "elementKey": "exactdob2",
+        "elementName": "exactdob2",
+        "elementSet": "data",
+        "elementPath": "exactdob2"
+      },
+      "maeq": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 140,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": true,
+        "elementKey": "maeq",
+        "elementName": "maeq",
+        "elementSet": "data",
+        "elementPath": "maeq"
+      },
+      "roundsdatelate": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 141,
             "section_name": "model"
           }
         ],
@@ -12385,7 +12424,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 140,
+            "_row_num": 142,
             "section_name": "model"
           }
         ],
@@ -12399,7 +12438,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 141,
+            "_row_num": 143,
             "section_name": "model"
           }
         ],
@@ -12413,7 +12452,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 142,
+            "_row_num": 144,
             "section_name": "model"
           }
         ],
@@ -12427,7 +12466,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 143,
+            "_row_num": 145,
             "section_name": "model"
           }
         ],
@@ -12441,7 +12480,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 144,
+            "_row_num": 146,
             "section_name": "model"
           }
         ],
@@ -12455,7 +12494,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 145,
+            "_row_num": 147,
             "section_name": "model"
           }
         ],
@@ -12469,7 +12508,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 146,
+            "_row_num": 148,
             "section_name": "model"
           }
         ],
@@ -12483,7 +12522,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 147,
+            "_row_num": 149,
             "section_name": "model"
           }
         ],
@@ -12497,7 +12536,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 148,
+            "_row_num": 150,
             "section_name": "model"
           }
         ],
@@ -12511,7 +12550,7 @@
         "type": "number",
         "_defn": [
           {
-            "_row_num": 149,
+            "_row_num": 151,
             "section_name": "model"
           }
         ],
@@ -12525,7 +12564,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 150,
+            "_row_num": 152,
             "section_name": "model"
           }
         ],
@@ -12539,7 +12578,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 151,
+            "_row_num": 153,
             "section_name": "model"
           }
         ],
@@ -12553,7 +12592,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 152,
+            "_row_num": 154,
             "section_name": "model"
           }
         ],
@@ -12572,7 +12611,7 @@
         "__rowNum__": 1,
         "_defn": [
           {
-            "_row_num": 153,
+            "_row_num": 155,
             "section_name": "model"
           }
         ],
@@ -12586,7 +12625,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 154,
+            "_row_num": 156,
             "section_name": "model"
           }
         ],
@@ -12600,7 +12639,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 155,
+            "_row_num": 157,
             "section_name": "model"
           }
         ],
@@ -12614,7 +12653,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 156,
+            "_row_num": 158,
             "section_name": "model"
           }
         ],
@@ -12628,7 +12667,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 157,
+            "_row_num": 159,
             "section_name": "model"
           }
         ],
@@ -12651,7 +12690,7 @@
         },
         "_defn": [
           {
-            "_row_num": 158,
+            "_row_num": 160,
             "section_name": "model"
           }
         ],
@@ -12677,7 +12716,7 @@
         },
         "_defn": [
           {
-            "_row_num": 159,
+            "_row_num": 161,
             "section_name": "model"
           }
         ],
@@ -12703,7 +12742,7 @@
         },
         "_defn": [
           {
-            "_row_num": 160,
+            "_row_num": 162,
             "section_name": "model"
           }
         ],
@@ -12729,7 +12768,7 @@
         },
         "_defn": [
           {
-            "_row_num": 161,
+            "_row_num": 163,
             "section_name": "model"
           }
         ],
@@ -12746,7 +12785,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 162,
+            "_row_num": 164,
             "section_name": "model"
           }
         ],
@@ -12769,7 +12808,7 @@
         },
         "_defn": [
           {
-            "_row_num": 163,
+            "_row_num": 165,
             "section_name": "model"
           }
         ],
@@ -12795,7 +12834,7 @@
         },
         "_defn": [
           {
-            "_row_num": 164,
+            "_row_num": 166,
             "section_name": "model"
           }
         ],
@@ -12821,7 +12860,7 @@
         },
         "_defn": [
           {
-            "_row_num": 165,
+            "_row_num": 167,
             "section_name": "model"
           }
         ],
@@ -12847,7 +12886,7 @@
         },
         "_defn": [
           {
-            "_row_num": 166,
+            "_row_num": 168,
             "section_name": "model"
           }
         ],
@@ -12873,7 +12912,7 @@
         },
         "_defn": [
           {
-            "_row_num": 167,
+            "_row_num": 169,
             "section_name": "model"
           }
         ],
@@ -12890,7 +12929,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 168,
+            "_row_num": 170,
             "section_name": "model"
           }
         ],
@@ -12913,7 +12952,7 @@
         },
         "_defn": [
           {
-            "_row_num": 169,
+            "_row_num": 171,
             "section_name": "model"
           }
         ],
@@ -12939,7 +12978,7 @@
         },
         "_defn": [
           {
-            "_row_num": 170,
+            "_row_num": 172,
             "section_name": "model"
           }
         ],

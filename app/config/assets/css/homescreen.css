@@ -58,6 +58,10 @@ button:active {
     border-color: #66A3C2;
 }
 
+#button6 {
+    border-color: #A7D0E5;
+}
+
 h1 {
     font-size: 40pt;
     margin: 50px 0;

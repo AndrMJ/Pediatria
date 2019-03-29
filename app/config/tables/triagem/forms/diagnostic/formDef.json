@@ -2988,7 +2988,7 @@
       },
       {
         "name": "bairro",
-        "type": "select_one_inline",
+        "type": "select_one_dropdown",
         "isSessionVariable": false,
         "_row_num": 3
       },
@@ -3803,196 +3803,208 @@
         "_row_num": 138
       },
       {
-        "name": "roundsdatelate",
-        "type": "text",
-        "isSessionVariable": false,
+        "name": "exactdob2",
+        "type": "select_one",
+        "isSessionVariable": true,
         "_row_num": 139
       },
       {
-        "name": "roundq",
+        "name": "maeq",
         "type": "select_one",
-        "isSessionVariable": false,
+        "isSessionVariable": true,
         "_row_num": 140
       },
       {
-        "name": "csobs",
+        "name": "roundsdatelate",
         "type": "text",
         "isSessionVariable": false,
         "_row_num": 141
       },
       {
-        "name": "defdiag1",
-        "type": "text",
+        "name": "roundq",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 142
       },
       {
-        "name": "defdiag2",
+        "name": "csobs",
         "type": "text",
         "isSessionVariable": false,
         "_row_num": 143
       },
       {
-        "name": "defdiag3",
+        "name": "defdiag1",
         "type": "text",
         "isSessionVariable": false,
         "_row_num": 144
       },
       {
-        "name": "falh",
-        "type": "integer",
+        "name": "defdiag2",
+        "type": "text",
         "isSessionVariable": false,
         "_row_num": 145
       },
       {
-        "name": "falm",
-        "type": "integer",
+        "name": "defdiag3",
+        "type": "text",
         "isSessionVariable": false,
         "_row_num": 146
       },
       {
-        "name": "gepor",
+        "name": "falh",
         "type": "integer",
         "isSessionVariable": false,
         "_row_num": 147
       },
       {
-        "name": "geresl",
+        "name": "falm",
         "type": "integer",
         "isSessionVariable": false,
         "_row_num": 148
       },
       {
-        "name": "hemogli1",
-        "type": "decimal",
+        "name": "gepor",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 149
       },
       {
-        "name": "horainth",
+        "name": "geresl",
         "type": "integer",
         "isSessionVariable": false,
         "_row_num": 150
       },
       {
-        "name": "horaintm",
-        "type": "integer",
+        "name": "hemogli1",
+        "type": "decimal",
         "isSessionVariable": false,
         "_row_num": 151
       },
       {
-        "name": "leucocito",
+        "name": "horainth",
         "type": "integer",
         "isSessionVariable": false,
         "_row_num": 152
       },
       {
+        "name": "horaintm",
+        "type": "integer",
+        "isSessionVariable": false,
+        "_row_num": 153
+      },
+      {
+        "name": "leucocito",
+        "type": "integer",
+        "isSessionVariable": false,
+        "_row_num": 154
+      },
+      {
         "name": "saida",
         "type": "custom_date",
         "isSessionVariable": false,
-        "_row_num": 153
+        "_row_num": 155
       },
       {
         "name": "saidacom",
         "type": "text",
         "isSessionVariable": false,
-        "_row_num": 154
+        "_row_num": 156
       },
       {
         "name": "sanguegrp",
         "type": "select_one_dropdown",
         "isSessionVariable": false,
-        "_row_num": 155
+        "_row_num": 157
       },
       {
         "name": "tdr",
         "type": "select_one_dropdown",
         "isSessionVariable": false,
-        "_row_num": 156
+        "_row_num": 158
       },
       {
         "name": "transtot",
         "type": "integer",
         "isSessionVariable": false,
-        "_row_num": 157
+        "_row_num": 159
       },
       {
         "name": "defdiag1n",
         "type": "select_multiple",
         "isSessionVariable": true,
-        "_row_num": 158
+        "_row_num": 160
       },
       {
         "name": "defdiag2n",
         "type": "select_multiple",
         "isSessionVariable": true,
-        "_row_num": 159
+        "_row_num": 161
       },
       {
         "name": "defdiag3n",
         "type": "select_multiple",
         "isSessionVariable": true,
-        "_row_num": 160
+        "_row_num": 162
       },
       {
         "name": "falq",
         "type": "select_multiple",
         "isSessionVariable": true,
-        "_row_num": 161
+        "_row_num": 163
       },
       {
         "name": "geresli",
         "type": "integer",
         "isSessionVariable": true,
-        "_row_num": 162
+        "_row_num": 164
       },
       {
         "name": "hemogli1q",
         "type": "select_multiple",
         "isSessionVariable": true,
-        "_row_num": 163
+        "_row_num": 165
       },
       {
         "name": "horaintq",
         "type": "select_multiple",
         "isSessionVariable": true,
-        "_row_num": 164
+        "_row_num": 166
       },
       {
         "name": "leucocitoq",
         "type": "select_multiple",
         "isSessionVariable": true,
-        "_row_num": 165
+        "_row_num": 167
       },
       {
         "name": "malq",
         "type": "select_multiple",
         "isSessionVariable": true,
-        "_row_num": 166
+        "_row_num": 168
       },
       {
         "name": "saidana",
         "type": "select_multiple",
         "isSessionVariable": true,
-        "_row_num": 167
+        "_row_num": 169
       },
       {
         "name": "sanguegrpi",
         "type": "select_one_dropdown",
         "isSessionVariable": true,
-        "_row_num": 168
+        "_row_num": 170
       },
       {
         "name": "sanguegrpq",
         "type": "select_multiple",
         "isSessionVariable": true,
-        "_row_num": 169
+        "_row_num": 171
       },
       {
         "name": "transtotq",
         "type": "select_multiple",
         "isSessionVariable": true,
-        "_row_num": 170
+        "_row_num": 172
       }
     ]
   },
@@ -8718,11 +8730,33 @@
         "isSessionVariable": true,
         "elementKey": "cam1na"
       },
-      "roundsdatelate": {
+      "exactdob2": {
         "type": "string",
         "_defn": [
           {
             "_row_num": 139,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": true,
+        "elementKey": "exactdob2"
+      },
+      "maeq": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 140,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": true,
+        "elementKey": "maeq"
+      },
+      "roundsdatelate": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 141,
             "section_name": "model"
           }
         ],
@@ -8733,7 +8767,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 140,
+            "_row_num": 142,
             "section_name": "model"
           }
         ],
@@ -8744,7 +8778,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 141,
+            "_row_num": 143,
             "section_name": "model"
           }
         ],
@@ -8755,7 +8789,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 142,
+            "_row_num": 144,
             "section_name": "model"
           }
         ],
@@ -8766,7 +8800,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 143,
+            "_row_num": 145,
             "section_name": "model"
           }
         ],
@@ -8777,7 +8811,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 144,
+            "_row_num": 146,
             "section_name": "model"
           }
         ],
@@ -8788,7 +8822,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 145,
+            "_row_num": 147,
             "section_name": "model"
           }
         ],
@@ -8799,7 +8833,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 146,
+            "_row_num": 148,
             "section_name": "model"
           }
         ],
@@ -8810,7 +8844,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 147,
+            "_row_num": 149,
             "section_name": "model"
           }
         ],
@@ -8821,7 +8855,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 148,
+            "_row_num": 150,
             "section_name": "model"
           }
         ],
@@ -8832,7 +8866,7 @@
         "type": "number",
         "_defn": [
           {
-            "_row_num": 149,
+            "_row_num": 151,
             "section_name": "model"
           }
         ],
@@ -8843,7 +8877,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 150,
+            "_row_num": 152,
             "section_name": "model"
           }
         ],
@@ -8854,7 +8888,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 151,
+            "_row_num": 153,
             "section_name": "model"
           }
         ],
@@ -8865,7 +8899,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 152,
+            "_row_num": 154,
             "section_name": "model"
           }
         ],
@@ -8881,7 +8915,7 @@
         "__rowNum__": 1,
         "_defn": [
           {
-            "_row_num": 153,
+            "_row_num": 155,
             "section_name": "model"
           }
         ],
@@ -8892,7 +8926,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 154,
+            "_row_num": 156,
             "section_name": "model"
           }
         ],
@@ -8903,7 +8937,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 155,
+            "_row_num": 157,
             "section_name": "model"
           }
         ],
@@ -8914,7 +8948,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 156,
+            "_row_num": 158,
             "section_name": "model"
           }
         ],
@@ -8925,7 +8959,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 157,
+            "_row_num": 159,
             "section_name": "model"
           }
         ],
@@ -8940,7 +8974,7 @@
         },
         "_defn": [
           {
-            "_row_num": 158,
+            "_row_num": 160,
             "section_name": "model"
           }
         ],
@@ -8955,7 +8989,7 @@
         },
         "_defn": [
           {
-            "_row_num": 159,
+            "_row_num": 161,
             "section_name": "model"
           }
         ],
@@ -8970,7 +9004,7 @@
         },
         "_defn": [
           {
-            "_row_num": 160,
+            "_row_num": 162,
             "section_name": "model"
           }
         ],
@@ -8985,7 +9019,7 @@
         },
         "_defn": [
           {
-            "_row_num": 161,
+            "_row_num": 163,
             "section_name": "model"
           }
         ],
@@ -8996,7 +9030,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 162,
+            "_row_num": 164,
             "section_name": "model"
           }
         ],
@@ -9011,7 +9045,7 @@
         },
         "_defn": [
           {
-            "_row_num": 163,
+            "_row_num": 165,
             "section_name": "model"
           }
         ],
@@ -9026,7 +9060,7 @@
         },
         "_defn": [
           {
-            "_row_num": 164,
+            "_row_num": 166,
             "section_name": "model"
           }
         ],
@@ -9041,7 +9075,7 @@
         },
         "_defn": [
           {
-            "_row_num": 165,
+            "_row_num": 167,
             "section_name": "model"
           }
         ],
@@ -9056,7 +9090,7 @@
         },
         "_defn": [
           {
-            "_row_num": 166,
+            "_row_num": 168,
             "section_name": "model"
           }
         ],
@@ -9071,7 +9105,7 @@
         },
         "_defn": [
           {
-            "_row_num": 167,
+            "_row_num": 169,
             "section_name": "model"
           }
         ],
@@ -9082,7 +9116,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 168,
+            "_row_num": 170,
             "section_name": "model"
           }
         ],
@@ -9097,7 +9131,7 @@
         },
         "_defn": [
           {
-            "_row_num": 169,
+            "_row_num": 171,
             "section_name": "model"
           }
         ],
@@ -9112,7 +9146,7 @@
         },
         "_defn": [
           {
-            "_row_num": 170,
+            "_row_num": 172,
             "section_name": "model"
           }
         ],
@@ -11793,11 +11827,39 @@
           "cam1na_items"
         ]
       },
-      "roundsdatelate": {
+      "exactdob2": {
         "type": "string",
         "_defn": [
           {
             "_row_num": 139,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": true,
+        "elementKey": "exactdob2",
+        "elementName": "exactdob2",
+        "elementSet": "data",
+        "elementPath": "exactdob2"
+      },
+      "maeq": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 140,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": true,
+        "elementKey": "maeq",
+        "elementName": "maeq",
+        "elementSet": "data",
+        "elementPath": "maeq"
+      },
+      "roundsdatelate": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 141,
             "section_name": "model"
           }
         ],
@@ -11811,7 +11873,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 140,
+            "_row_num": 142,
             "section_name": "model"
           }
         ],
@@ -11825,7 +11887,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 141,
+            "_row_num": 143,
             "section_name": "model"
           }
         ],
@@ -11839,7 +11901,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 142,
+            "_row_num": 144,
             "section_name": "model"
           }
         ],
@@ -11853,7 +11915,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 143,
+            "_row_num": 145,
             "section_name": "model"
           }
         ],
@@ -11867,7 +11929,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 144,
+            "_row_num": 146,
             "section_name": "model"
           }
         ],
@@ -11881,7 +11943,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 145,
+            "_row_num": 147,
             "section_name": "model"
           }
         ],
@@ -11895,7 +11957,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 146,
+            "_row_num": 148,
             "section_name": "model"
           }
         ],
@@ -11909,7 +11971,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 147,
+            "_row_num": 149,
             "section_name": "model"
           }
         ],
@@ -11923,7 +11985,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 148,
+            "_row_num": 150,
             "section_name": "model"
           }
         ],
@@ -11937,7 +11999,7 @@
         "type": "number",
         "_defn": [
           {
-            "_row_num": 149,
+            "_row_num": 151,
             "section_name": "model"
           }
         ],
@@ -11951,7 +12013,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 150,
+            "_row_num": 152,
             "section_name": "model"
           }
         ],
@@ -11965,7 +12027,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 151,
+            "_row_num": 153,
             "section_name": "model"
           }
         ],
@@ -11979,7 +12041,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 152,
+            "_row_num": 154,
             "section_name": "model"
           }
         ],
@@ -11998,7 +12060,7 @@
         "__rowNum__": 1,
         "_defn": [
           {
-            "_row_num": 153,
+            "_row_num": 155,
             "section_name": "model"
           }
         ],
@@ -12012,7 +12074,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 154,
+            "_row_num": 156,
             "section_name": "model"
           }
         ],
@@ -12026,7 +12088,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 155,
+            "_row_num": 157,
             "section_name": "model"
           }
         ],
@@ -12040,7 +12102,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 156,
+            "_row_num": 158,
             "section_name": "model"
           }
         ],
@@ -12054,7 +12116,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 157,
+            "_row_num": 159,
             "section_name": "model"
           }
         ],
@@ -12077,7 +12139,7 @@
         },
         "_defn": [
           {
-            "_row_num": 158,
+            "_row_num": 160,
             "section_name": "model"
           }
         ],
@@ -12103,7 +12165,7 @@
         },
         "_defn": [
           {
-            "_row_num": 159,
+            "_row_num": 161,
             "section_name": "model"
           }
         ],
@@ -12129,7 +12191,7 @@
         },
         "_defn": [
           {
-            "_row_num": 160,
+            "_row_num": 162,
             "section_name": "model"
           }
         ],
@@ -12155,7 +12217,7 @@
         },
         "_defn": [
           {
-            "_row_num": 161,
+            "_row_num": 163,
             "section_name": "model"
           }
         ],
@@ -12172,7 +12234,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 162,
+            "_row_num": 164,
             "section_name": "model"
           }
         ],
@@ -12195,7 +12257,7 @@
         },
         "_defn": [
           {
-            "_row_num": 163,
+            "_row_num": 165,
             "section_name": "model"
           }
         ],
@@ -12221,7 +12283,7 @@
         },
         "_defn": [
           {
-            "_row_num": 164,
+            "_row_num": 166,
             "section_name": "model"
           }
         ],
@@ -12247,7 +12309,7 @@
         },
         "_defn": [
           {
-            "_row_num": 165,
+            "_row_num": 167,
             "section_name": "model"
           }
         ],
@@ -12273,7 +12335,7 @@
         },
         "_defn": [
           {
-            "_row_num": 166,
+            "_row_num": 168,
             "section_name": "model"
           }
         ],
@@ -12299,7 +12361,7 @@
         },
         "_defn": [
           {
-            "_row_num": 167,
+            "_row_num": 169,
             "section_name": "model"
           }
         ],
@@ -12316,7 +12378,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 168,
+            "_row_num": 170,
             "section_name": "model"
           }
         ],
@@ -12339,7 +12401,7 @@
         },
         "_defn": [
           {
-            "_row_num": 169,
+            "_row_num": 171,
             "section_name": "model"
           }
         ],
@@ -12365,7 +12427,7 @@
         },
         "_defn": [
           {
-            "_row_num": 170,
+            "_row_num": 172,
             "section_name": "model"
           }
         ],

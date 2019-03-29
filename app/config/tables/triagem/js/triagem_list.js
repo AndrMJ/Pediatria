@@ -15,7 +15,7 @@ function handleClick(index) {
         		null,
                 'triagem',
                 index,
-                'laterounds',
+                'triagem',
                 null);
     }
 }
@@ -30,7 +30,7 @@ function cbSRSuccess(searchData) {
 				'triagem',
 				'_id = ?',
 				[rowId],
-				'config/tables/triagem/html/triagem_laterounds.html');
+				'config/tables/triagem/html/triagem_list.html');
     } else {
         document.getElementById("search").value = "";
         document.getElementsByName("query")[0].placeholder="Client not found";
@@ -38,7 +38,7 @@ function cbSRSuccess(searchData) {
 }
 
 function cbSRFailure(error) {
-    console.log('triagem_laterounds: cbSRFailure failed with error: ' + error);
+    console.log('triagem_list: cbSRFailure failed with error: ' + error);
 }
 
 // filters list view by regdate entered by user
@@ -83,21 +83,10 @@ function render() {
         var secEntered = triagem.getData(i, 'sec1');
         var camEntered = triagem.getData(i, 'cam1');
         var checkSmxcau = triagem.getData(i, 'smxcau');
-        var roundsdateEntered = triagem.getData(i, 'roundsdatelate');
-        var td = new Date();
-        var m = td.getMonth();
-        var d = td.getDate();
-        var y = td.getFullYear();
-
-        var today = new Date(y,m,d);
-        var rdate = null
-        if (roundsdateEntered !== null) {
-        	rdate = new Date(roundsdateEntered.substring(0,4),roundsdateEntered.substring(5,7)-1,roundsdateEntered.substring(8,10));
-        } 
 
         // make list entry
         // Only show not patients not yet checked today
-        if ((checkSmxcau === "55" && today > rdate) || (checkSmxcau === "55" && roundsdateEntered === null)){
+{
             /*    Creating the item space    */
             var item = document.createElement('li');
             item.setAttribute('class', 'item_space');
@@ -219,7 +208,7 @@ function cbSuccess(result) {
 }
 
 function cbFailure(error) {
-    console.log('triagem_laterounds: failed with error: ' + error);
+    console.log('triagem_list: failed with error: ' + error);
 }
 
 function display() {

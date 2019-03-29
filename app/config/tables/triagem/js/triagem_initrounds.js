@@ -52,13 +52,13 @@ function getResults() {
 // displays list view of patients
 function render() {
 
-    // create button that adds patients to the system - launches triagem form
+    // create button that adds patients to the system - launches initroundsQuick form
     var addClient = document.createElement('p');
     addClient.onclick = function() {
         odkTables.addRowWithSurvey(
         		null,
                 'triagem',
-                'triagem',
+                'initroundsQuick',
                 null,
                 null);
     };
@@ -71,20 +71,30 @@ function render() {
         var regdateEntered = triagem.getData(i, 'regdate');
         var nameEntered = triagem.getData(i, 'nome');
         var dobEntered = triagem.getData(i, 'dob');
+        var anosEntered = triagem.getData(i, 'anos');
+        var mesEntered = triagem.getData(i, 'meses');
+        var semEntered = triagem.getData(i, 'semanes');
+        var diasEntered = triagem.getData(i, 'dias');
         var	sexEntered = triagem.getData(i, 'sex');
+        var pesoEntered = triagem.getData(i, 'peso');
+        var tempEntered = triagem.getData(i, 'tempr');
+        var maeEntered = triagem.getData(i, 'nomemae');
+        var bairroEntered = triagem.getData(i, 'bairro');
         var checkSmxcau = triagem.getData(i, 'smxcau');
         var checkHosp = triagem.getData(i, 'hospitzd');
-        var dischargeEntered = triagem.getData(i, 'saida');
         
         // make list entry
-        // Only show patients not yet checked for admission 
-    	if (checkHosp === '1' && checkSmxcau === null){
+        // Only show patients not yet seen
+    	if (checkHosp === '1' && checkSmxcau === null) {
             /*    Creating the item space    */
             var item = document.createElement('li');
             item.setAttribute('class', 'item_space');
             item.setAttribute(
                     'onClick',
                     'handleClick("' + triagem.getRowId(i) + '")');
+            if(nameEntered === null) {
+            	nameEntered = 'Não sabe';
+            }
             item.innerHTML = nameEntered;
             document.getElementById('list').appendChild(item);
 
@@ -96,38 +106,85 @@ function render() {
             item.appendChild(chevron);
 
             // create sub-list in item space
-            //  Name information
-            var name = document.createElement('li');
-            name.setAttribute('class', 'detail');
-            name.innerHTML = 'Name: ' + nameEntered;
-            item.appendChild(name);
-
-            //  DoB information
-            var dob = document.createElement('li');
-            dob.setAttribute('class', 'detail');
+            //  DoB/age information
+            var age = document.createElement('li');
+            var ageEntered = null;
+        	age.setAttribute('class', 'detail');
             if(dobEntered !== null) {
-            	dobEntered = dobEntered.substring(8,10) + dobEntered.substring(4,7) + '-' + dobEntered.substring(0,4);
-            }
-            dob.innerHTML = 'DoB: ' + dobEntered;
-            item.appendChild(dob);
-            
+                ageEntered = dobEntered.substring(8,10) + dobEntered.substring(4,7) + '-' + dobEntered.substring(0,4);
+                age.innerHTML = 'Dob: ' + ageEntered;
+            } else if(dobEntered === null) {
+            	if(anosEntered !== null) {
+            		ageEntered = anosEntered + ' ano(s)';
+            	} else if(mesEntered !== null) {
+            		ageEntered = mesEntered + ' mês(es)';
+            	} else if(semEntered !== null) {
+            		ageEntered = semEntered + ' semana(s)';
+            	} else if(diasEntered !== null) {
+            		ageEntered = diasEntered + ' dia(s)';
+            	} else {
+                	ageEntered = 'Não sabe';
+                }
+            	age.innerHTML = 'Age: ' + ageEntered;
+            } 
+            item.appendChild(age);
+          
             //  Sex information
             var sex = document.createElement('li');
             sex.setAttribute('class', 'detail');
             if(sexEntered === '1') {
             	sexEntered = 'Male';
             } else if(sexEntered === '2') {
-            	sexEntered = 'Female'
+            	sexEntered = 'Female';
+            } else {
+            	sexEntered = 'Não sabe';
             }
             sex.innerHTML = 'Sex: ' + sexEntered;
             item.appendChild(sex);
             
-            //  smxcau information
-            var smxcau = document.createElement('li');
-            smxcau.setAttribute('class', 'detail');
-            smxcau.innerHTML = 'smxcau: ' + checkSmxcau;
-            item.appendChild(smxcau);
+            //  Weight and temperature information
+            var pesotemp = document.createElement('li');
+            pesotemp.setAttribute('class', 'detail');
+            if(pesoEntered === null) {
+            	pesoEntered = 'Não sabe';
+            }
+            if(tempEntered === null) {
+            	tempEntered = 'Não sabe';
+            }
+            pesotemp.innerHTML = 'Weight: ' + pesoEntered + ',' + ' Temperature: ' + tempEntered;
+            item.appendChild(pesotemp);
             
+        //  Bairro information
+            var bairro = document.createElement('li');
+            bairro.setAttribute('class', 'detail');
+            if(bairroEntered === '1') {
+            	bairroEntered = 'Bandim I';
+            } else if(bairroEntered === '2') {
+            	bairroEntered = 'Bandim II';
+            } else if(bairroEntered === '3') {
+            	bairroEntered = 'Belem';
+            } else if(bairroEntered === '4') {
+            	bairroEntered = 'Mindera';
+            } else if(bairroEntered === '7') {
+            	bairroEntered = 'Cuntum I';
+            } else if(bairroEntered === '9') {
+            	bairroEntered = 'Cuntum II';
+            } else if(bairroEntered === '999') {
+            	bairroEntered = 'Não sabe';
+            } else {
+            	bairroEntered = 'Não sabe';
+            }
+            bairro.innerHTML = 'Bairro: ' + bairroEntered;
+            item.appendChild(bairro);
+            
+            //  Name of mother
+            var mae = document.createElement('li');
+            mae.setAttribute('class', 'detail');
+            if(maeEntered === null) {
+            	maeEntered = 'Não sabe';
+            }
+            mae.innerHTML = 'Nome da mãe: ' + maeEntered;
+            item.appendChild(mae);
         }
     }
 }
