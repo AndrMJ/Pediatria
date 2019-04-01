@@ -232,7 +232,7 @@
       {
         "type": "select_one_dropdown",
         "values_list": "reg",
-        "name": "bairro",
+        "name": "reg",
         "display": {
           "prompt": {
             "text": "Region"
@@ -7189,12 +7189,7 @@
       },
       "bairro": {
         "type": "string",
-        "valuesList": "reg",
         "_defn": [
-          {
-            "_row_num": 17,
-            "section_name": "survey"
-          },
           {
             "_row_num": 3,
             "section_name": "model"
@@ -7608,7 +7603,12 @@
       },
       "reg": {
         "type": "string",
+        "valuesList": "reg",
         "_defn": [
+          {
+            "_row_num": 17,
+            "section_name": "survey"
+          },
           {
             "_row_num": 39,
             "section_name": "model"
@@ -9687,7 +9687,7 @@
           {
             "type": "select_one_dropdown",
             "values_list": "reg",
-            "name": "bairro",
+            "name": "reg",
             "display": {
               "prompt": {
                 "text": "Region"
@@ -9982,12 +9982,7 @@
       },
       "bairro": {
         "type": "string",
-        "valuesList": "reg",
         "_defn": [
-          {
-            "_row_num": 17,
-            "section_name": "survey"
-          },
           {
             "_row_num": 3,
             "section_name": "model"
@@ -10509,7 +10504,12 @@
       },
       "reg": {
         "type": "string",
+        "valuesList": "reg",
         "_defn": [
+          {
+            "_row_num": 17,
+            "section_name": "survey"
+          },
           {
             "_row_num": 39,
             "section_name": "model"
