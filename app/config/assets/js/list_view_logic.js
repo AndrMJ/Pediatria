@@ -15,6 +15,10 @@ window.listViewLogic = {
     searchKey: null,
     queryStmt: 'stmt',
     queryArgs: 'args',
+    constraintVar1: null,
+    constraintVal1: null,
+    constraintVar2: null,
+    constraintVal2: null,
 
     rowCount: 0,  
     limit: -1,
@@ -46,6 +50,25 @@ window.listViewLogic = {
     firstDetColId: null,
     secondDetLabel: null,
     secondDetColId: null,
+    thirdDetLabel: null,
+    thirdDetColId: null,
+    fourthDetLabel: null,
+    fourthDetColId: null,
+    fifthDetLabel: null,
+    fifthDetColId: null,
+    sixthDetLabel: null,
+    sixthDetColId: null,
+    seventhDetLabel: null,
+    seventhDetColId: null,
+    
+    setConstrains: function(colId1, value1, colId2, value2) {
+    	var that = this;
+    	
+    	that.constraintVar1 = colId1;
+    	that.constraintVal1 = value1;
+    	that.constraintVar2 = colId2;
+    	that.constraintVal2 = value2;
+    },
     
     setTableId: function(tableName) {
         if (tableName === null || tableName === undefined ||
@@ -220,7 +243,10 @@ window.listViewLogic = {
     },
 
     setColIdsToDisplayInList: function(headerLabel, headerColId, 
-            firstDetailLabel, firstDetailColId, secondDetailLabel, secondDetailColId) {
+            firstDetailLabel, firstDetailColId, secondDetailLabel, secondDetailColId,
+            thirdDetailLabel, thirdDetailColId, fourthDetailLabel, fourthDetailColId,
+            fifthDetailLabel, fifthDetailColId, sixthDetailLabel, sixthDetailColId,
+            seventhDetailLabel, seventhDetailColId) {
         var that = this;
 
         if (headerLabel !== null && headerLabel !== undefined && headerLabel.length !== 0) {
@@ -245,7 +271,47 @@ window.listViewLogic = {
 
         if (secondDetailColId !== null && secondDetailColId !== undefined && secondDetailColId.length !== 0) {
             that.secondDetColId = secondDetailColId;
-        }  
+        }
+        
+        if (thirdDetailLabel !== null && thirdDetailLabel !== undefined && thirdDetailLabel.length !== 0) {
+            that.thirdDetLabel = thirdDetailLabel;
+        }
+
+        if (thirdDetailColId !== null && thirdDetailColId !== undefined && thirdDetailColId.length !== 0) {
+            that.thirdDetColId = thirdDetailColId;
+        }
+        
+        if (fourthDetailLabel !== null && fourthDetailLabel !== undefined && fourthDetailLabel.length !== 0) {
+            that.fourthDetLabel = fourthDetailLabel;
+        }
+
+        if (fourthDetailColId !== null && fourthDetailColId !== undefined && fourthDetailColId.length !== 0) {
+            that.fourthDetColId = fourthDetailColId;
+        }
+        
+        if (fifthDetailLabel !== null && fifthDetailLabel !== undefined && fifthDetailLabel.length !== 0) {
+            that.fifthDetLabel = fifthDetailLabel;
+        }
+
+        if (fifthDetailColId !== null && fifthDetailColId !== undefined && fifthDetailColId.length !== 0) {
+            that.fifthDetColId = fifthDetailColId;
+        }
+        
+        if (sixthDetailLabel !== null && sixthDetailLabel !== undefined && sixthDetailLabel.length !== 0) {
+            that.sixthDetLabel = sixthDetailLabel;
+        }
+
+        if (sixthDetailColId !== null && sixthDetailColId !== undefined && sixthDetailColId.length !== 0) {
+            that.sixthDetColId = sixthDetailColId;
+        }
+
+        if (seventhDetailLabel !== null && seventhDetailLabel !== undefined && seventhDetailLabel.length !== 0) {
+            that.seventhDetLabel = seventhDetailLabel;
+        }
+
+        if (seventhDetailColId !== null && seventhDetailColId !== undefined && seventhDetailColId.length !== 0) {
+            that.seventhDetColId = seventhDetailColId;
+        }
     },
 
     setImageToDisplayInList: function(imgIdToUse) {
@@ -504,133 +570,214 @@ window.listViewLogic = {
     displayGroup: function(resultSet) {
         var that = this;
         var locale = odkCommon.getPreferredLocale();
-        var editTxt = odkCommon.localizeText(locale, "edit");
-        var deleteTxt = odkCommon.localizeText(locale, "delete");
-        var delRowTxt = odkCommon.localizeText(locale, "are_you_sure_you_want_to_delete_row");
         /* Number of rows displayed per 'chunk' - can modify this value */
         for (var i = 0; i < resultSet.getCount(); i++) {
+        	
+        	/* Handles the constraint variables*/
+        	var check1 = util.formatColIdForDisplay(that.constraintVar1, i, resultSet, true);
+            var check2 = util.formatColIdForDisplay(that.constraintVar2, i, resultSet, true);	
+        	var checkTotal = null
+        	
+            /* Special constraint for Lola's list*/
+        	if (that.formId === 'laterounds') {
+        		var td = new Date();
+                var m = td.getMonth();
+                var d = td.getDate();
+                var y = td.getFullYear();
 
-            /* Creates the item space */
-            var item = $('<li>');
-            item.attr('rowId', resultSet.getRowId(i));
-            item.attr('class', 'item_space');
-            item.text(that.createLabel(that.hdrLabel) + util.formatColIdForDisplay(that.hdrColId, i, resultSet, true));
-
-            if (that.showEditAndDelButtons === false)  {
-                /* Creates arrow icon (Nothing to edit here) */
-                var chevron = $('<img>');
-                chevron.attr('src', odkCommon.getFileAsUrl('config/assets/img/white_arrow.png'));
-                chevron.attr('class', 'chevron');
-                item.append(chevron);
-            }
-
-            if (that.firstDetColId !== null && that.firstDetColId !== undefined && that.firstDetColId.length !== 0) {
-                var field1 = $('<li>');
-                field1.attr('class', 'detail');
-                var fDetail = util.formatColIdForDisplay(that.firstDetColId, i, resultSet, true);
-                if (that.firstDetColId === 'sex') {
-                	if (fDetail === '1') {
-                		fDetail = 'Male';
-                	}
-                	else if (fDetail === '2') {
-                		fDetail = 'Female';
-                	}
-                	else {
-                		fDetail = 'Não sabe';
-                	}
-                }
-                
-                field1.text(that.createLabel(that.firstDetLabel) + fDetail);
-                item.append(field1);
-            }
-
-            // Add delete button if _effective_access has 'd'
-            if (that.showEditAndDelButtons === true) {
-                var access = resultSet.getData(i, '_effective_access');
-                if (access.indexOf('d') !== -1) {
-                    var deleteButton = $('<button>');
-                    deleteButton.attr('id', 'delButton');
-                    deleteButton.attr('class', 'delBtn btn');
-
-                    deleteButton.click(function(e) {
-                        var jqueryObj = $(e.target);
-                        // get closest thing with class item_space, to get row id
-                        var containingDiv = jqueryObj.closest('.item_space');
-                        var rowId = containingDiv.attr('rowId');
-                        console.log('deleteButton clicked with rowId: ' + rowId);
-                        e.stopPropagation();
-
-                        if (confirm(delRowTxt + ' ' + rowId)) {
-                            odkData.deleteRow(that.tableId, null, rowId, function(d) {
-                                that.resumeFn('rowDeleted');
-                            }, function(error) {
-                                console.log('Failed to delete row ' +  rowId + ' with error ' + error);
-                                alert('Unable to delete row - ' + rowId);
-                            });
-                        }
-                    });
-
-                    deleteButton.text(deleteTxt);
+                var today = new Date(y,m,d);
+                if (check2 !== '') {
+                	check2 = new Date(check2.substring(0,4), check2.substring(5,7)-1, check2.substring(8,10));
+                } 
+        		if ((check1 === that.constraintVal1 && today > check2) || (check1 === that.constraintVal1 && check2 === '')) {
+        			checkTotal = '1'
+        		}
+        	} else if (check1 === that.constraintVal1 && check2 === that.constraintVal2) {
+        		checkTotal = '1'
+        	}
             
-                    item.append(deleteButton);
-                }
+        	if (checkTotal === '1') {
+        		/* Creates the item space */
+        		var item = $('<li>');
+        		item.attr('rowId', resultSet.getRowId(i));
+        		item.attr('class', 'item_space');
+        		item.text(that.createLabel(that.hdrLabel) + util.formatColIdForDisplay(that.hdrColId, i, resultSet, true));
 
-                // Add edit button if _effective_access has 'w'
-                if (access.indexOf('w') !== -1) {
-                    var editButton = $('<button>');
-                    editButton.attr('id', 'editButton');
-                    editButton.attr('class', 'editBtn btn');
+        		if (that.showEditAndDelButtons === false)  {
+        			/* Creates arrow icon (Nothing to edit here) */
+        			var chevron = $('<img>');
+        			chevron.attr('src', odkCommon.getFileAsUrl('config/assets/img/white_arrow.png'));
+        			chevron.attr('class', 'chevron');
+        			item.append(chevron);
+        		}
 
-                    editButton.click(function(e) {
-                        var jqueryObj = $(e.target);
-                        // get closest thing with class item_space, to get row id
-                        var containingDiv = jqueryObj.closest('.item_space');
-                        var rowId = containingDiv.attr('rowId');
-                        console.log('editButton clicked with rowId: ' + rowId);
-                        e.stopPropagation();
+        		if (that.firstDetColId !== null && that.firstDetColId !== undefined && that.firstDetColId.length !== 0) {
+        			var field1 = $('<li>');
+        			field1.attr('class', 'detail');
+        			var fDetail = util.formatColIdForDisplay(that.firstDetColId, i, resultSet, true);
+        			if (that.firstDetColId === 'sex') {
+        				if (fDetail === '1') {
+        					fDetail = 'Male';
+        				} else if (fDetail === '2') {
+        					fDetail = 'Female';
+        				} else {
+        					fDetail = 'Não sabe';
+        				}
+        			}
+        			
+        			field1.text(that.createLabel(that.firstDetLabel) + fDetail);
+        			item.append(field1);
+        		}
 
-                        odkTables.editRowWithSurvey(null, that.tableId, rowId, that.formId, null, null);
-                    });
-
-                    editButton.text(editTxt);
-            
-                    item.append(editButton);
-                }
-            } 
-
-            if (that.secondDetColId !== null && that.secondDetColId !== undefined && that.secondDetColId.length !== 0) {
-                var field2 = $('<li>');
-                var sDetail = util.formatColIdForDisplay(that.secondDetColId, i, resultSet, true);
-                field2.attr('class', 'detail');
-                field2.text(that.createLabel(that.secondDetLabel) + sDetail);
-                item.append(field2);
-            }
-
-            if (that.imgId !== null && that.imgId !== undefined && that.imgId.length !== 0) {
-                var uriRelative = resultSet.getData(i, that.imgId);
-                var src = '';
-                if (uriRelative !== null  && uriRelative !== '') {
-                    var uriAbsolute = odkCommon.getRowFileAsUrl(that.tableId, resultSet.getRowId(i), uriRelative);
-                    src = uriAbsolute;
-                }
+        		if (that.secondDetColId !== null && that.secondDetColId !== undefined && that.secondDetColId.length !== 0) {
+        			var field2 = $('<li>');
+        			field2.attr('class', 'detail');
+                	var sDetail = util.formatColIdForDisplay(that.secondDetColId, i, resultSet, true);
+                	if(that.secondDetColId === 'dob') {
+                		if(sDetail !== null) {
+                			var dobEntered = sDetail;
+                			sDetail = dobEntered.substring(8,10) + dobEntered.substring(4,7) + '-' + dobEntered.substring(0,4);
+                		}
+                		else {
+                			var ano = util.formatColIdForDisplay('anos', i, resultSet, true);
+                			var mes = util.formatColIdForDisplay('meses', i, resultSet, true);
+                			var sem = util.formatColIdForDisplay('semanes', i, resultSet, true);
+                			var dia = util.formatColIdForDisplay('dias', i, resultSet, true);
+                			if (ano !== '') {
+                				sDetail = ano;
+                				that.secondDetLabel = 'Ano(s)';
+                			} else if (mes !== '') {
+                				sDetail = mes;
+                				that.secondDetLabel = 'Mês(es)';
+                			} else if (sem !== '') {
+                				sDetail = sem;
+                				that.secondDetLabel = 'Semana(s)';
+                			} else if (dia !== '') {
+                				sDetail = dia;
+                				that.secondDetLabel = 'Dia(s)';
+                			} else {
+                				sDetail = 'Não sabe';
+                			}
+                		}
+                	}
                 
-                var thumbnail = $('<img>');
-                thumbnail.attr('src', src);
-                thumbnail.attr('class', 'imgWrapper');
-
-                var imgDiv = $('<div>');
-                imgDiv.addClass('imgWrapperDiv');
-                imgDiv.append(thumbnail);
-                item.append(imgDiv);
-            }
-
-            $(that.listElemId).append(item);
-
-            // don't append the last one to avoid the fencepost problem
-            var borderDiv = $('<div>');
-            borderDiv.addClass('divider');
-            $(that.listElemId).append(borderDiv);
-        }
+                	field2.text(that.createLabel(that.secondDetLabel) + sDetail);
+                	item.append(field2);
+        		}
+            
+        		if (that.thirdDetColId !== null && that.thirdDetColId !== undefined && that.thirdDetColId.length !== 0) {
+        			var field3 = $('<li>');
+        			field3.attr('class', 'detail');
+        			var tDetail = util.formatColIdForDisplay(that.thirdDetColId, i, resultSet, true);
+        			if (that.thirdDetColId === 'peso') {
+        				var ttDetail = util.formatColIdForDisplay('tempr', i, resultSet, true);
+        				if(ttDetail === '') {
+        					ttDetail = 'Não sabe';
+        				}
+        				if(tDetail === '') {
+            				tDetail = 'Não sabe';
+            			}
+        			}
+        			field3.text(that.createLabel(that.thirdDetLabel) + tDetail + that.createLabel('; Temperature') + ttDetail);
+        			item.append(field3);
+        		}
+            
+        		if (that.fourthDetColId !== null && that.fourthDetColId !== undefined && that.fourthDetColId.length !== 0) {
+        			var field4 = $('<li>');
+        			field4.attr('class', 'detail');
+        			var foDetail = util.formatColIdForDisplay(that.fourthDetColId, i, resultSet, true);
+        			if (that.fourthDetColId === 'bairro') {
+                		if (foDetail === '1') {
+                			foDetail = 'Bandim I';
+                		} else if (foDetail === '2') {
+                			foDetail = 'Bandim II';
+						} else if (foDetail === '3') {
+							foDetail = 'Belem';
+                		} else if (foDetail === '4') {
+                			foDetail = 'Mindera';
+                		} else if (foDetail === '7') {
+                			foDetail = 'Cuntum I';
+                		} else if (foDetail === '9') {
+                			foDetail = 'Cuntum II';
+                		} else if (foDetail === '99' || foDetail === '') {
+                			foDetail = 'Não sabe';
+                		} else {
+                		}
+                	}
+        			field4.text(that.createLabel(that.fourthDetLabel) + foDetail);
+        			item.append(field4);
+        		}
+            
+        		if (that.fifthDetColId !== null && that.fifthDetColId !== undefined && that.fifthDetColId.length !== 0) {
+        			var field5 = $('<li>');
+        			field5.attr('class', 'detail');
+        			var fiDetail = util.formatColIdForDisplay(that.fifthDetColId, i, resultSet, true);
+        			if(that.fifthDetColId === 'regdate') {
+                		if(fiDetail !== '') {
+                			var regEntered = fiDetail;
+                			fiDetail = regEntered.substring(8,10) + regEntered.substring(4,7) + '-' + regEntered.substring(0,4);
+                		} else {
+                			fiDetail = 'Não sabe';
+                		}
+        			}
+        			if(that.fifthDetColId === 'nomemae') {
+        				if(fiDetail === '') {
+        					fiDetail = 'Não sabe';
+        				}
+        			}
+        			field5.text(that.createLabel(that.fifthDetLabel) + fiDetail);
+        			item.append(field5);
+        		}
+        		
+        		if (that.sixthDetColId !== null && that.sixthDetColId !== undefined && that.sixthDetColId.length !== 0) {
+        			var field6 = $('<li>');
+        			field6.attr('class', 'detail');
+        			var siDetail = util.formatColIdForDisplay(that.sixthDetColId, i, resultSet, true);
+        			if (that.sixthDetColId === 'sec1') {
+        				var scDetail = util.formatColIdForDisplay('cam1', i, resultSet, true);
+        				if(scDetail === '') {
+        					scDetail = 'Não sabe';
+        				}
+        				if(siDetail === '') {
+            				siDetail = 'Não sabe';
+            			}
+        				var label = that.createLabel(that.sixthDetLabel) + siDetail + that.createLabel('; Bed') + scDetail;
+        			}
+        			if (that.sixthDetColId === 'roundq') {
+        				if(siDetail === '') {
+            				siDetail = 'Não sabe';
+            			}
+        				var label = that.createLabel(that.sixthDetLabel) + siDetail;
+        			}
+        			field6.text(label);
+        			item.append(field6);  
+        		}
+        		
+        		if (that.seventhDetColId !== null && that.seventhDetColId !== undefined && that.seventhDetColId.length !== 0) {
+        			var field7 = $('<li>');
+        			field7.attr('class', 'detail');
+        			var seDetail = util.formatColIdForDisplay(that.seventhDetColId, i, resultSet, true);
+        			if (that.seventhDetColId === 'roundsdatelate') {
+        				if (seDetail !== '') {
+        					var visEntered = seDetail;
+                			seDetail = visEntered.substring(8,10) + visEntered.substring(4,7) + '-' + visEntered.substring(0,4);
+        				} else {
+            				seDetail = 'Não sabe';
+            			}
+        			}
+        			field7.text(that.createLabel(that.seventhDetLabel) + seDetail);
+        			item.append(field7);  
+        		}
+        			
+        		$(that.listElemId).append(item);
+        		
+        		
+        		// don't append the last one to avoid the fencepost problem
+        		var borderDiv = $('<div>');
+        		borderDiv.addClass('divider');
+        		$(that.listElemId).append(borderDiv);
+        	}
+        }    
     },
 
     clearRows: function() {

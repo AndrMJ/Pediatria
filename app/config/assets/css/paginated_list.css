@@ -55,7 +55,7 @@ ul {
 }
 
 .detail {
-  font-size: 16pt;
+  font-size: 17pt;
   color: #fff;
   font-weight: normal;
 }
@@ -77,6 +77,7 @@ ul {
 }
 
 #searchBox {
+
     font-size: 15pt;
     text-align: center;
     width: 100%;
@@ -98,6 +99,8 @@ ul {
     border: 1px solid darkslategray;
     width: 250px;
     margin: auto;
+    font-size: 18px;
+   	margin-top: 10px;
 }
 
 #submit {
@@ -108,13 +111,14 @@ ul {
     background-color: darkslategray;
     color: white;
     margin: auto;
+    font-size: 18px;
 }
 
 .btn{
     width: 100%;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    font-size: 14px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 18px;
     font-weight: normal;
     line-height: 1.42857143;
     text-align: center;
@@ -124,6 +128,25 @@ ul {
     color: white;
     border: 1px solid transparent;
 }
+
+.launchForm {
+    width: 90%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background: darkslategray;
+    color: white;
+    border: 1px solid transparent;
+}
+
 
 .btnDiv{
     display:inline-block;
@@ -144,11 +167,12 @@ ul {
 .dropdownLimit {
     background-color: white;
     padding: 10px;
-    margin: 5px;
+    margin: auto;
+    font-size: 18px;
 }
 
 .navTextStyle {
-    font-size: 10pt;
+    font-size: 15pt;
 }
 
 .paginatedListHeader {

@@ -19,7 +19,7 @@
       },
       {
         "setting_name": "form_version",
-        "value": 20190502,
+        "value": 20190404,
         "_row_num": 3
       },
       {
@@ -93,42 +93,6 @@
         "_row_num": 3
       },
       {
-        "type": "select_one",
-        "values_list": "seccheck",
-        "name": "sec1check",
-        "_row_num": 4
-      },
-      {
-        "clause": "if",
-        "condition": "selected(data('sec1check'),'2')",
-        "_row_num": 5
-      },
-      {
-        "type": "select_one_dropdown",
-        "values_list": "sec",
-        "name": "sec1",
-        "display": {
-          "prompt": {
-            "text": "New section"
-          }
-        },
-        "_row_num": 6
-      },
-      {
-        "clause": "else",
-        "_row_num": 7
-      },
-      {
-        "type": "assign",
-        "name": "sec1",
-        "calculation": "data('sec1i')",
-        "_row_num": 8
-      },
-      {
-        "clause": "end if",
-        "_row_num": 9
-      },
-      {
         "type": "note",
         "display": {
           "prompt": {
@@ -138,81 +102,98 @@
         "inputAttributes": {
           "readonly": true
         },
-        "_row_num": 10
+        "_row_num": 4
       },
       {
         "type": "select_one",
-        "values_list": "camcheck",
-        "name": "cam1check",
-        "_row_num": 11
+        "values_list": "seccam",
+        "name": "seccam",
+        "_row_num": 5
       },
       {
         "clause": "if",
-        "condition": "selected(data('cam1check'),'2')",
-        "_row_num": 12
+        "condition": "selected(data('seccam'),'2')",
+        "_row_num": 6
+      },
+      {
+        "type": "select_one_dropdown",
+        "values_list": "sec",
+        "name": "sec1",
+        "display": {
+          "prompt": {
+            "text": "Section"
+          }
+        },
+        "_row_num": 7
       },
       {
         "type": "integer",
         "name": "cam1n",
         "display": {
           "prompt": {
-            "text": "New bed"
+            "text": "Bed"
           }
         },
         "inputAttributes": {
           "autocomplete": "off"
         },
-        "_row_num": 13
+        "_row_num": 8
       },
       {
         "type": "select_multiple",
         "values_list": "camNA",
         "name": "cam1na",
-        "_row_num": 14
+        "_row_num": 9
       },
       {
         "clause": "if",
         "condition": "data('cam1na') != null",
-        "_row_num": 15
+        "_row_num": 10
       },
       {
         "type": "assign",
         "name": "cam1",
         "calculation": 9999,
-        "_row_num": 16
+        "_row_num": 11
       },
       {
         "clause": "else",
-        "_row_num": 17
+        "_row_num": 12
       },
       {
         "type": "assign",
         "name": "cam1",
         "calculation": "data('cam1n')",
-        "_row_num": 18
+        "_row_num": 13
       },
       {
         "clause": "end if",
-        "_row_num": 19
+        "_row_num": 14
       },
       {
         "clause": "else",
-        "_row_num": 20
+        "_row_num": 15
+      },
+      {
+        "type": "assign",
+        "name": "sec1",
+        "calculation": "data('sec1i')",
+        "_row_num": 16
       },
       {
         "type": "assign",
         "name": "cam1",
         "calculation": "data('cam1i')",
-        "_row_num": 21
+        "_row_num": 17
       },
       {
         "clause": "end if",
-        "_row_num": 22
+        "_row_num": 18
       },
       {
         "clause": "if",
         "condition": "selected(data('sec1'),'NA') || data('cam1na') != null",
-        "_row_num": 23
+        "_row_num": 19
       },
       {
         "type": "text",
@@ -225,15 +206,15 @@
         "inputAttributes": {
           "autocomplete": "off"
         },
-        "_row_num": 24
+        "_row_num": 20
       },
       {
         "clause": "end if",
-        "_row_num": 25
+        "_row_num": 21
       },
       {
         "clause": "end screen",
-        "_row_num": 26
+        "_row_num": 22
       }
     ],
     "choices": [
@@ -430,44 +411,24 @@
         "_row_num": 16
       },
       {
-        "choice_list_name": "seccheck",
+        "choice_list_name": "seccam",
         "data_value": "1",
         "display": {
           "title": {
-            "text": "Same section"
+            "text": "Same section and bed"
           }
         },
         "_row_num": 17
       },
       {
-        "choice_list_name": "seccheck",
+        "choice_list_name": "seccam",
         "data_value": "2",
         "display": {
           "title": {
-            "text": "New section"
+            "text": "Different section or bed"
           }
         },
         "_row_num": 18
-      },
-      {
-        "choice_list_name": "camcheck",
-        "data_value": "1",
-        "display": {
-          "title": {
-            "text": "Same bed"
-          }
-        },
-        "_row_num": 19
-      },
-      {
-        "choice_list_name": "camcheck",
-        "data_value": "2",
-        "display": {
-          "title": {
-            "text": "New bed"
-          }
-        },
-        "_row_num": 20
       }
     ],
     "calculates": [
@@ -489,74 +450,74 @@
     ],
     "model": [
       {
-        "name": "cam1",
-        "type": "integer",
+        "name": "assistant",
+        "type": "select_one_dropdown",
         "isSessionVariable": false,
         "_row_num": 2
       },
       {
-        "name": "cam1i",
+        "name": "cam1",
         "type": "integer",
         "isSessionVariable": false,
         "_row_num": 3
       },
       {
-        "name": "id",
-        "type": "text",
+        "name": "cam1i",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 4
       },
       {
-        "name": "nome",
+        "name": "id",
         "type": "text",
         "isSessionVariable": false,
         "_row_num": 5
       },
       {
-        "name": "roundsdate",
+        "name": "nome",
         "type": "text",
         "isSessionVariable": false,
         "_row_num": 6
       },
       {
+        "name": "roundsdate",
+        "type": "text",
+        "isSessionVariable": false,
+        "_row_num": 7
+      },
+      {
         "name": "sec1",
         "type": "select_one_dropdown",
         "isSessionVariable": false,
-        "_row_num": 7
+        "_row_num": 8
       },
       {
         "name": "sec1i",
         "type": "text",
         "isSessionVariable": false,
-        "_row_num": 8
+        "_row_num": 9
       },
       {
         "name": "lateroundcom",
         "type": "text",
         "isSessionVariable": false,
-        "_row_num": 9
+        "_row_num": 10
       },
       {
-        "name": "cam1check",
+        "name": "seccam",
         "type": "select_one",
         "isSessionVariable": true,
-        "_row_num": 10
+        "_row_num": 11
       },
       {
         "name": "cam1n",
         "type": "integer",
         "isSessionVariable": true,
-        "_row_num": 11
+        "_row_num": 12
       },
       {
         "name": "cam1na",
         "type": "select_multiple",
-        "isSessionVariable": true,
-        "_row_num": 12
-      },
-      {
-        "name": "sec1check",
-        "type": "select_one",
         "isSessionVariable": true,
         "_row_num": 13
       }
@@ -586,7 +547,7 @@
       },
       "form_version": {
         "setting_name": "form_version",
-        "value": 20190502,
+        "value": 20190404,
         "_row_num": 3
       },
       "table_id": {
@@ -887,48 +848,26 @@
           "_row_num": 16
         }
       ],
-      "seccheck": [
+      "seccam": [
         {
-          "choice_list_name": "seccheck",
+          "choice_list_name": "seccam",
           "data_value": "1",
           "display": {
             "title": {
-              "text": "Same section"
+              "text": "Same section and bed"
             }
           },
           "_row_num": 17
         },
         {
-          "choice_list_name": "seccheck",
+          "choice_list_name": "seccam",
           "data_value": "2",
           "display": {
             "title": {
-              "text": "New section"
+              "text": "Different section or bed"
             }
           },
           "_row_num": 18
-        }
-      ],
-      "camcheck": [
-        {
-          "choice_list_name": "camcheck",
-          "data_value": "1",
-          "display": {
-            "title": {
-              "text": "Same bed"
-            }
-          },
-          "_row_num": 19
-        },
-        {
-          "choice_list_name": "camcheck",
-          "data_value": "2",
-          "display": {
-            "title": {
-              "text": "New bed"
-            }
-          },
-          "_row_num": 20
         }
       ]
     },
@@ -945,11 +884,22 @@
       }
     },
     "model": {
+      "assistant": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 2,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": false,
+        "elementKey": "assistant"
+      },
       "cam1": {
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 2,
+            "_row_num": 3,
             "section_name": "model"
           }
         ],
@@ -960,7 +910,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 3,
+            "_row_num": 4,
             "section_name": "model"
           }
         ],
@@ -971,7 +921,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 4,
+            "_row_num": 5,
             "section_name": "model"
           }
         ],
@@ -982,7 +932,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 5,
+            "_row_num": 6,
             "section_name": "model"
           }
         ],
@@ -993,7 +943,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 6,
+            "_row_num": 7,
             "section_name": "model"
           }
         ],
@@ -1005,11 +955,11 @@
         "valuesList": "sec",
         "_defn": [
           {
-            "_row_num": 6,
+            "_row_num": 7,
             "section_name": "survey"
           },
           {
-            "_row_num": 7,
+            "_row_num": 8,
             "section_name": "model"
           }
         ],
@@ -1020,7 +970,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 8,
+            "_row_num": 9,
             "section_name": "model"
           }
         ],
@@ -1031,23 +981,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 24,
-            "section_name": "survey"
-          },
-          {
-            "_row_num": 9,
-            "section_name": "model"
-          }
-        ],
-        "isSessionVariable": false,
-        "elementKey": "lateroundcom"
-      },
-      "cam1check": {
-        "type": "string",
-        "valuesList": "camcheck",
-        "_defn": [
-          {
-            "_row_num": 11,
+            "_row_num": 20,
             "section_name": "survey"
           },
           {
@@ -1055,18 +989,34 @@
             "section_name": "model"
           }
         ],
+        "isSessionVariable": false,
+        "elementKey": "lateroundcom"
+      },
+      "seccam": {
+        "type": "string",
+        "valuesList": "seccam",
+        "_defn": [
+          {
+            "_row_num": 5,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 11,
+            "section_name": "model"
+          }
+        ],
         "isSessionVariable": true,
-        "elementKey": "cam1check"
+        "elementKey": "seccam"
       },
       "cam1n": {
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 13,
+            "_row_num": 8,
             "section_name": "survey"
           },
           {
-            "_row_num": 11,
+            "_row_num": 12,
             "section_name": "model"
           }
         ],
@@ -1082,23 +1032,7 @@
         "valuesList": "camNA",
         "_defn": [
           {
-            "_row_num": 14,
-            "section_name": "survey"
-          },
-          {
-            "_row_num": 12,
-            "section_name": "model"
-          }
-        ],
-        "isSessionVariable": true,
-        "elementKey": "cam1na"
-      },
-      "sec1check": {
-        "type": "string",
-        "valuesList": "seccheck",
-        "_defn": [
-          {
-            "_row_num": 4,
+            "_row_num": 9,
             "section_name": "survey"
           },
           {
@@ -1107,7 +1041,7 @@
           }
         ],
         "isSessionVariable": true,
-        "elementKey": "sec1check"
+        "elementKey": "cam1na"
       }
     },
     "section_names": [
@@ -1249,33 +1183,6 @@
             "promptIdx": 0
           },
           {
-            "type": "select_one",
-            "values_list": "seccheck",
-            "name": "sec1check",
-            "_row_num": 4,
-            "__rowNum__": 3,
-            "_token_type": "prompt",
-            "_type": "select_one",
-            "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 1
-          },
-          {
-            "type": "select_one_dropdown",
-            "values_list": "sec",
-            "name": "sec1",
-            "display": {
-              "prompt": {
-                "text": "New section"
-              }
-            },
-            "_row_num": 6,
-            "__rowNum__": 5,
-            "_token_type": "prompt",
-            "_type": "select_one_dropdown",
-            "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 2
-          },
-          {
             "type": "note",
             "display": {
               "prompt": {
@@ -1285,52 +1192,68 @@
             "inputAttributes": {
               "readonly": true
             },
-            "_row_num": 10,
-            "__rowNum__": 9,
+            "_row_num": 4,
+            "__rowNum__": 3,
             "_token_type": "prompt",
             "_type": "note",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 3
+            "promptIdx": 1
           },
           {
             "type": "select_one",
-            "values_list": "camcheck",
-            "name": "cam1check",
-            "_row_num": 11,
-            "__rowNum__": 10,
+            "values_list": "seccam",
+            "name": "seccam",
+            "_row_num": 5,
+            "__rowNum__": 4,
             "_token_type": "prompt",
             "_type": "select_one",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 4
+            "promptIdx": 2
+          },
+          {
+            "type": "select_one_dropdown",
+            "values_list": "sec",
+            "name": "sec1",
+            "display": {
+              "prompt": {
+                "text": "Section"
+              }
+            },
+            "_row_num": 7,
+            "__rowNum__": 6,
+            "_token_type": "prompt",
+            "_type": "select_one_dropdown",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 3
           },
           {
             "type": "integer",
             "name": "cam1n",
             "display": {
               "prompt": {
-                "text": "New bed"
+                "text": "Bed"
               }
             },
             "inputAttributes": {
               "autocomplete": "off"
             },
-            "_row_num": 13,
-            "__rowNum__": 12,
+            "_row_num": 8,
+            "__rowNum__": 7,
             "_token_type": "prompt",
             "_type": "integer",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 5
+            "promptIdx": 4
           },
           {
             "type": "select_multiple",
             "values_list": "camNA",
             "name": "cam1na",
-            "_row_num": 14,
-            "__rowNum__": 13,
+            "_row_num": 9,
+            "__rowNum__": 8,
             "_token_type": "prompt",
             "_type": "select_multiple",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 6
+            "promptIdx": 5
           },
           {
             "type": "text",
@@ -1343,20 +1266,20 @@
             "inputAttributes": {
               "autocomplete": "off"
             },
-            "_row_num": 24,
-            "__rowNum__": 23,
+            "_row_num": 20,
+            "__rowNum__": 19,
             "_token_type": "prompt",
             "_type": "text",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 7
+            "promptIdx": 6
           },
           {
             "_token_type": "prompt",
             "type": "contents",
             "_type": "contents",
-            "_row_num": 27,
-            "_branch_label_enclosing_screen": "survey/_screen27",
-            "promptIdx": 8
+            "_row_num": 23,
+            "_branch_label_enclosing_screen": "survey/_screen23",
+            "promptIdx": 7
           }
         ],
         "validation_tag_map": {
@@ -1370,23 +1293,23 @@
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 26,
-              "__rowNum__": 25,
+              "_row_num": 22,
+              "__rowNum__": 21,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\nif (selected(data('sec1check'),'2')) {\nactivePromptIndicies.push(2);\n}\nelse {\nassign('sec1', data('sec1i'));\n}\nactivePromptIndicies.push(3);\nactivePromptIndicies.push(4);\nif (selected(data('cam1check'),'2')) {\nactivePromptIndicies.push(5);\nactivePromptIndicies.push(6);\nif (data('cam1na') != null) {\nassign('cam1', 9999);\n}\nelse {\nassign('cam1', data('cam1n'));\n}\n}\nelse {\nassign('cam1', data('cam1i'));\n}\nif (selected(data('sec1'),'NA') || data('cam1na') != null) {\nactivePromptIndicies.push(7);\n}\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\nactivePromptIndicies.push(2);\nif (selected(data('seccam'),'2')) {\nactivePromptIndicies.push(3);\nactivePromptIndicies.push(4);\nactivePromptIndicies.push(5);\nif (data('cam1na') != null) {\nassign('cam1', 9999);\n}\nelse {\nassign('cam1', data('cam1n'));\n}\n}\nelse {\nassign('sec1', data('sec1i'));\nassign('cam1', data('cam1i'));\n}\nif (selected(data('sec1'),'NA') || data('cam1na') != null) {\nactivePromptIndicies.push(6);\n}\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 0
           },
           {
             "_token_type": "exit_section",
             "clause": "exit section",
-            "_row_num": 27,
+            "_row_num": 23,
             "operationIdx": 1
           },
           {
-            "_row_num": 27,
+            "_row_num": 23,
             "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(8);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(7);\n\nreturn activePromptIndicies;\n}\n",
             "screen": {
               "hideInBackHistory": true
             },
@@ -1395,23 +1318,37 @@
           {
             "_token_type": "resume",
             "clause": "resume",
-            "_row_num": 27,
+            "_row_num": 23,
             "operationIdx": 3
           }
         ],
         "branch_label_map": {
           "_screen2": 0,
           "_contents": 2,
-          "_screen27": 2
+          "_screen23": 2
         }
       }
     },
     "dataTableModel": {
+      "assistant": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 2,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": false,
+        "elementKey": "assistant",
+        "elementName": "assistant",
+        "elementSet": "data",
+        "elementPath": "assistant"
+      },
       "cam1": {
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 2,
+            "_row_num": 3,
             "section_name": "model"
           }
         ],
@@ -1425,7 +1362,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 3,
+            "_row_num": 4,
             "section_name": "model"
           }
         ],
@@ -1439,7 +1376,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 4,
+            "_row_num": 5,
             "section_name": "model"
           }
         ],
@@ -1453,7 +1390,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 5,
+            "_row_num": 6,
             "section_name": "model"
           }
         ],
@@ -1467,7 +1404,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 6,
+            "_row_num": 7,
             "section_name": "model"
           }
         ],
@@ -1482,11 +1419,11 @@
         "valuesList": "sec",
         "_defn": [
           {
-            "_row_num": 6,
+            "_row_num": 7,
             "section_name": "survey"
           },
           {
-            "_row_num": 7,
+            "_row_num": 8,
             "section_name": "model"
           }
         ],
@@ -1500,7 +1437,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 8,
+            "_row_num": 9,
             "section_name": "model"
           }
         ],
@@ -1514,11 +1451,11 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 24,
+            "_row_num": 20,
             "section_name": "survey"
           },
           {
-            "_row_num": 9,
+            "_row_num": 10,
             "section_name": "model"
           }
         ],
@@ -1528,34 +1465,34 @@
         "elementSet": "data",
         "elementPath": "lateroundcom"
       },
-      "cam1check": {
+      "seccam": {
         "type": "string",
-        "valuesList": "camcheck",
+        "valuesList": "seccam",
         "_defn": [
           {
-            "_row_num": 11,
+            "_row_num": 5,
             "section_name": "survey"
           },
           {
-            "_row_num": 10,
+            "_row_num": 11,
             "section_name": "model"
           }
         ],
         "isSessionVariable": true,
-        "elementKey": "cam1check",
-        "elementName": "cam1check",
+        "elementKey": "seccam",
+        "elementName": "seccam",
         "elementSet": "data",
-        "elementPath": "cam1check"
+        "elementPath": "seccam"
       },
       "cam1n": {
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 13,
+            "_row_num": 8,
             "section_name": "survey"
           },
           {
-            "_row_num": 11,
+            "_row_num": 12,
             "section_name": "model"
           }
         ],
@@ -1579,11 +1516,11 @@
         "valuesList": "camNA",
         "_defn": [
           {
-            "_row_num": 14,
+            "_row_num": 9,
             "section_name": "survey"
           },
           {
-            "_row_num": 12,
+            "_row_num": 13,
             "section_name": "model"
           }
         ],
@@ -1595,25 +1532,6 @@
         "listChildElementKeys": [
           "cam1na_items"
         ]
-      },
-      "sec1check": {
-        "type": "string",
-        "valuesList": "seccheck",
-        "_defn": [
-          {
-            "_row_num": 4,
-            "section_name": "survey"
-          },
-          {
-            "_row_num": 13,
-            "section_name": "model"
-          }
-        ],
-        "isSessionVariable": true,
-        "elementKey": "sec1check",
-        "elementName": "sec1check",
-        "elementSet": "data",
-        "elementPath": "sec1check"
       },
       "cam1na_items": {
         "type": "string",

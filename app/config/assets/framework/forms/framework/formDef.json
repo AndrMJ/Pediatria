@@ -14,7 +14,7 @@
       },
       {
         "setting_name": "form_version",
-        "value": 20190502,
+        "value": 20190404,
         "_row_num": 3
       },
       {
@@ -34,6 +34,11 @@
         },
         "showContents": false,
         "_row_num": 5
+      },
+      {
+        "setting_name": "font-size",
+        "value": "20pt",
+        "_row_num": 6
       },
       {
         "setting_name": "default",
@@ -638,7 +643,7 @@
       },
       "form_version": {
         "setting_name": "form_version",
-        "value": 20190502,
+        "value": 20190404,
         "_row_num": 3
       },
       "form_id": {
@@ -658,6 +663,11 @@
         },
         "showContents": false,
         "_row_num": 5
+      },
+      "font-size": {
+        "setting_name": "font-size",
+        "value": "20pt",
+        "_row_num": 6
       },
       "default": {
         "setting_name": "default",
