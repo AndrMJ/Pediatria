@@ -6576,7 +6576,7 @@
       },
       {
         "name": "bcgnse2nr",
-        "type": "integer",
+        "type": "text",
         "isSessionVariable": true,
         "_row_num": 70
       },
@@ -6588,7 +6588,7 @@
       },
       {
         "name": "bcgnse3nr",
-        "type": "integer",
+        "type": "text",
         "isSessionVariable": true,
         "_row_num": 72
       },
@@ -6600,7 +6600,7 @@
       },
       {
         "name": "bcgnsenr",
-        "type": "integer",
+        "type": "text",
         "isSessionVariable": true,
         "_row_num": 74
       },
@@ -11429,7 +11429,7 @@
         "elementKey": "vsar1"
       },
       "bcgnse2nr": {
-        "type": "integer",
+        "type": "string",
         "_defn": [
           {
             "_row_num": 43,
@@ -11459,7 +11459,7 @@
         "elementKey": "bcgnse2s"
       },
       "bcgnse3nr": {
-        "type": "integer",
+        "type": "string",
         "_defn": [
           {
             "_row_num": 49,
@@ -11489,7 +11489,7 @@
         "elementKey": "bcgnse3s"
       },
       "bcgnsenr": {
-        "type": "integer",
+        "type": "string",
         "_defn": [
           {
             "_row_num": 37,
@@ -17525,7 +17525,7 @@
         "elementPath": "vsar1"
       },
       "bcgnse2nr": {
-        "type": "integer",
+        "type": "string",
         "_defn": [
           {
             "_row_num": 43,
@@ -17561,7 +17561,7 @@
         "elementPath": "bcgnse2s"
       },
       "bcgnse3nr": {
-        "type": "integer",
+        "type": "string",
         "_defn": [
           {
             "_row_num": 49,
@@ -17597,7 +17597,7 @@
         "elementPath": "bcgnse3s"
       },
       "bcgnsenr": {
-        "type": "integer",
+        "type": "string",
         "_defn": [
           {
             "_row_num": 37,

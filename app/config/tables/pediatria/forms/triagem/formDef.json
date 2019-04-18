@@ -314,9 +314,10 @@
         "_row_num": 26
       },
       {
-        "type": "integer",
+        "type": "text",
         "name": "bcgnsenr",
         "inputAttributes": {
+          "type": "number",
           "autocomplete": "off"
         },
         "comments": "Study number",
@@ -363,9 +364,10 @@
         "_row_num": 32
       },
       {
-        "type": "integer",
+        "type": "text",
         "name": "bcgnse2nr",
         "inputAttributes": {
+          "type": "number",
           "autocomplete": "off"
         },
         "_row_num": 33
@@ -410,9 +412,10 @@
         "_row_num": 38
       },
       {
-        "type": "integer",
+        "type": "text",
         "name": "bcgnse3nr",
         "inputAttributes": {
+          "type": "number",
           "autocomplete": "off"
         },
         "_row_num": 39
@@ -6369,7 +6372,7 @@
       },
       {
         "name": "bcgnse2nr",
-        "type": "integer",
+        "type": "text",
         "isSessionVariable": true,
         "_row_num": 70
       },
@@ -6381,7 +6384,7 @@
       },
       {
         "name": "bcgnse3nr",
-        "type": "integer",
+        "type": "text",
         "isSessionVariable": true,
         "_row_num": 72
       },
@@ -6393,7 +6396,7 @@
       },
       {
         "name": "bcgnsenr",
-        "type": "integer",
+        "type": "text",
         "isSessionVariable": true,
         "_row_num": 74
       },
@@ -11183,7 +11186,7 @@
         "elementKey": "vsar1"
       },
       "bcgnse2nr": {
-        "type": "integer",
+        "type": "string",
         "_defn": [
           {
             "_row_num": 33,
@@ -11213,7 +11216,7 @@
         "elementKey": "bcgnse2s"
       },
       "bcgnse3nr": {
-        "type": "integer",
+        "type": "string",
         "_defn": [
           {
             "_row_num": 39,
@@ -11243,7 +11246,7 @@
         "elementKey": "bcgnse3s"
       },
       "bcgnsenr": {
-        "type": "integer",
+        "type": "string",
         "_defn": [
           {
             "_row_num": 27,
@@ -13257,16 +13260,17 @@
             "promptIdx": 12
           },
           {
-            "type": "integer",
+            "type": "text",
             "name": "bcgnsenr",
             "inputAttributes": {
+              "type": "number",
               "autocomplete": "off"
             },
             "comments": "Study number",
             "_row_num": 27,
             "__rowNum__": 26,
             "_token_type": "prompt",
-            "_type": "integer",
+            "_type": "text",
             "_branch_label_enclosing_screen": "survey/_screen23",
             "promptIdx": 13
           },
@@ -13292,15 +13296,16 @@
             "promptIdx": 14
           },
           {
-            "type": "integer",
+            "type": "text",
             "name": "bcgnse2nr",
             "inputAttributes": {
+              "type": "number",
               "autocomplete": "off"
             },
             "_row_num": 33,
             "__rowNum__": 32,
             "_token_type": "prompt",
-            "_type": "integer",
+            "_type": "text",
             "_branch_label_enclosing_screen": "survey/_screen23",
             "promptIdx": 15
           },
@@ -13326,15 +13331,16 @@
             "promptIdx": 16
           },
           {
-            "type": "integer",
+            "type": "text",
             "name": "bcgnse3nr",
             "inputAttributes": {
+              "type": "number",
               "autocomplete": "off"
             },
             "_row_num": 39,
             "__rowNum__": 38,
             "_token_type": "prompt",
-            "_type": "integer",
+            "_type": "text",
             "_branch_label_enclosing_screen": "survey/_screen23",
             "promptIdx": 17
           },
@@ -16839,7 +16845,7 @@
         "elementPath": "vsar1"
       },
       "bcgnse2nr": {
-        "type": "integer",
+        "type": "string",
         "_defn": [
           {
             "_row_num": 33,
@@ -16875,7 +16881,7 @@
         "elementPath": "bcgnse2s"
       },
       "bcgnse3nr": {
-        "type": "integer",
+        "type": "string",
         "_defn": [
           {
             "_row_num": 39,
@@ -16911,7 +16917,7 @@
         "elementPath": "bcgnse3s"
       },
       "bcgnsenr": {
-        "type": "integer",
+        "type": "string",
         "_defn": [
           {
             "_row_num": 27,
