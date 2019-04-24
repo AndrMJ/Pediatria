@@ -81,7 +81,10 @@
         "name": "hospitzd",
         "display": {
           "prompt": {
-            "text": "Is the child hospitalized"
+            "text": {
+              "default": "Is the child hospitalized?",
+              "portuguese": "A criança está hospitalizada?"
+            }
           }
         },
         "_row_num": 3
@@ -383,7 +386,10 @@
         "data_value": "NTN",
         "display": {
           "title": {
-            "text": "NTN - Has no card and no vaccines"
+            "text": {
+              "default": "NTN - Has no card and no vaccines",
+              "portuguese": "NTN - Não tem cartão e não tem vacinas"
+            }
           }
         },
         "_row_num": 15
@@ -393,7 +399,10 @@
         "data_value": "NTS",
         "display": {
           "title": {
-            "text": "NTS - Has no card, some vaccines"
+            "text": {
+              "default": "NTS - Has no card, some vaccines",
+              "portuguese": "NTS - Não tem cartão, mas tem vacinas"
+            }
           }
         },
         "_row_num": 16
@@ -871,7 +880,10 @@
         "data_value": "MA",
         "display": {
           "title": {
-            "text": "MA -"
+            "text": {
+              "default": "MA -",
+              "portuguese": "MA -"
+            }
           }
         },
         "_row_num": 53
@@ -881,7 +893,10 @@
         "data_value": "MI",
         "display": {
           "title": {
-            "text": "MI -"
+            "text": {
+              "default": "MI -",
+              "portuguese": "MI -"
+            }
           }
         },
         "_row_num": 54
@@ -917,7 +932,10 @@
         "data_value": "PA",
         "display": {
           "title": {
-            "text": "PA -"
+            "text": {
+              "default": "PA -",
+              "portuguese": "PA -"
+            }
           }
         },
         "_row_num": 57
@@ -992,7 +1010,10 @@
         "data_value": "1955-05-05T00:00:00.000000000",
         "display": {
           "title": {
-            "text": "Unknown date"
+            "text": {
+              "default": "Unknown date",
+              "portuguese": "Data desconhecida"
+            }
           }
         },
         "_row_num": 63
@@ -1002,7 +1023,10 @@
         "data_value": "1944-04-04T00:00:00.000000000",
         "display": {
           "title": {
-            "text": "Unknown status"
+            "text": {
+              "default": "Unknown status",
+              "portuguese": "Status desconhecido"
+            }
           }
         },
         "_row_num": 64
@@ -1025,7 +1049,10 @@
         "data_value": "999999999",
         "display": {
           "title": {
-            "text": "Don't know number"
+            "text": {
+              "default": "Don't know number",
+              "portuguese": "Não sabe o número"
+            }
           }
         },
         "_row_num": 66
@@ -1295,7 +1322,10 @@
         "data_value": "1955-05-05T00:00:00.000000000",
         "display": {
           "title": {
-            "text": "Unknown date"
+            "text": {
+              "default": "Unknown date",
+              "portuguese": "Data desconhecida"
+            }
           }
         },
         "_row_num": 87
@@ -1305,7 +1335,10 @@
         "data_value": "1944-04-04T00:00:00.000000000",
         "display": {
           "title": {
-            "text": "Unknown status"
+            "text": {
+              "default": "Unknown status",
+              "portuguese": "Status desconhecido"
+            }
           }
         },
         "_row_num": 88
@@ -1341,7 +1374,10 @@
         "data_value": "1955-05-05T00:00:00.000000000",
         "display": {
           "title": {
-            "text": "Unknown date"
+            "text": {
+              "default": "Unknown date",
+              "portuguese": "Data desconhecida"
+            }
           }
         },
         "_row_num": 91
@@ -1351,7 +1387,10 @@
         "data_value": "1944-04-04T00:00:00.000000000",
         "display": {
           "title": {
-            "text": "Unknown status"
+            "text": {
+              "default": "Unknown status",
+              "portuguese": "Status desconhecido"
+            }
           }
         },
         "_row_num": 92
@@ -1387,7 +1426,10 @@
         "data_value": "1955-05-05T00:00:00.000000000",
         "display": {
           "title": {
-            "text": "Unknown date"
+            "text": {
+              "default": "Unknown date",
+              "portuguese": "Data desconhecida"
+            }
           }
         },
         "_row_num": 95
@@ -1397,7 +1439,10 @@
         "data_value": "1944-04-04T00:00:00.000000000",
         "display": {
           "title": {
-            "text": "Unknown status"
+            "text": {
+              "default": "Unknown status",
+              "portuguese": "Status desconhecido"
+            }
           }
         },
         "_row_num": 96
@@ -1433,7 +1478,10 @@
         "data_value": "1955-05-05T00:00:00.000000000",
         "display": {
           "title": {
-            "text": "Unknown date"
+            "text": {
+              "default": "Unknown date",
+              "portuguese": "Data desconhecida"
+            }
           }
         },
         "_row_num": 99
@@ -1443,7 +1491,10 @@
         "data_value": "1944-04-04T00:00:00.000000000",
         "display": {
           "title": {
-            "text": "Unknown status"
+            "text": {
+              "default": "Unknown status",
+              "portuguese": "Status desconhecido"
+            }
           }
         },
         "_row_num": 100
@@ -1479,7 +1530,10 @@
         "data_value": "1955-05-05T00:00:00.000000000",
         "display": {
           "title": {
-            "text": "Unknown date"
+            "text": {
+              "default": "Unknown date",
+              "portuguese": "Data desconhecida"
+            }
           }
         },
         "_row_num": 103
@@ -1489,7 +1543,10 @@
         "data_value": "1944-04-04T00:00:00.000000000",
         "display": {
           "title": {
-            "text": "Unknown status"
+            "text": {
+              "default": "Unknown status",
+              "portuguese": "Status desconhecido"
+            }
           }
         },
         "_row_num": 104
@@ -2318,7 +2375,10 @@
         "data_value": "1955-05-05T00:00:00.000000000",
         "display": {
           "title": {
-            "text": "Unknown date"
+            "text": {
+              "default": "Unknown date",
+              "portuguese": "Data desconhecida"
+            }
           }
         },
         "_row_num": 168
@@ -2328,7 +2388,10 @@
         "data_value": "1944-04-04T00:00:00.000000000",
         "display": {
           "title": {
-            "text": "Unknown status"
+            "text": {
+              "default": "Unknown status",
+              "portuguese": "Status desconhecido"
+            }
           }
         },
         "_row_num": 169
@@ -2351,7 +2414,10 @@
         "data_value": "1",
         "display": {
           "title": {
-            "text": "Consultation only"
+            "text": {
+              "default": "Consultation only",
+              "portuguese": "Apenas consulta"
+            }
           }
         },
         "_row_num": 171
@@ -2361,7 +2427,10 @@
         "data_value": "2",
         "display": {
           "title": {
-            "text": "Admitted for observation"
+            "text": {
+              "default": "Admitted for observation",
+              "portuguese": "Admitido para observação"
+            }
           }
         },
         "_row_num": 172
@@ -2371,7 +2440,10 @@
         "data_value": "3",
         "display": {
           "title": {
-            "text": "Hospitalized"
+            "text": {
+              "default": "Hospitalized",
+              "portuguese": "Incrustado"
+            }
           }
         },
         "_row_num": 173
@@ -2381,7 +2453,10 @@
         "data_value": "1",
         "display": {
           "title": {
-            "text": "diag 1"
+            "text": {
+              "default": "diag 1",
+              "portuguese": "diag 1"
+            }
           }
         },
         "_row_num": 174
@@ -2391,7 +2466,10 @@
         "data_value": "2",
         "display": {
           "title": {
-            "text": "diag 2"
+            "text": {
+              "default": "diag 2",
+              "portuguese": "diag 2"
+            }
           }
         },
         "_row_num": 175
@@ -2401,7 +2479,10 @@
         "data_value": "3",
         "display": {
           "title": {
-            "text": "diag 3"
+            "text": {
+              "default": "diag 3",
+              "portuguese": "diag 3"
+            }
           }
         },
         "_row_num": 176
@@ -2411,7 +2492,10 @@
         "data_value": "4",
         "display": {
           "title": {
-            "text": "diag 4"
+            "text": {
+              "default": "diag 4",
+              "portuguese": "diag 4"
+            }
           }
         },
         "_row_num": 177
@@ -2421,7 +2505,10 @@
         "data_value": "5",
         "display": {
           "title": {
-            "text": "diag 5"
+            "text": {
+              "default": "diag 5",
+              "portuguese": "diag 5"
+            }
           }
         },
         "_row_num": 178
@@ -2431,7 +2518,10 @@
         "data_value": "6",
         "display": {
           "title": {
-            "text": "diag 6"
+            "text": {
+              "default": "diag 6",
+              "portuguese": "diag 6"
+            }
           }
         },
         "_row_num": 179
@@ -2441,7 +2531,10 @@
         "data_value": "7",
         "display": {
           "title": {
-            "text": "diag 7"
+            "text": {
+              "default": "diag 7",
+              "portuguese": "diag 7"
+            }
           }
         },
         "_row_num": 180
@@ -2451,7 +2544,10 @@
         "data_value": "8",
         "display": {
           "title": {
-            "text": "diag 8"
+            "text": {
+              "default": "diag 8",
+              "portuguese": "diag 8"
+            }
           }
         },
         "_row_num": 181
@@ -2461,7 +2557,10 @@
         "data_value": "9",
         "display": {
           "title": {
-            "text": "diag 9"
+            "text": {
+              "default": "diag 9",
+              "portuguese": "diag 9"
+            }
           }
         },
         "_row_num": 182
@@ -2471,7 +2570,10 @@
         "data_value": "10",
         "display": {
           "title": {
-            "text": "diag 10"
+            "text": {
+              "default": "diag 10",
+              "portuguese": "diag 10"
+            }
           }
         },
         "_row_num": 183
@@ -2481,7 +2583,10 @@
         "data_value": "9999",
         "display": {
           "title": {
-            "text": "No diagnosis"
+            "text": {
+              "default": "No diagnosis",
+              "portuguese": "Nenhum diagnóstico"
+            }
           }
         },
         "_row_num": 184
@@ -2491,7 +2596,10 @@
         "data_value": "55",
         "display": {
           "title": {
-            "text": "Still admitted"
+            "text": {
+              "default": "Still admitted",
+              "portuguese": "Ainda admitido"
+            }
           }
         },
         "_row_num": 185
@@ -2501,7 +2609,10 @@
         "data_value": "51",
         "display": {
           "title": {
-            "text": "Discharged alive"
+            "text": {
+              "default": "Discharged alive",
+              "portuguese": "Viveu descarregado"
+            }
           }
         },
         "_row_num": 186
@@ -2511,7 +2622,10 @@
         "data_value": "53",
         "display": {
           "title": {
-            "text": "Died during admission"
+            "text": {
+              "default": "Died during admission",
+              "portuguese": "Morreu durante a admissão"
+            }
           }
         },
         "_row_num": 187
@@ -2521,7 +2635,10 @@
         "data_value": "54",
         "display": {
           "title": {
-            "text": "Left"
+            "text": {
+              "default": "Left",
+              "portuguese": "Deixou"
+            }
           }
         },
         "_row_num": 188
@@ -2531,7 +2648,10 @@
         "data_value": "1955-05-05T00:00:00.000000000",
         "display": {
           "title": {
-            "text": "Unknown date"
+            "text": {
+              "default": "Unknown date",
+              "portuguese": "Data desconhecida"
+            }
           }
         },
         "_row_num": 189
@@ -2723,7 +2843,10 @@
         "data_value": "999",
         "display": {
           "title": {
-            "text": "Bed unknown"
+            "text": {
+              "default": "Bed unknown",
+              "portuguese": "Cama desconhecida"
+            }
           }
         },
         "_row_num": 204
@@ -2733,7 +2856,10 @@
         "data_value": "4",
         "display": {
           "title": {
-            "text": "Still admitted"
+            "text": {
+              "default": "Still admitted",
+              "portuguese": "Ainda admitido"
+            }
           }
         },
         "_row_num": 205
@@ -2743,7 +2869,10 @@
         "data_value": "1",
         "display": {
           "title": {
-            "text": "Discharged alive"
+            "text": {
+              "default": "Discharged alive",
+              "portuguese": "Viveu descarregado"
+            }
           }
         },
         "_row_num": 206
@@ -2753,7 +2882,10 @@
         "data_value": "2",
         "display": {
           "title": {
-            "text": "Died during admission"
+            "text": {
+              "default": "Died during admission",
+              "portuguese": "Morreu durante a admissão"
+            }
           }
         },
         "_row_num": 207
@@ -2763,7 +2895,10 @@
         "data_value": "3",
         "display": {
           "title": {
-            "text": "Left"
+            "text": {
+              "default": "Left",
+              "portuguese": "Deixou"
+            }
           }
         },
         "_row_num": 208
@@ -2773,7 +2908,10 @@
         "data_value": "1",
         "display": {
           "title": {
-            "text": "Positive"
+            "text": {
+              "default": "Positive",
+              "portuguese": "Positivo"
+            }
           }
         },
         "_row_num": 209
@@ -2783,7 +2921,10 @@
         "data_value": "2",
         "display": {
           "title": {
-            "text": "Negative"
+            "text": {
+              "default": "Negative",
+              "portuguese": "Negativo"
+            }
           }
         },
         "_row_num": 210
@@ -2793,7 +2934,10 @@
         "data_value": "9",
         "display": {
           "title": {
-            "text": "Not performed"
+            "text": {
+              "default": "Not performed",
+              "portuguese": "Não realizado"
+            }
           }
         },
         "_row_num": 211
@@ -2933,7 +3077,10 @@
         "data_value": "na",
         "display": {
           "title": {
-            "text": "Time unknown"
+            "text": {
+              "default": "Time unknown",
+              "portuguese": "Tempo desconhecido"
+            }
           }
         },
         "_row_num": 222
@@ -2943,7 +3090,10 @@
         "data_value": "88888",
         "display": {
           "title": {
-            "text": "Negative"
+            "text": {
+              "default": "Negative",
+              "portuguese": "Negativo"
+            }
           }
         },
         "_row_num": 223
@@ -4527,7 +4677,10 @@
           "data_value": "NTN",
           "display": {
             "title": {
-              "text": "NTN - Has no card and no vaccines"
+              "text": {
+                "default": "NTN - Has no card and no vaccines",
+                "portuguese": "NTN - Não tem cartão e não tem vacinas"
+              }
             }
           },
           "_row_num": 15
@@ -4537,7 +4690,10 @@
           "data_value": "NTS",
           "display": {
             "title": {
-              "text": "NTS - Has no card, some vaccines"
+              "text": {
+                "default": "NTS - Has no card, some vaccines",
+                "portuguese": "NTS - Não tem cartão, mas tem vacinas"
+              }
             }
           },
           "_row_num": 16
@@ -5027,7 +5183,10 @@
           "data_value": "MA",
           "display": {
             "title": {
-              "text": "MA -"
+              "text": {
+                "default": "MA -",
+                "portuguese": "MA -"
+              }
             }
           },
           "_row_num": 53
@@ -5037,7 +5196,10 @@
           "data_value": "MI",
           "display": {
             "title": {
-              "text": "MI -"
+              "text": {
+                "default": "MI -",
+                "portuguese": "MI -"
+              }
             }
           },
           "_row_num": 54
@@ -5073,7 +5235,10 @@
           "data_value": "PA",
           "display": {
             "title": {
-              "text": "PA -"
+              "text": {
+                "default": "PA -",
+                "portuguese": "PA -"
+              }
             }
           },
           "_row_num": 57
@@ -5150,7 +5315,10 @@
           "data_value": "1955-05-05T00:00:00.000000000",
           "display": {
             "title": {
-              "text": "Unknown date"
+              "text": {
+                "default": "Unknown date",
+                "portuguese": "Data desconhecida"
+              }
             }
           },
           "_row_num": 63
@@ -5160,7 +5328,10 @@
           "data_value": "1944-04-04T00:00:00.000000000",
           "display": {
             "title": {
-              "text": "Unknown status"
+              "text": {
+                "default": "Unknown status",
+                "portuguese": "Status desconhecido"
+              }
             }
           },
           "_row_num": 64
@@ -5185,7 +5356,10 @@
           "data_value": "999999999",
           "display": {
             "title": {
-              "text": "Don't know number"
+              "text": {
+                "default": "Don't know number",
+                "portuguese": "Não sabe o número"
+              }
             }
           },
           "_row_num": 66
@@ -5461,7 +5635,10 @@
           "data_value": "1955-05-05T00:00:00.000000000",
           "display": {
             "title": {
-              "text": "Unknown date"
+              "text": {
+                "default": "Unknown date",
+                "portuguese": "Data desconhecida"
+              }
             }
           },
           "_row_num": 87
@@ -5471,7 +5648,10 @@
           "data_value": "1944-04-04T00:00:00.000000000",
           "display": {
             "title": {
-              "text": "Unknown status"
+              "text": {
+                "default": "Unknown status",
+                "portuguese": "Status desconhecido"
+              }
             }
           },
           "_row_num": 88
@@ -5509,7 +5689,10 @@
           "data_value": "1955-05-05T00:00:00.000000000",
           "display": {
             "title": {
-              "text": "Unknown date"
+              "text": {
+                "default": "Unknown date",
+                "portuguese": "Data desconhecida"
+              }
             }
           },
           "_row_num": 91
@@ -5519,7 +5702,10 @@
           "data_value": "1944-04-04T00:00:00.000000000",
           "display": {
             "title": {
-              "text": "Unknown status"
+              "text": {
+                "default": "Unknown status",
+                "portuguese": "Status desconhecido"
+              }
             }
           },
           "_row_num": 92
@@ -5557,7 +5743,10 @@
           "data_value": "1955-05-05T00:00:00.000000000",
           "display": {
             "title": {
-              "text": "Unknown date"
+              "text": {
+                "default": "Unknown date",
+                "portuguese": "Data desconhecida"
+              }
             }
           },
           "_row_num": 95
@@ -5567,7 +5756,10 @@
           "data_value": "1944-04-04T00:00:00.000000000",
           "display": {
             "title": {
-              "text": "Unknown status"
+              "text": {
+                "default": "Unknown status",
+                "portuguese": "Status desconhecido"
+              }
             }
           },
           "_row_num": 96
@@ -5605,7 +5797,10 @@
           "data_value": "1955-05-05T00:00:00.000000000",
           "display": {
             "title": {
-              "text": "Unknown date"
+              "text": {
+                "default": "Unknown date",
+                "portuguese": "Data desconhecida"
+              }
             }
           },
           "_row_num": 99
@@ -5615,7 +5810,10 @@
           "data_value": "1944-04-04T00:00:00.000000000",
           "display": {
             "title": {
-              "text": "Unknown status"
+              "text": {
+                "default": "Unknown status",
+                "portuguese": "Status desconhecido"
+              }
             }
           },
           "_row_num": 100
@@ -5653,7 +5851,10 @@
           "data_value": "1955-05-05T00:00:00.000000000",
           "display": {
             "title": {
-              "text": "Unknown date"
+              "text": {
+                "default": "Unknown date",
+                "portuguese": "Data desconhecida"
+              }
             }
           },
           "_row_num": 103
@@ -5663,7 +5864,10 @@
           "data_value": "1944-04-04T00:00:00.000000000",
           "display": {
             "title": {
-              "text": "Unknown status"
+              "text": {
+                "default": "Unknown status",
+                "portuguese": "Status desconhecido"
+              }
             }
           },
           "_row_num": 104
@@ -6512,7 +6716,10 @@
           "data_value": "1955-05-05T00:00:00.000000000",
           "display": {
             "title": {
-              "text": "Unknown date"
+              "text": {
+                "default": "Unknown date",
+                "portuguese": "Data desconhecida"
+              }
             }
           },
           "_row_num": 168
@@ -6522,7 +6729,10 @@
           "data_value": "1944-04-04T00:00:00.000000000",
           "display": {
             "title": {
-              "text": "Unknown status"
+              "text": {
+                "default": "Unknown status",
+                "portuguese": "Status desconhecido"
+              }
             }
           },
           "_row_num": 169
@@ -6549,7 +6759,10 @@
           "data_value": "1",
           "display": {
             "title": {
-              "text": "Consultation only"
+              "text": {
+                "default": "Consultation only",
+                "portuguese": "Apenas consulta"
+              }
             }
           },
           "_row_num": 171
@@ -6559,7 +6772,10 @@
           "data_value": "2",
           "display": {
             "title": {
-              "text": "Admitted for observation"
+              "text": {
+                "default": "Admitted for observation",
+                "portuguese": "Admitido para observação"
+              }
             }
           },
           "_row_num": 172
@@ -6569,7 +6785,10 @@
           "data_value": "3",
           "display": {
             "title": {
-              "text": "Hospitalized"
+              "text": {
+                "default": "Hospitalized",
+                "portuguese": "Incrustado"
+              }
             }
           },
           "_row_num": 173
@@ -6581,7 +6800,10 @@
           "data_value": "1",
           "display": {
             "title": {
-              "text": "diag 1"
+              "text": {
+                "default": "diag 1",
+                "portuguese": "diag 1"
+              }
             }
           },
           "_row_num": 174
@@ -6591,7 +6813,10 @@
           "data_value": "2",
           "display": {
             "title": {
-              "text": "diag 2"
+              "text": {
+                "default": "diag 2",
+                "portuguese": "diag 2"
+              }
             }
           },
           "_row_num": 175
@@ -6601,7 +6826,10 @@
           "data_value": "3",
           "display": {
             "title": {
-              "text": "diag 3"
+              "text": {
+                "default": "diag 3",
+                "portuguese": "diag 3"
+              }
             }
           },
           "_row_num": 176
@@ -6611,7 +6839,10 @@
           "data_value": "4",
           "display": {
             "title": {
-              "text": "diag 4"
+              "text": {
+                "default": "diag 4",
+                "portuguese": "diag 4"
+              }
             }
           },
           "_row_num": 177
@@ -6621,7 +6852,10 @@
           "data_value": "5",
           "display": {
             "title": {
-              "text": "diag 5"
+              "text": {
+                "default": "diag 5",
+                "portuguese": "diag 5"
+              }
             }
           },
           "_row_num": 178
@@ -6631,7 +6865,10 @@
           "data_value": "6",
           "display": {
             "title": {
-              "text": "diag 6"
+              "text": {
+                "default": "diag 6",
+                "portuguese": "diag 6"
+              }
             }
           },
           "_row_num": 179
@@ -6641,7 +6878,10 @@
           "data_value": "7",
           "display": {
             "title": {
-              "text": "diag 7"
+              "text": {
+                "default": "diag 7",
+                "portuguese": "diag 7"
+              }
             }
           },
           "_row_num": 180
@@ -6651,7 +6891,10 @@
           "data_value": "8",
           "display": {
             "title": {
-              "text": "diag 8"
+              "text": {
+                "default": "diag 8",
+                "portuguese": "diag 8"
+              }
             }
           },
           "_row_num": 181
@@ -6661,7 +6904,10 @@
           "data_value": "9",
           "display": {
             "title": {
-              "text": "diag 9"
+              "text": {
+                "default": "diag 9",
+                "portuguese": "diag 9"
+              }
             }
           },
           "_row_num": 182
@@ -6671,7 +6917,10 @@
           "data_value": "10",
           "display": {
             "title": {
-              "text": "diag 10"
+              "text": {
+                "default": "diag 10",
+                "portuguese": "diag 10"
+              }
             }
           },
           "_row_num": 183
@@ -6683,7 +6932,10 @@
           "data_value": "9999",
           "display": {
             "title": {
-              "text": "No diagnosis"
+              "text": {
+                "default": "No diagnosis",
+                "portuguese": "Nenhum diagnóstico"
+              }
             }
           },
           "_row_num": 184
@@ -6695,7 +6947,10 @@
           "data_value": "55",
           "display": {
             "title": {
-              "text": "Still admitted"
+              "text": {
+                "default": "Still admitted",
+                "portuguese": "Ainda admitido"
+              }
             }
           },
           "_row_num": 185
@@ -6705,7 +6960,10 @@
           "data_value": "51",
           "display": {
             "title": {
-              "text": "Discharged alive"
+              "text": {
+                "default": "Discharged alive",
+                "portuguese": "Viveu descarregado"
+              }
             }
           },
           "_row_num": 186
@@ -6715,7 +6973,10 @@
           "data_value": "53",
           "display": {
             "title": {
-              "text": "Died during admission"
+              "text": {
+                "default": "Died during admission",
+                "portuguese": "Morreu durante a admissão"
+              }
             }
           },
           "_row_num": 187
@@ -6725,7 +6986,10 @@
           "data_value": "54",
           "display": {
             "title": {
-              "text": "Left"
+              "text": {
+                "default": "Left",
+                "portuguese": "Deixou"
+              }
             }
           },
           "_row_num": 188
@@ -6737,7 +7001,10 @@
           "data_value": "1955-05-05T00:00:00.000000000",
           "display": {
             "title": {
-              "text": "Unknown date"
+              "text": {
+                "default": "Unknown date",
+                "portuguese": "Data desconhecida"
+              }
             }
           },
           "_row_num": 189
@@ -6933,7 +7200,10 @@
           "data_value": "999",
           "display": {
             "title": {
-              "text": "Bed unknown"
+              "text": {
+                "default": "Bed unknown",
+                "portuguese": "Cama desconhecida"
+              }
             }
           },
           "_row_num": 204
@@ -6945,7 +7215,10 @@
           "data_value": "4",
           "display": {
             "title": {
-              "text": "Still admitted"
+              "text": {
+                "default": "Still admitted",
+                "portuguese": "Ainda admitido"
+              }
             }
           },
           "_row_num": 205
@@ -6955,7 +7228,10 @@
           "data_value": "1",
           "display": {
             "title": {
-              "text": "Discharged alive"
+              "text": {
+                "default": "Discharged alive",
+                "portuguese": "Viveu descarregado"
+              }
             }
           },
           "_row_num": 206
@@ -6965,7 +7241,10 @@
           "data_value": "2",
           "display": {
             "title": {
-              "text": "Died during admission"
+              "text": {
+                "default": "Died during admission",
+                "portuguese": "Morreu durante a admissão"
+              }
             }
           },
           "_row_num": 207
@@ -6975,7 +7254,10 @@
           "data_value": "3",
           "display": {
             "title": {
-              "text": "Left"
+              "text": {
+                "default": "Left",
+                "portuguese": "Deixou"
+              }
             }
           },
           "_row_num": 208
@@ -6987,7 +7269,10 @@
           "data_value": "1",
           "display": {
             "title": {
-              "text": "Positive"
+              "text": {
+                "default": "Positive",
+                "portuguese": "Positivo"
+              }
             }
           },
           "_row_num": 209
@@ -6997,7 +7282,10 @@
           "data_value": "2",
           "display": {
             "title": {
-              "text": "Negative"
+              "text": {
+                "default": "Negative",
+                "portuguese": "Negativo"
+              }
             }
           },
           "_row_num": 210
@@ -7007,7 +7295,10 @@
           "data_value": "9",
           "display": {
             "title": {
-              "text": "Not performed"
+              "text": {
+                "default": "Not performed",
+                "portuguese": "Não realizado"
+              }
             }
           },
           "_row_num": 211
@@ -7153,7 +7444,10 @@
           "data_value": "na",
           "display": {
             "title": {
-              "text": "Time unknown"
+              "text": {
+                "default": "Time unknown",
+                "portuguese": "Tempo desconhecido"
+              }
             }
           },
           "_row_num": 222
@@ -7165,7 +7459,10 @@
           "data_value": "88888",
           "display": {
             "title": {
-              "text": "Negative"
+              "text": {
+                "default": "Negative",
+                "portuguese": "Negativo"
+              }
             }
           },
           "_row_num": 223
@@ -9732,7 +10029,10 @@
             "name": "hospitzd",
             "display": {
               "prompt": {
-                "text": "Is the child hospitalized"
+                "text": {
+                  "default": "Is the child hospitalized?",
+                  "portuguese": "A criança está hospitalizada?"
+                }
               }
             },
             "_row_num": 3,

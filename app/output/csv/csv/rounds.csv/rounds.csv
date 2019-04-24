@@ -1,0 +1,4 @@
+_id,_form_id,_locale,_savepoint_type,_savepoint_timestamp,_savepoint_creator,assistant,cam1,cam1i,id,lateroundcom,nome,roundsdate,sec1,sec1i,_default_access,_group_modify,_group_privileged,_group_read_only,_row_etag,_row_owner
+uuid:74930d8b-e2d7-48ab-8384-19fd82b67c39,rounds,en_US,COMPLETE,2019-04-24T17:19:50.482000000,anonymous,4,2,2,uuid:8e3c6393-414e-47e9-9739-5f6d39d733cd,,Andreas,2019-04-23,B,B,FULL,,,,,anonymous
+uuid:5370cc46-1caf-4981-ad13-43af4f6a0424,rounds,en_US,COMPLETE,2019-04-24T17:20:38.291000000,anonymous,4,5,2,uuid:8e3c6393-414e-47e9-9739-5f6d39d733cd,,Andreas,2019-04-24,M,B,FULL,,,,,anonymous
+uuid:33670192-ad7a-4847-9221-727b139169d1,rounds,en_US,COMPLETE,2019-04-24T17:21:26.300000000,anonymous,4,6,66,uuid:e40114be-0fd3-4b67-9f70-23c38a746b4e,,Mette,2019-04-23,N,A,FULL,,,,,anonymous

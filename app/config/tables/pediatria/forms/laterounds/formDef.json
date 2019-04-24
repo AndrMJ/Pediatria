@@ -79,7 +79,10 @@
         "name": "roundsdatelate",
         "display": {
           "prompt": {
-            "text": "Day of round"
+            "text": {
+              "default": "Day of check",
+              "portuguese": "Dia de cheque"
+            }
           }
         },
         "required": true,
@@ -94,7 +97,10 @@
         "name": "asslaterounds",
         "display": {
           "prompt": {
-            "text": "Assistant"
+            "text": {
+              "default": "Assistant",
+              "portuguese": "Assistente"
+            }
           }
         },
         "_row_num": 4
@@ -113,7 +119,10 @@
         "name": "roundq",
         "display": {
           "prompt": {
-            "text": "Status of child"
+            "text": {
+              "default": "Status of child",
+              "portuguese": "Status da criança"
+            }
           }
         },
         "_row_num": 7
@@ -136,7 +145,10 @@
         "values_list": "linked_rounds",
         "display": {
           "prompt": {
-            "text": "Registered rounds"
+            "text": {
+              "default": "Registered check(s)",
+              "portuguese": "Cheque(s) registrado(s)"
+            }
           }
         },
         "_row_num": 11
@@ -280,7 +292,10 @@
         "name": "stu",
         "display": {
           "prompt": {
-            "text": "Choose studies"
+            "text": {
+              "default": "Choose studie(s)",
+              "portuguese": "Escolha estudoa(s)"
+            }
           }
         },
         "comments": "Choose all studynr prefixes",
@@ -516,7 +531,7 @@
           "prompt": {
             "text": {
               "default": "Does the child live in the project area?",
-              "portuguese": "A criança vive na area de estudo de PSB ?"
+              "portuguese": "A criança vive na area de estudo de PSB?"
             }
           }
         },
@@ -825,7 +840,10 @@
         "name": "habcom",
         "display": {
           "prompt": {
-            "text": "Description of where the child lives"
+            "text": {
+              "default": "Description of where the child lives",
+              "portuguese": "Descrição de onde a criança vive"
+            }
           }
         },
         "inputAttributes": {
@@ -858,7 +876,10 @@
         "name": "tabq",
         "display": {
           "prompt": {
-            "text": "Do people from the project come by the village?"
+            "text": {
+              "default": "Do people from the project come by the village?",
+              "portuguese": "As pessoas do projeto vêm pela aldeia?"
+            }
           }
         },
         "_row_num": 106
@@ -875,7 +896,10 @@
         "name": "reg",
         "display": {
           "prompt": {
-            "text": "Region"
+            "text": {
+              "default": "Region",
+              "portuguese": "Região"
+            }
           }
         },
         "_row_num": 108
@@ -901,7 +925,10 @@
         "name": "tab",
         "display": {
           "prompt": {
-            "text": "Name of village"
+            "text": {
+              "default": "Name of village",
+              "portuguese": "Nome da tabanca"
+            }
           }
         },
         "inputAttributes": {
@@ -989,7 +1016,10 @@
         "name": "maeq",
         "display": {
           "prompt": {
-            "text": "Is the mother present?"
+            "text": {
+              "default": "Is the mother present?",
+              "portuguese": "A mãe está presente?"
+            }
           }
         },
         "_row_num": 123
@@ -1047,7 +1077,7 @@
           "prompt": {
             "text": {
               "default": "Other:",
-              "portuguese": "Outra"
+              "portuguese": "Outra:"
             }
           }
         },
@@ -2646,7 +2676,7 @@
         "display": {
           "prompt": {
             "text": {
-              "default": "Date of VAS (Sarampo 1)",
+              "default": "Date of VAS (Measles 1)",
               "portuguese": "Data de VAS (Sarampo 1)"
             }
           },
@@ -2700,7 +2730,7 @@
           "prompt": {
             "text": {
               "default": "Date of VAA (Yellow fever)",
-              "portuguese": "Data de VAA (Fevre amarelio)"
+              "portuguese": "Data de VAA (Febre amarela)"
             }
           },
           "constraint_message": {
@@ -2793,7 +2823,10 @@
         "name": "vbcg",
         "display": {
           "prompt": {
-            "text": "BCG"
+            "text": {
+              "default": "BCG",
+              "portuguese": "BCG"
+            }
           }
         },
         "_row_num": 383
@@ -2804,7 +2837,10 @@
         "name": "polionas",
         "display": {
           "prompt": {
-            "text": "VPO-0"
+            "text": {
+              "default": "VPO-0",
+              "portuguese": "VPO-0"
+            }
           }
         },
         "_row_num": 384
@@ -2823,7 +2859,10 @@
         "name": "vpenta1",
         "display": {
           "prompt": {
-            "text": "PENTA 1"
+            "text": {
+              "default": "PENTA 1",
+              "portuguese": "PENTA 1"
+            }
           }
         },
         "_row_num": 387
@@ -2834,7 +2873,10 @@
         "name": "vpenta2",
         "display": {
           "prompt": {
-            "text": "PENTA 2"
+            "text": {
+              "default": "PENTA 2",
+              "portuguese": "PENTA 2"
+            }
           }
         },
         "_row_num": 388
@@ -2845,7 +2887,10 @@
         "name": "vpenta3",
         "display": {
           "prompt": {
-            "text": "PENTA 3"
+            "text": {
+              "default": "PENTA 3",
+              "portuguese": "PENTA 3"
+            }
           }
         },
         "_row_num": 389
@@ -2864,7 +2909,10 @@
         "name": "vp1",
         "display": {
           "prompt": {
-            "text": "VPO-1"
+            "text": {
+              "default": "VPO-1",
+              "portuguese": "VPO-1"
+            }
           }
         },
         "_row_num": 392
@@ -2875,7 +2923,10 @@
         "name": "vp2",
         "display": {
           "prompt": {
-            "text": "VPO-2"
+            "text": {
+              "default": "VPO-2",
+              "portuguese": "VPO-2"
+            }
           }
         },
         "_row_num": 393
@@ -2886,7 +2937,10 @@
         "name": "vp3",
         "display": {
           "prompt": {
-            "text": "VPO-3"
+            "text": {
+              "default": "VPO-3",
+              "portuguese": "VPO-3"
+            }
           }
         },
         "_row_num": 394
@@ -2905,7 +2959,10 @@
         "name": "vpcv1",
         "display": {
           "prompt": {
-            "text": "PCV13-1"
+            "text": {
+              "default": "PCV13-1",
+              "portuguese": "PCV13-1"
+            }
           }
         },
         "_row_num": 397
@@ -2916,7 +2973,10 @@
         "name": "vpcv2",
         "display": {
           "prompt": {
-            "text": "PCV13-2"
+            "text": {
+              "default": "PCV13-2",
+              "portuguese": "PCV13-2"
+            }
           }
         },
         "_row_num": 398
@@ -2927,7 +2987,10 @@
         "name": "vpcv3",
         "display": {
           "prompt": {
-            "text": "PCV13-3"
+            "text": {
+              "default": "PCV13-3",
+              "portuguese": "PCV13-3"
+            }
           }
         },
         "_row_num": 399
@@ -2946,7 +3009,10 @@
         "name": "rox1",
         "display": {
           "prompt": {
-            "text": "ROTA-1"
+            "text": {
+              "default": "ROTA-1",
+              "portuguese": "ROTA-1"
+            }
           }
         },
         "_row_num": 402
@@ -2957,7 +3023,10 @@
         "name": "rox2",
         "display": {
           "prompt": {
-            "text": "ROTA-2"
+            "text": {
+              "default": "ROTA-2",
+              "portuguese": "ROTA-2"
+            }
           }
         },
         "_row_num": 403
@@ -2976,7 +3045,10 @@
         "name": "vpinj",
         "display": {
           "prompt": {
-            "text": "VPI"
+            "text": {
+              "default": "VPI",
+              "portuguese": "VPI"
+            }
           }
         },
         "_row_num": 406
@@ -2987,7 +3059,10 @@
         "name": "vsar1",
         "display": {
           "prompt": {
-            "text": "Date of VAS (Sarampo 1)"
+            "text": {
+              "default": "VAS (Measles 1)",
+              "portuguese": "VAS (Sarampo 1)"
+            }
           }
         },
         "_row_num": 407
@@ -2998,7 +3073,10 @@
         "name": "vfam",
         "display": {
           "prompt": {
-            "text": "VAA (Fevre amarelio)"
+            "text": {
+              "default": "VAA (Yellow fever)",
+              "portuguese": "VAA (Febre amarela)"
+            }
           }
         },
         "_row_num": 408
@@ -3023,8 +3101,8 @@
         "display": {
           "prompt": {
             "text": {
-              "default": "Did the child take part in the April 2018 campaign?",
-              "portuguese": "A criança tinha participado na campanha de vacinação no mês de Abril de 2018 ?"
+              "default": "Did the child take part in the May 2019 campaign?",
+              "portuguese": "A criança tinha participado na campanha de vacinação no mês de Maio de 2019 ?"
             }
           }
         },
@@ -3047,7 +3125,7 @@
       {
         "type": "assign",
         "name": "campcode",
-        "calculation": 1804,
+        "calculation": 1905,
         "_row_num": 414
       },
       {
@@ -3089,8 +3167,8 @@
         "display": {
           "prompt": {
             "text": {
-              "default": "Pro diagnosis 1",
-              "portuguese": "Prodiagnostico 1"
+              "default": "Admission diagnosis 1",
+              "portuguese": "Diagnóstico de admissão 1"
             }
           }
         },
@@ -3124,8 +3202,8 @@
         "display": {
           "prompt": {
             "text": {
-              "default": "Pro diagnosis 2",
-              "portuguese": "Prodiagnostico 2"
+              "default": "Admission diagnosis 2",
+              "portuguese": "Diagnóstico de admissão 2"
             }
           }
         },
@@ -3159,8 +3237,8 @@
         "display": {
           "prompt": {
             "text": {
-              "default": "Pro diagnosis 3",
-              "portuguese": "Prodiagnostico 3"
+              "default": "Admission diagnosis 3",
+              "portuguese": "Diagnóstico de admissão 3"
             }
           }
         },
@@ -3375,7 +3453,10 @@
         "data_value": "NTN",
         "display": {
           "title": {
-            "text": "NTN - Has no card and no vaccines"
+            "text": {
+              "default": "NTN - Has no card and no vaccines",
+              "portuguese": "NTN - Não tem cartão e não tem vacinas"
+            }
           }
         },
         "_row_num": 15
@@ -3385,7 +3466,10 @@
         "data_value": "NTS",
         "display": {
           "title": {
-            "text": "NTS - Has no card, some vaccines"
+            "text": {
+              "default": "NTS - Has no card, some vaccines",
+              "portuguese": "NTS - Não tem cartão, mas tem vacinas"
+            }
           }
         },
         "_row_num": 16
@@ -3863,7 +3947,10 @@
         "data_value": "MA",
         "display": {
           "title": {
-            "text": "MA -"
+            "text": {
+              "default": "MA -",
+              "portuguese": "MA -"
+            }
           }
         },
         "_row_num": 53
@@ -3873,7 +3960,10 @@
         "data_value": "MI",
         "display": {
           "title": {
-            "text": "MI -"
+            "text": {
+              "default": "MI -",
+              "portuguese": "MI -"
+            }
           }
         },
         "_row_num": 54
@@ -3909,7 +3999,10 @@
         "data_value": "PA",
         "display": {
           "title": {
-            "text": "PA -"
+            "text": {
+              "default": "PA -",
+              "portuguese": "PA -"
+            }
           }
         },
         "_row_num": 57
@@ -3984,7 +4077,10 @@
         "data_value": "1955-05-05T00:00:00.000000000",
         "display": {
           "title": {
-            "text": "Unknown date"
+            "text": {
+              "default": "Unknown date",
+              "portuguese": "Data desconhecida"
+            }
           }
         },
         "_row_num": 63
@@ -3994,7 +4090,10 @@
         "data_value": "1944-04-04T00:00:00.000000000",
         "display": {
           "title": {
-            "text": "Unknown status"
+            "text": {
+              "default": "Unknown status",
+              "portuguese": "Status desconhecido"
+            }
           }
         },
         "_row_num": 64
@@ -4017,7 +4116,10 @@
         "data_value": "999999999",
         "display": {
           "title": {
-            "text": "Don't know number"
+            "text": {
+              "default": "Don't know number",
+              "portuguese": "Não sabe o número"
+            }
           }
         },
         "_row_num": 66
@@ -4287,7 +4389,10 @@
         "data_value": "1955-05-05T00:00:00.000000000",
         "display": {
           "title": {
-            "text": "Unknown date"
+            "text": {
+              "default": "Unknown date",
+              "portuguese": "Data desconhecida"
+            }
           }
         },
         "_row_num": 87
@@ -4297,7 +4402,10 @@
         "data_value": "1944-04-04T00:00:00.000000000",
         "display": {
           "title": {
-            "text": "Unknown status"
+            "text": {
+              "default": "Unknown status",
+              "portuguese": "Status desconhecido"
+            }
           }
         },
         "_row_num": 88
@@ -4333,7 +4441,10 @@
         "data_value": "1955-05-05T00:00:00.000000000",
         "display": {
           "title": {
-            "text": "Unknown date"
+            "text": {
+              "default": "Unknown date",
+              "portuguese": "Data desconhecida"
+            }
           }
         },
         "_row_num": 91
@@ -4343,7 +4454,10 @@
         "data_value": "1944-04-04T00:00:00.000000000",
         "display": {
           "title": {
-            "text": "Unknown status"
+            "text": {
+              "default": "Unknown status",
+              "portuguese": "Status desconhecido"
+            }
           }
         },
         "_row_num": 92
@@ -4379,7 +4493,10 @@
         "data_value": "1955-05-05T00:00:00.000000000",
         "display": {
           "title": {
-            "text": "Unknown date"
+            "text": {
+              "default": "Unknown date",
+              "portuguese": "Data desconhecida"
+            }
           }
         },
         "_row_num": 95
@@ -4389,7 +4506,10 @@
         "data_value": "1944-04-04T00:00:00.000000000",
         "display": {
           "title": {
-            "text": "Unknown status"
+            "text": {
+              "default": "Unknown status",
+              "portuguese": "Status desconhecido"
+            }
           }
         },
         "_row_num": 96
@@ -4425,7 +4545,10 @@
         "data_value": "1955-05-05T00:00:00.000000000",
         "display": {
           "title": {
-            "text": "Unknown date"
+            "text": {
+              "default": "Unknown date",
+              "portuguese": "Data desconhecida"
+            }
           }
         },
         "_row_num": 99
@@ -4435,7 +4558,10 @@
         "data_value": "1944-04-04T00:00:00.000000000",
         "display": {
           "title": {
-            "text": "Unknown status"
+            "text": {
+              "default": "Unknown status",
+              "portuguese": "Status desconhecido"
+            }
           }
         },
         "_row_num": 100
@@ -4471,7 +4597,10 @@
         "data_value": "1955-05-05T00:00:00.000000000",
         "display": {
           "title": {
-            "text": "Unknown date"
+            "text": {
+              "default": "Unknown date",
+              "portuguese": "Data desconhecida"
+            }
           }
         },
         "_row_num": 103
@@ -4481,7 +4610,10 @@
         "data_value": "1944-04-04T00:00:00.000000000",
         "display": {
           "title": {
-            "text": "Unknown status"
+            "text": {
+              "default": "Unknown status",
+              "portuguese": "Status desconhecido"
+            }
           }
         },
         "_row_num": 104
@@ -5310,7 +5442,10 @@
         "data_value": "1955-05-05T00:00:00.000000000",
         "display": {
           "title": {
-            "text": "Unknown date"
+            "text": {
+              "default": "Unknown date",
+              "portuguese": "Data desconhecida"
+            }
           }
         },
         "_row_num": 168
@@ -5320,7 +5455,10 @@
         "data_value": "1944-04-04T00:00:00.000000000",
         "display": {
           "title": {
-            "text": "Unknown status"
+            "text": {
+              "default": "Unknown status",
+              "portuguese": "Status desconhecido"
+            }
           }
         },
         "_row_num": 169
@@ -5343,7 +5481,10 @@
         "data_value": "1",
         "display": {
           "title": {
-            "text": "Consultation only"
+            "text": {
+              "default": "Consultation only",
+              "portuguese": "Apenas consulta"
+            }
           }
         },
         "_row_num": 171
@@ -5353,7 +5494,10 @@
         "data_value": "2",
         "display": {
           "title": {
-            "text": "Admitted for observation"
+            "text": {
+              "default": "Admitted for observation",
+              "portuguese": "Admitido para observação"
+            }
           }
         },
         "_row_num": 172
@@ -5363,7 +5507,10 @@
         "data_value": "3",
         "display": {
           "title": {
-            "text": "Hospitalized"
+            "text": {
+              "default": "Hospitalized",
+              "portuguese": "Incrustado"
+            }
           }
         },
         "_row_num": 173
@@ -5373,7 +5520,10 @@
         "data_value": "1",
         "display": {
           "title": {
-            "text": "diag 1"
+            "text": {
+              "default": "diag 1",
+              "portuguese": "diag 1"
+            }
           }
         },
         "_row_num": 174
@@ -5383,7 +5533,10 @@
         "data_value": "2",
         "display": {
           "title": {
-            "text": "diag 2"
+            "text": {
+              "default": "diag 2",
+              "portuguese": "diag 2"
+            }
           }
         },
         "_row_num": 175
@@ -5393,7 +5546,10 @@
         "data_value": "3",
         "display": {
           "title": {
-            "text": "diag 3"
+            "text": {
+              "default": "diag 3",
+              "portuguese": "diag 3"
+            }
           }
         },
         "_row_num": 176
@@ -5403,7 +5559,10 @@
         "data_value": "4",
         "display": {
           "title": {
-            "text": "diag 4"
+            "text": {
+              "default": "diag 4",
+              "portuguese": "diag 4"
+            }
           }
         },
         "_row_num": 177
@@ -5413,7 +5572,10 @@
         "data_value": "5",
         "display": {
           "title": {
-            "text": "diag 5"
+            "text": {
+              "default": "diag 5",
+              "portuguese": "diag 5"
+            }
           }
         },
         "_row_num": 178
@@ -5423,7 +5585,10 @@
         "data_value": "6",
         "display": {
           "title": {
-            "text": "diag 6"
+            "text": {
+              "default": "diag 6",
+              "portuguese": "diag 6"
+            }
           }
         },
         "_row_num": 179
@@ -5433,7 +5598,10 @@
         "data_value": "7",
         "display": {
           "title": {
-            "text": "diag 7"
+            "text": {
+              "default": "diag 7",
+              "portuguese": "diag 7"
+            }
           }
         },
         "_row_num": 180
@@ -5443,7 +5611,10 @@
         "data_value": "8",
         "display": {
           "title": {
-            "text": "diag 8"
+            "text": {
+              "default": "diag 8",
+              "portuguese": "diag 8"
+            }
           }
         },
         "_row_num": 181
@@ -5453,7 +5624,10 @@
         "data_value": "9",
         "display": {
           "title": {
-            "text": "diag 9"
+            "text": {
+              "default": "diag 9",
+              "portuguese": "diag 9"
+            }
           }
         },
         "_row_num": 182
@@ -5463,7 +5637,10 @@
         "data_value": "10",
         "display": {
           "title": {
-            "text": "diag 10"
+            "text": {
+              "default": "diag 10",
+              "portuguese": "diag 10"
+            }
           }
         },
         "_row_num": 183
@@ -5473,7 +5650,10 @@
         "data_value": "9999",
         "display": {
           "title": {
-            "text": "No diagnosis"
+            "text": {
+              "default": "No diagnosis",
+              "portuguese": "Nenhum diagnóstico"
+            }
           }
         },
         "_row_num": 184
@@ -5483,7 +5663,10 @@
         "data_value": "55",
         "display": {
           "title": {
-            "text": "Still admitted"
+            "text": {
+              "default": "Still admitted",
+              "portuguese": "Ainda admitido"
+            }
           }
         },
         "_row_num": 185
@@ -5493,7 +5676,10 @@
         "data_value": "51",
         "display": {
           "title": {
-            "text": "Discharged alive"
+            "text": {
+              "default": "Discharged alive",
+              "portuguese": "Viveu descarregado"
+            }
           }
         },
         "_row_num": 186
@@ -5503,7 +5689,10 @@
         "data_value": "53",
         "display": {
           "title": {
-            "text": "Died during admission"
+            "text": {
+              "default": "Died during admission",
+              "portuguese": "Morreu durante a admissão"
+            }
           }
         },
         "_row_num": 187
@@ -5513,7 +5702,10 @@
         "data_value": "54",
         "display": {
           "title": {
-            "text": "Left"
+            "text": {
+              "default": "Left",
+              "portuguese": "Deixou"
+            }
           }
         },
         "_row_num": 188
@@ -5523,7 +5715,10 @@
         "data_value": "1955-05-05T00:00:00.000000000",
         "display": {
           "title": {
-            "text": "Unknown date"
+            "text": {
+              "default": "Unknown date",
+              "portuguese": "Data desconhecida"
+            }
           }
         },
         "_row_num": 189
@@ -5715,7 +5910,10 @@
         "data_value": "999",
         "display": {
           "title": {
-            "text": "Bed unknown"
+            "text": {
+              "default": "Bed unknown",
+              "portuguese": "Cama desconhecida"
+            }
           }
         },
         "_row_num": 204
@@ -5725,7 +5923,10 @@
         "data_value": "4",
         "display": {
           "title": {
-            "text": "Still admitted"
+            "text": {
+              "default": "Still admitted",
+              "portuguese": "Ainda admitido"
+            }
           }
         },
         "_row_num": 205
@@ -5735,7 +5936,10 @@
         "data_value": "1",
         "display": {
           "title": {
-            "text": "Discharged alive"
+            "text": {
+              "default": "Discharged alive",
+              "portuguese": "Viveu descarregado"
+            }
           }
         },
         "_row_num": 206
@@ -5745,7 +5949,10 @@
         "data_value": "2",
         "display": {
           "title": {
-            "text": "Died during admission"
+            "text": {
+              "default": "Died during admission",
+              "portuguese": "Morreu durante a admissão"
+            }
           }
         },
         "_row_num": 207
@@ -5755,7 +5962,10 @@
         "data_value": "3",
         "display": {
           "title": {
-            "text": "Left"
+            "text": {
+              "default": "Left",
+              "portuguese": "Deixou"
+            }
           }
         },
         "_row_num": 208
@@ -5765,7 +5975,10 @@
         "data_value": "1",
         "display": {
           "title": {
-            "text": "Positive"
+            "text": {
+              "default": "Positive",
+              "portuguese": "Positivo"
+            }
           }
         },
         "_row_num": 209
@@ -5775,7 +5988,10 @@
         "data_value": "2",
         "display": {
           "title": {
-            "text": "Negative"
+            "text": {
+              "default": "Negative",
+              "portuguese": "Negativo"
+            }
           }
         },
         "_row_num": 210
@@ -5785,7 +6001,10 @@
         "data_value": "9",
         "display": {
           "title": {
-            "text": "Not performed"
+            "text": {
+              "default": "Not performed",
+              "portuguese": "Não realizado"
+            }
           }
         },
         "_row_num": 211
@@ -5925,7 +6144,10 @@
         "data_value": "na",
         "display": {
           "title": {
-            "text": "Time unknown"
+            "text": {
+              "default": "Time unknown",
+              "portuguese": "Tempo desconhecido"
+            }
           }
         },
         "_row_num": 222
@@ -5935,7 +6157,10 @@
         "data_value": "88888",
         "display": {
           "title": {
-            "text": "Negative"
+            "text": {
+              "default": "Negative",
+              "portuguese": "Negativo"
+            }
           }
         },
         "_row_num": 223
@@ -7568,7 +7793,10 @@
           "data_value": "NTN",
           "display": {
             "title": {
-              "text": "NTN - Has no card and no vaccines"
+              "text": {
+                "default": "NTN - Has no card and no vaccines",
+                "portuguese": "NTN - Não tem cartão e não tem vacinas"
+              }
             }
           },
           "_row_num": 15
@@ -7578,7 +7806,10 @@
           "data_value": "NTS",
           "display": {
             "title": {
-              "text": "NTS - Has no card, some vaccines"
+              "text": {
+                "default": "NTS - Has no card, some vaccines",
+                "portuguese": "NTS - Não tem cartão, mas tem vacinas"
+              }
             }
           },
           "_row_num": 16
@@ -8068,7 +8299,10 @@
           "data_value": "MA",
           "display": {
             "title": {
-              "text": "MA -"
+              "text": {
+                "default": "MA -",
+                "portuguese": "MA -"
+              }
             }
           },
           "_row_num": 53
@@ -8078,7 +8312,10 @@
           "data_value": "MI",
           "display": {
             "title": {
-              "text": "MI -"
+              "text": {
+                "default": "MI -",
+                "portuguese": "MI -"
+              }
             }
           },
           "_row_num": 54
@@ -8114,7 +8351,10 @@
           "data_value": "PA",
           "display": {
             "title": {
-              "text": "PA -"
+              "text": {
+                "default": "PA -",
+                "portuguese": "PA -"
+              }
             }
           },
           "_row_num": 57
@@ -8191,7 +8431,10 @@
           "data_value": "1955-05-05T00:00:00.000000000",
           "display": {
             "title": {
-              "text": "Unknown date"
+              "text": {
+                "default": "Unknown date",
+                "portuguese": "Data desconhecida"
+              }
             }
           },
           "_row_num": 63
@@ -8201,7 +8444,10 @@
           "data_value": "1944-04-04T00:00:00.000000000",
           "display": {
             "title": {
-              "text": "Unknown status"
+              "text": {
+                "default": "Unknown status",
+                "portuguese": "Status desconhecido"
+              }
             }
           },
           "_row_num": 64
@@ -8226,7 +8472,10 @@
           "data_value": "999999999",
           "display": {
             "title": {
-              "text": "Don't know number"
+              "text": {
+                "default": "Don't know number",
+                "portuguese": "Não sabe o número"
+              }
             }
           },
           "_row_num": 66
@@ -8502,7 +8751,10 @@
           "data_value": "1955-05-05T00:00:00.000000000",
           "display": {
             "title": {
-              "text": "Unknown date"
+              "text": {
+                "default": "Unknown date",
+                "portuguese": "Data desconhecida"
+              }
             }
           },
           "_row_num": 87
@@ -8512,7 +8764,10 @@
           "data_value": "1944-04-04T00:00:00.000000000",
           "display": {
             "title": {
-              "text": "Unknown status"
+              "text": {
+                "default": "Unknown status",
+                "portuguese": "Status desconhecido"
+              }
             }
           },
           "_row_num": 88
@@ -8550,7 +8805,10 @@
           "data_value": "1955-05-05T00:00:00.000000000",
           "display": {
             "title": {
-              "text": "Unknown date"
+              "text": {
+                "default": "Unknown date",
+                "portuguese": "Data desconhecida"
+              }
             }
           },
           "_row_num": 91
@@ -8560,7 +8818,10 @@
           "data_value": "1944-04-04T00:00:00.000000000",
           "display": {
             "title": {
-              "text": "Unknown status"
+              "text": {
+                "default": "Unknown status",
+                "portuguese": "Status desconhecido"
+              }
             }
           },
           "_row_num": 92
@@ -8598,7 +8859,10 @@
           "data_value": "1955-05-05T00:00:00.000000000",
           "display": {
             "title": {
-              "text": "Unknown date"
+              "text": {
+                "default": "Unknown date",
+                "portuguese": "Data desconhecida"
+              }
             }
           },
           "_row_num": 95
@@ -8608,7 +8872,10 @@
           "data_value": "1944-04-04T00:00:00.000000000",
           "display": {
             "title": {
-              "text": "Unknown status"
+              "text": {
+                "default": "Unknown status",
+                "portuguese": "Status desconhecido"
+              }
             }
           },
           "_row_num": 96
@@ -8646,7 +8913,10 @@
           "data_value": "1955-05-05T00:00:00.000000000",
           "display": {
             "title": {
-              "text": "Unknown date"
+              "text": {
+                "default": "Unknown date",
+                "portuguese": "Data desconhecida"
+              }
             }
           },
           "_row_num": 99
@@ -8656,7 +8926,10 @@
           "data_value": "1944-04-04T00:00:00.000000000",
           "display": {
             "title": {
-              "text": "Unknown status"
+              "text": {
+                "default": "Unknown status",
+                "portuguese": "Status desconhecido"
+              }
             }
           },
           "_row_num": 100
@@ -8694,7 +8967,10 @@
           "data_value": "1955-05-05T00:00:00.000000000",
           "display": {
             "title": {
-              "text": "Unknown date"
+              "text": {
+                "default": "Unknown date",
+                "portuguese": "Data desconhecida"
+              }
             }
           },
           "_row_num": 103
@@ -8704,7 +8980,10 @@
           "data_value": "1944-04-04T00:00:00.000000000",
           "display": {
             "title": {
-              "text": "Unknown status"
+              "text": {
+                "default": "Unknown status",
+                "portuguese": "Status desconhecido"
+              }
             }
           },
           "_row_num": 104
@@ -9553,7 +9832,10 @@
           "data_value": "1955-05-05T00:00:00.000000000",
           "display": {
             "title": {
-              "text": "Unknown date"
+              "text": {
+                "default": "Unknown date",
+                "portuguese": "Data desconhecida"
+              }
             }
           },
           "_row_num": 168
@@ -9563,7 +9845,10 @@
           "data_value": "1944-04-04T00:00:00.000000000",
           "display": {
             "title": {
-              "text": "Unknown status"
+              "text": {
+                "default": "Unknown status",
+                "portuguese": "Status desconhecido"
+              }
             }
           },
           "_row_num": 169
@@ -9590,7 +9875,10 @@
           "data_value": "1",
           "display": {
             "title": {
-              "text": "Consultation only"
+              "text": {
+                "default": "Consultation only",
+                "portuguese": "Apenas consulta"
+              }
             }
           },
           "_row_num": 171
@@ -9600,7 +9888,10 @@
           "data_value": "2",
           "display": {
             "title": {
-              "text": "Admitted for observation"
+              "text": {
+                "default": "Admitted for observation",
+                "portuguese": "Admitido para observação"
+              }
             }
           },
           "_row_num": 172
@@ -9610,7 +9901,10 @@
           "data_value": "3",
           "display": {
             "title": {
-              "text": "Hospitalized"
+              "text": {
+                "default": "Hospitalized",
+                "portuguese": "Incrustado"
+              }
             }
           },
           "_row_num": 173
@@ -9622,7 +9916,10 @@
           "data_value": "1",
           "display": {
             "title": {
-              "text": "diag 1"
+              "text": {
+                "default": "diag 1",
+                "portuguese": "diag 1"
+              }
             }
           },
           "_row_num": 174
@@ -9632,7 +9929,10 @@
           "data_value": "2",
           "display": {
             "title": {
-              "text": "diag 2"
+              "text": {
+                "default": "diag 2",
+                "portuguese": "diag 2"
+              }
             }
           },
           "_row_num": 175
@@ -9642,7 +9942,10 @@
           "data_value": "3",
           "display": {
             "title": {
-              "text": "diag 3"
+              "text": {
+                "default": "diag 3",
+                "portuguese": "diag 3"
+              }
             }
           },
           "_row_num": 176
@@ -9652,7 +9955,10 @@
           "data_value": "4",
           "display": {
             "title": {
-              "text": "diag 4"
+              "text": {
+                "default": "diag 4",
+                "portuguese": "diag 4"
+              }
             }
           },
           "_row_num": 177
@@ -9662,7 +9968,10 @@
           "data_value": "5",
           "display": {
             "title": {
-              "text": "diag 5"
+              "text": {
+                "default": "diag 5",
+                "portuguese": "diag 5"
+              }
             }
           },
           "_row_num": 178
@@ -9672,7 +9981,10 @@
           "data_value": "6",
           "display": {
             "title": {
-              "text": "diag 6"
+              "text": {
+                "default": "diag 6",
+                "portuguese": "diag 6"
+              }
             }
           },
           "_row_num": 179
@@ -9682,7 +9994,10 @@
           "data_value": "7",
           "display": {
             "title": {
-              "text": "diag 7"
+              "text": {
+                "default": "diag 7",
+                "portuguese": "diag 7"
+              }
             }
           },
           "_row_num": 180
@@ -9692,7 +10007,10 @@
           "data_value": "8",
           "display": {
             "title": {
-              "text": "diag 8"
+              "text": {
+                "default": "diag 8",
+                "portuguese": "diag 8"
+              }
             }
           },
           "_row_num": 181
@@ -9702,7 +10020,10 @@
           "data_value": "9",
           "display": {
             "title": {
-              "text": "diag 9"
+              "text": {
+                "default": "diag 9",
+                "portuguese": "diag 9"
+              }
             }
           },
           "_row_num": 182
@@ -9712,7 +10033,10 @@
           "data_value": "10",
           "display": {
             "title": {
-              "text": "diag 10"
+              "text": {
+                "default": "diag 10",
+                "portuguese": "diag 10"
+              }
             }
           },
           "_row_num": 183
@@ -9724,7 +10048,10 @@
           "data_value": "9999",
           "display": {
             "title": {
-              "text": "No diagnosis"
+              "text": {
+                "default": "No diagnosis",
+                "portuguese": "Nenhum diagnóstico"
+              }
             }
           },
           "_row_num": 184
@@ -9736,7 +10063,10 @@
           "data_value": "55",
           "display": {
             "title": {
-              "text": "Still admitted"
+              "text": {
+                "default": "Still admitted",
+                "portuguese": "Ainda admitido"
+              }
             }
           },
           "_row_num": 185
@@ -9746,7 +10076,10 @@
           "data_value": "51",
           "display": {
             "title": {
-              "text": "Discharged alive"
+              "text": {
+                "default": "Discharged alive",
+                "portuguese": "Viveu descarregado"
+              }
             }
           },
           "_row_num": 186
@@ -9756,7 +10089,10 @@
           "data_value": "53",
           "display": {
             "title": {
-              "text": "Died during admission"
+              "text": {
+                "default": "Died during admission",
+                "portuguese": "Morreu durante a admissão"
+              }
             }
           },
           "_row_num": 187
@@ -9766,7 +10102,10 @@
           "data_value": "54",
           "display": {
             "title": {
-              "text": "Left"
+              "text": {
+                "default": "Left",
+                "portuguese": "Deixou"
+              }
             }
           },
           "_row_num": 188
@@ -9778,7 +10117,10 @@
           "data_value": "1955-05-05T00:00:00.000000000",
           "display": {
             "title": {
-              "text": "Unknown date"
+              "text": {
+                "default": "Unknown date",
+                "portuguese": "Data desconhecida"
+              }
             }
           },
           "_row_num": 189
@@ -9974,7 +10316,10 @@
           "data_value": "999",
           "display": {
             "title": {
-              "text": "Bed unknown"
+              "text": {
+                "default": "Bed unknown",
+                "portuguese": "Cama desconhecida"
+              }
             }
           },
           "_row_num": 204
@@ -9986,7 +10331,10 @@
           "data_value": "4",
           "display": {
             "title": {
-              "text": "Still admitted"
+              "text": {
+                "default": "Still admitted",
+                "portuguese": "Ainda admitido"
+              }
             }
           },
           "_row_num": 205
@@ -9996,7 +10344,10 @@
           "data_value": "1",
           "display": {
             "title": {
-              "text": "Discharged alive"
+              "text": {
+                "default": "Discharged alive",
+                "portuguese": "Viveu descarregado"
+              }
             }
           },
           "_row_num": 206
@@ -10006,7 +10357,10 @@
           "data_value": "2",
           "display": {
             "title": {
-              "text": "Died during admission"
+              "text": {
+                "default": "Died during admission",
+                "portuguese": "Morreu durante a admissão"
+              }
             }
           },
           "_row_num": 207
@@ -10016,7 +10370,10 @@
           "data_value": "3",
           "display": {
             "title": {
-              "text": "Left"
+              "text": {
+                "default": "Left",
+                "portuguese": "Deixou"
+              }
             }
           },
           "_row_num": 208
@@ -10028,7 +10385,10 @@
           "data_value": "1",
           "display": {
             "title": {
-              "text": "Positive"
+              "text": {
+                "default": "Positive",
+                "portuguese": "Positivo"
+              }
             }
           },
           "_row_num": 209
@@ -10038,7 +10398,10 @@
           "data_value": "2",
           "display": {
             "title": {
-              "text": "Negative"
+              "text": {
+                "default": "Negative",
+                "portuguese": "Negativo"
+              }
             }
           },
           "_row_num": 210
@@ -10048,7 +10411,10 @@
           "data_value": "9",
           "display": {
             "title": {
-              "text": "Not performed"
+              "text": {
+                "default": "Not performed",
+                "portuguese": "Não realizado"
+              }
             }
           },
           "_row_num": 211
@@ -10194,7 +10560,10 @@
           "data_value": "na",
           "display": {
             "title": {
-              "text": "Time unknown"
+              "text": {
+                "default": "Time unknown",
+                "portuguese": "Tempo desconhecido"
+              }
             }
           },
           "_row_num": 222
@@ -10206,7 +10575,10 @@
           "data_value": "88888",
           "display": {
             "title": {
-              "text": "Negative"
+              "text": {
+                "default": "Negative",
+                "portuguese": "Negativo"
+              }
             }
           },
           "_row_num": 223
@@ -13324,7 +13696,10 @@
             "name": "roundsdatelate",
             "display": {
               "prompt": {
-                "text": "Day of round"
+                "text": {
+                  "default": "Day of check",
+                  "portuguese": "Dia de cheque"
+                }
               }
             },
             "required": true,
@@ -13344,7 +13719,10 @@
             "name": "asslaterounds",
             "display": {
               "prompt": {
-                "text": "Assistant"
+                "text": {
+                  "default": "Assistant",
+                  "portuguese": "Assistente"
+                }
               }
             },
             "_row_num": 4,
@@ -13360,7 +13738,10 @@
             "name": "roundq",
             "display": {
               "prompt": {
-                "text": "Status of child"
+                "text": {
+                  "default": "Status of child",
+                  "portuguese": "Status da criança"
+                }
               }
             },
             "_row_num": 7,
@@ -13375,7 +13756,10 @@
             "values_list": "linked_rounds",
             "display": {
               "prompt": {
-                "text": "Registered rounds"
+                "text": {
+                  "default": "Registered check(s)",
+                  "portuguese": "Cheque(s) registrado(s)"
+                }
               }
             },
             "_row_num": 11,
@@ -13511,7 +13895,10 @@
             "name": "stu",
             "display": {
               "prompt": {
-                "text": "Choose studies"
+                "text": {
+                  "default": "Choose studie(s)",
+                  "portuguese": "Escolha estudoa(s)"
+                }
               }
             },
             "comments": "Choose all studynr prefixes",
@@ -13666,7 +14053,7 @@
               "prompt": {
                 "text": {
                   "default": "Does the child live in the project area?",
-                  "portuguese": "A criança vive na area de estudo de PSB ?"
+                  "portuguese": "A criança vive na area de estudo de PSB?"
                 }
               }
             },
@@ -13884,7 +14271,10 @@
             "name": "habcom",
             "display": {
               "prompt": {
-                "text": "Description of where the child lives"
+                "text": {
+                  "default": "Description of where the child lives",
+                  "portuguese": "Descrição de onde a criança vive"
+                }
               }
             },
             "inputAttributes": {
@@ -13904,7 +14294,10 @@
             "name": "tabq",
             "display": {
               "prompt": {
-                "text": "Do people from the project come by the village?"
+                "text": {
+                  "default": "Do people from the project come by the village?",
+                  "portuguese": "As pessoas do projeto vêm pela aldeia?"
+                }
               }
             },
             "_row_num": 106,
@@ -13920,7 +14313,10 @@
             "name": "reg",
             "display": {
               "prompt": {
-                "text": "Region"
+                "text": {
+                  "default": "Region",
+                  "portuguese": "Região"
+                }
               }
             },
             "_row_num": 108,
@@ -13956,7 +14352,10 @@
             "name": "tab",
             "display": {
               "prompt": {
-                "text": "Name of village"
+                "text": {
+                  "default": "Name of village",
+                  "portuguese": "Nome da tabanca"
+                }
               }
             },
             "inputAttributes": {
@@ -14017,7 +14416,10 @@
             "name": "maeq",
             "display": {
               "prompt": {
-                "text": "Is the mother present?"
+                "text": {
+                  "default": "Is the mother present?",
+                  "portuguese": "A mãe está presente?"
+                }
               }
             },
             "_row_num": 123,
@@ -14054,7 +14456,7 @@
               "prompt": {
                 "text": {
                   "default": "Other:",
-                  "portuguese": "Outra"
+                  "portuguese": "Outra:"
                 }
               }
             },
@@ -14980,7 +15382,7 @@
             "display": {
               "prompt": {
                 "text": {
-                  "default": "Date of VAS (Sarampo 1)",
+                  "default": "Date of VAS (Measles 1)",
                   "portuguese": "Data de VAS (Sarampo 1)"
                 }
               },
@@ -15017,7 +15419,7 @@
               "prompt": {
                 "text": {
                   "default": "Date of VAA (Yellow fever)",
-                  "portuguese": "Data de VAA (Fevre amarelio)"
+                  "portuguese": "Data de VAA (Febre amarela)"
                 }
               },
               "constraint_message": {
@@ -15052,7 +15454,10 @@
             "name": "vbcg",
             "display": {
               "prompt": {
-                "text": "BCG"
+                "text": {
+                  "default": "BCG",
+                  "portuguese": "BCG"
+                }
               }
             },
             "_row_num": 383,
@@ -15068,7 +15473,10 @@
             "name": "polionas",
             "display": {
               "prompt": {
-                "text": "VPO-0"
+                "text": {
+                  "default": "VPO-0",
+                  "portuguese": "VPO-0"
+                }
               }
             },
             "_row_num": 384,
@@ -15084,7 +15492,10 @@
             "name": "vpenta1",
             "display": {
               "prompt": {
-                "text": "PENTA 1"
+                "text": {
+                  "default": "PENTA 1",
+                  "portuguese": "PENTA 1"
+                }
               }
             },
             "_row_num": 387,
@@ -15100,7 +15511,10 @@
             "name": "vpenta2",
             "display": {
               "prompt": {
-                "text": "PENTA 2"
+                "text": {
+                  "default": "PENTA 2",
+                  "portuguese": "PENTA 2"
+                }
               }
             },
             "_row_num": 388,
@@ -15116,7 +15530,10 @@
             "name": "vpenta3",
             "display": {
               "prompt": {
-                "text": "PENTA 3"
+                "text": {
+                  "default": "PENTA 3",
+                  "portuguese": "PENTA 3"
+                }
               }
             },
             "_row_num": 389,
@@ -15132,7 +15549,10 @@
             "name": "vp1",
             "display": {
               "prompt": {
-                "text": "VPO-1"
+                "text": {
+                  "default": "VPO-1",
+                  "portuguese": "VPO-1"
+                }
               }
             },
             "_row_num": 392,
@@ -15148,7 +15568,10 @@
             "name": "vp2",
             "display": {
               "prompt": {
-                "text": "VPO-2"
+                "text": {
+                  "default": "VPO-2",
+                  "portuguese": "VPO-2"
+                }
               }
             },
             "_row_num": 393,
@@ -15164,7 +15587,10 @@
             "name": "vp3",
             "display": {
               "prompt": {
-                "text": "VPO-3"
+                "text": {
+                  "default": "VPO-3",
+                  "portuguese": "VPO-3"
+                }
               }
             },
             "_row_num": 394,
@@ -15180,7 +15606,10 @@
             "name": "vpcv1",
             "display": {
               "prompt": {
-                "text": "PCV13-1"
+                "text": {
+                  "default": "PCV13-1",
+                  "portuguese": "PCV13-1"
+                }
               }
             },
             "_row_num": 397,
@@ -15196,7 +15625,10 @@
             "name": "vpcv2",
             "display": {
               "prompt": {
-                "text": "PCV13-2"
+                "text": {
+                  "default": "PCV13-2",
+                  "portuguese": "PCV13-2"
+                }
               }
             },
             "_row_num": 398,
@@ -15212,7 +15644,10 @@
             "name": "vpcv3",
             "display": {
               "prompt": {
-                "text": "PCV13-3"
+                "text": {
+                  "default": "PCV13-3",
+                  "portuguese": "PCV13-3"
+                }
               }
             },
             "_row_num": 399,
@@ -15228,7 +15663,10 @@
             "name": "rox1",
             "display": {
               "prompt": {
-                "text": "ROTA-1"
+                "text": {
+                  "default": "ROTA-1",
+                  "portuguese": "ROTA-1"
+                }
               }
             },
             "_row_num": 402,
@@ -15244,7 +15682,10 @@
             "name": "rox2",
             "display": {
               "prompt": {
-                "text": "ROTA-2"
+                "text": {
+                  "default": "ROTA-2",
+                  "portuguese": "ROTA-2"
+                }
               }
             },
             "_row_num": 403,
@@ -15260,7 +15701,10 @@
             "name": "vpinj",
             "display": {
               "prompt": {
-                "text": "VPI"
+                "text": {
+                  "default": "VPI",
+                  "portuguese": "VPI"
+                }
               }
             },
             "_row_num": 406,
@@ -15276,7 +15720,10 @@
             "name": "vsar1",
             "display": {
               "prompt": {
-                "text": "Date of VAS (Sarampo 1)"
+                "text": {
+                  "default": "VAS (Measles 1)",
+                  "portuguese": "VAS (Sarampo 1)"
+                }
               }
             },
             "_row_num": 407,
@@ -15292,7 +15739,10 @@
             "name": "vfam",
             "display": {
               "prompt": {
-                "text": "VAA (Fevre amarelio)"
+                "text": {
+                  "default": "VAA (Yellow fever)",
+                  "portuguese": "VAA (Febre amarela)"
+                }
               }
             },
             "_row_num": 408,
@@ -15309,8 +15759,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "default": "Did the child take part in the April 2018 campaign?",
-                  "portuguese": "A criança tinha participado na campanha de vacinação no mês de Abril de 2018 ?"
+                  "default": "Did the child take part in the May 2019 campaign?",
+                  "portuguese": "A criança tinha participado na campanha de vacinação no mês de Maio de 2019 ?"
                 }
               }
             },
@@ -15347,8 +15797,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "default": "Pro diagnosis 1",
-                  "portuguese": "Prodiagnostico 1"
+                  "default": "Admission diagnosis 1",
+                  "portuguese": "Diagnóstico de admissão 1"
                 }
               }
             },
@@ -15377,8 +15827,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "default": "Pro diagnosis 2",
-                  "portuguese": "Prodiagnostico 2"
+                  "default": "Admission diagnosis 2",
+                  "portuguese": "Diagnóstico de admissão 2"
                 }
               }
             },
@@ -15407,8 +15857,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "default": "Pro diagnosis 3",
-                  "portuguese": "Prodiagnostico 3"
+                  "default": "Admission diagnosis 3",
+                  "portuguese": "Diagnóstico de admissão 3"
                 }
               }
             },
@@ -16186,7 +16636,7 @@
               "__rowNum__": 417,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(110);\nactivePromptIndicies.push(111);\nassign('campcode', 1804);\nif (data('campest') != null) {\nassign('campdata', data('roundsdatelate'));\n}\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(110);\nactivePromptIndicies.push(111);\nassign('campcode', 1905);\nif (data('campest') != null) {\nassign('campdata', data('roundsdatelate'));\n}\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 69
           },
           {
