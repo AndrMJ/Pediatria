@@ -637,6 +637,7 @@ window.listViewLogic = {
                 		if(sDetail !== null) {
                 			var dobEntered = sDetail;
                 			sDetail = dobEntered.substring(8,10) + dobEntered.substring(4,7) + '-' + dobEntered.substring(0,4);
+                			that.secondDetLabel = 'Dob';
                 		}
                 		else {
                 			var ano = util.formatColIdForDisplay('anos', i, resultSet, true);
