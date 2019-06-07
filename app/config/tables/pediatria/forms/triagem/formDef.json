@@ -1529,7 +1529,7 @@
           "prompt": {
             "text": {
               "default": "Horizontal measurement",
-              "portuguese": "Medição Horizontal"
+              "portuguese": "Medição horizontal"
             }
           }
         },
@@ -5203,8 +5203,8 @@
         "display": {
           "title": {
             "text": {
-              "default": "Bdama",
-              "portuguese": "Bdama"
+              "default": "Bolama",
+              "portuguese": "Bolama"
             }
           }
         },
@@ -9554,8 +9554,8 @@
           "display": {
             "title": {
               "text": {
-                "default": "Bdama",
-                "portuguese": "Bdama"
+                "default": "Bolama",
+                "portuguese": "Bolama"
               }
             }
           },
@@ -14552,7 +14552,7 @@
               "prompt": {
                 "text": {
                   "default": "Horizontal measurement",
-                  "portuguese": "Medição Horizontal"
+                  "portuguese": "Medição horizontal"
                 }
               }
             },
